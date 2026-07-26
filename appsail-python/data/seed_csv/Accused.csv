@@ -1,0 +1,2202 @@
+AccusedMasterID,CaseMasterID,AccusedName,AgeYear,GenderID,PersonID
+1,1,Manjunath Gowda,31,M,A1
+2,2,Manjunath Gowda,36,M,A1
+3,3,Manjunath Gowda,44,M,A1
+4,4,Harish Raju,24,M,A1
+5,5,Unknown,31,M,A1
+6,6,Unknown,22,M,A1
+7,7,Kiran Raju,42,M,A1
+8,8,Unknown,25,M,A1
+9,9,Unknown,44,M,A1
+10,10,Unknown,20,M,A1
+11,11,Suresh Naik,40,M,A1
+12,12,Suresh Naik,32,M,A1
+13,13,Unknown,40,M,A1
+14,14,Vinay Nayak,29,M,A1
+15,15,Kiran Hegde,20,M,A1
+16,16,Unknown,20,M,A1
+17,17,Mahesh Rao,20,M,A1
+18,18,Ramesh Naik,36,M,A1
+19,19,Unknown,24,M,A1
+20,20,Unknown,43,M,A1
+21,21,Vinay Raju,29,M,A1
+22,22,Ravi Kumar,40,M,A1
+23,23,Unknown,35,M,A1
+24,24,Ravi Kumar,28,M,A1
+25,25,Ravi Kumar,30,M,A1
+26,26,Unknown,37,M,A1
+27,27,Ravi Kumar,29,M,A1
+28,28,Unknown,26,M,A1
+29,29,Unknown,30,M,A1
+30,30,Suresh Naik,35,M,A1
+31,31,Suresh Naik,19,M,A1
+32,32,Unknown,41,M,A1
+33,33,Unknown,19,M,A1
+34,34,Unknown,45,M,A1
+35,35,Shivakumar Hegde,24,M,A1
+36,36,Unknown,42,M,A1
+37,37,Harish Kumar,27,M,A1
+38,38,Unknown,45,M,A1
+39,39,Imran Pasha,36,M,A1
+40,40,Unknown,29,M,A1
+41,41,Imran Pasha,25,M,A1
+42,42,Unknown,30,M,A1
+43,43,Nagaraj Murthy,37,M,A1
+44,44,Prakash Hegde,38,M,A1
+45,45,Unknown,30,M,A1
+46,46,Unknown,45,M,A1
+47,47,Unknown,44,M,A1
+48,48,Shivakumar Naik,45,M,A1
+49,49,Unknown,42,M,A1
+50,50,Unknown,45,M,A1
+51,51,Ravi Kumar,30,M,A1
+52,52,Unknown,40,M,A1
+53,53,Ravi Kumar,18,M,A1
+54,54,Unknown,43,M,A1
+55,55,Ravi Kumar,23,M,A1
+56,56,Prasad Naik,43,M,A1
+57,57,Firoz Achar,30,M,A1
+58,58,Unknown,24,M,A1
+59,59,Unknown,30,M,A1
+60,60,Unknown,39,M,A1
+61,61,Ramesh Murthy,31,M,A1
+62,62,Mahesh Pasha,32,M,A1
+63,63,Basavaraj Patil,32,M,A1
+64,64,Basavaraj Patil,35,M,A1
+65,65,Unknown,23,M,A1
+66,66,Basavaraj Patil,38,M,A1
+67,67,Unknown,22,M,A1
+68,68,Unknown,34,M,A1
+69,69,Naveen Hegde,23,M,A1
+70,70,Harish Gowda,42,M,A1
+71,71,Unknown,41,M,A1
+72,72,Basavaraj Pasha,23,M,A1
+73,73,Unknown,37,M,A1
+74,74,Unknown,37,M,A1
+75,75,Harish Setty,29,M,A1
+76,76,Shivakumar Nayak,36,M,A1
+77,77,Unknown,24,M,A1
+78,78,Unknown,28,M,A1
+79,79,Unknown,45,M,A1
+80,80,Nagaraj Rao,45,M,A1
+81,81,Roopa Kumar,42,M,A1
+82,82,Naveen Kumar,39,M,A1
+83,82,Kiran Patil,26,M,A2
+84,83,Shivakumar Hegde,40,M,A1
+85,83,Sushma Rao,35,M,A2
+86,84,Santosh Patil,43,M,A1
+87,85,Umesh Pasha,22,M,A1
+88,85,Mahesh Gowda,19,M,A2
+89,86,Girish Raju,44,M,A1
+90,87,Nagaratna Achar,18,M,A1
+91,88,Shivakumar Murthy,18,M,A1
+92,89,Ravi Setty,42,M,A1
+93,90,Unknown,25,M,A1
+94,91,Roopa Setty,39,M,A1
+95,92,Ravi Reddy,27,M,A1
+96,93,Nagaraj Shetty,19,M,A1
+97,93,Kavya Bhat,41,M,A2
+98,94,Unknown,20,M,A1
+99,95,Ramesh Gowda,42,M,A1
+100,96,Unknown,35,M,A1
+101,97,Anil Shetty,23,M,A1
+102,97,Nagaraj Naik,24,M,A2
+103,98,Nagaratna Patil,31,M,A1
+104,99,Basavaraj Prasad,27,M,A1
+105,100,Girish Prasad,42,M,A1
+106,100,Firoz Murthy,24,M,A2
+107,101,Unknown,32,M,A1
+108,102,Prakash Nayak,38,M,A1
+109,103,Unknown,42,M,A1
+110,104,Manjunath Reddy,23,M,A1
+111,104,Basavaraj Kumar,39,M,A2
+112,105,Umesh Achar,22,M,A1
+113,105,Prasad Setty,37,M,A2
+114,106,Prasad Achar,28,M,A1
+115,106,Prakash Achar,30,M,A2
+116,107,Girish Gowda,28,M,A1
+117,108,Unknown,43,M,A1
+118,109,Unknown,24,M,A1
+119,110,Lakshmi Shetty,31,M,A1
+120,110,Suresh Naik,30,M,A2
+121,111,Nagaraj Shetty,29,M,A1
+122,112,Unknown,39,M,A1
+123,113,Divya Bhat,36,M,A1
+124,114,Nagaratna Setty,44,M,A1
+125,115,Sushma Patil,40,M,A1
+126,116,Prasad Pasha,31,M,A1
+127,116,Bhavya Achar,29,M,A2
+128,117,Umesh Kumar,36,M,A1
+129,118,Unknown,33,M,A1
+130,119,Bhavya Kumar,39,M,A1
+131,119,Harish Gowda,18,M,A2
+132,120,Firoz Naik,42,M,A1
+133,120,Sushma Hegde,31,M,A2
+134,121,Unknown,41,M,A1
+135,122,Unknown,38,M,A1
+136,123,Imran Bhat,33,M,A1
+137,124,Shivakumar Kumar,21,M,A1
+138,124,Geetha Shetty,33,M,A2
+139,125,Ravi Pasha,23,M,A1
+140,125,Ravi Gowda,20,M,A2
+141,126,Prakash Setty,45,M,A1
+142,127,Nagaraj Shetty,20,M,A1
+143,128,Kiran Reddy,40,M,A1
+144,129,Unknown,36,M,A1
+145,130,Shivakumar Rao,45,M,A1
+146,131,Ramesh Kumar,38,M,A1
+147,132,Manjunath Naik,30,M,A1
+148,133,Lokesh Nayak,43,M,A1
+149,133,Santosh Rao,27,M,A2
+150,134,Unknown,29,M,A1
+151,135,Anil Patil,28,M,A1
+152,135,Ramesh Naik,19,M,A2
+153,136,Harish Naik,24,M,A1
+154,137,Harish Pasha,33,M,A1
+155,137,Santosh Bhat,35,M,A2
+156,138,Lakshmi Rao,28,M,A1
+157,139,Nagaraj Prasad,24,M,A1
+158,139,Naveen Shetty,22,M,A2
+159,140,Unknown,20,M,A1
+160,141,Divya Setty,34,M,A1
+161,141,Prasad Patil,36,M,A2
+162,142,Savitha Pasha,42,M,A1
+163,143,Anil Raju,40,M,A1
+164,144,Vinay Rao,44,M,A1
+165,144,Prakash Reddy,20,M,A2
+166,145,Unknown,23,M,A1
+167,146,Roopa Gowda,21,M,A1
+168,146,Divya Raju,31,M,A2
+169,147,Unknown,21,M,A1
+170,148,Firoz Achar,26,M,A1
+171,148,Basavaraj Raju,37,M,A2
+172,149,Manjunath Murthy,45,M,A1
+173,150,Suresh Naik,45,M,A1
+174,150,Umesh Bhat,20,M,A2
+175,151,Lokesh Reddy,40,M,A1
+176,151,Harish Setty,21,M,A2
+177,152,Unknown,44,M,A1
+178,153,Anil Murthy,38,M,A1
+179,154,Naveen Reddy,30,M,A1
+180,155,Ravi Bhat,25,M,A1
+181,155,Vinay Nayak,29,M,A2
+182,156,Naveen Pasha,28,M,A1
+183,157,Naveen Reddy,33,M,A1
+184,158,Nagaraj Shetty,28,M,A1
+185,159,Roopa Raju,20,M,A1
+186,160,Unknown,31,M,A1
+187,161,Prasad Shetty,34,M,A1
+188,162,Unknown,20,M,A1
+189,163,Nagaraj Rao,38,M,A1
+190,164,Nagaraj Bhat,19,M,A1
+191,165,Unknown,34,M,A1
+192,166,Arun Reddy,29,M,A1
+193,166,Ramesh Hegde,39,M,A2
+194,167,Unknown,23,M,A1
+195,168,Prasad Prasad,43,M,A1
+196,169,Unknown,26,M,A1
+197,170,Prasad Shetty,41,M,A1
+198,171,Shivakumar Shetty,22,M,A1
+199,172,Suresh Kumar,37,M,A1
+200,172,Divya Shetty,45,M,A2
+201,173,Rekha Nayak,44,M,A1
+202,173,Anil Pasha,41,M,A2
+203,174,Prasad Murthy,42,M,A1
+204,175,Unknown,27,M,A1
+205,176,Harish Prasad,31,M,A1
+206,176,Nagaraj Gowda,38,M,A2
+207,177,Unknown,26,M,A1
+208,178,Shivakumar Achar,37,M,A1
+209,178,Kiran Gowda,33,M,A2
+210,179,Bhavya Setty,43,M,A1
+211,179,Manjunath Bhat,40,M,A2
+212,180,Basavaraj Reddy,26,M,A1
+213,180,Basavaraj Prasad,21,M,A2
+214,181,Unknown,43,M,A1
+215,182,Anil Raju,21,M,A1
+216,183,Unknown,41,M,A1
+217,184,Unknown,24,M,A1
+218,185,Ravi Setty,18,M,A1
+219,185,Manjunath Setty,35,M,A2
+220,186,Unknown,29,M,A1
+221,187,Firoz Naik,23,M,A1
+222,188,Manjunath Bhat,32,M,A1
+223,189,Suresh Murthy,28,M,A1
+224,190,Unknown,20,M,A1
+225,191,Kavya Raju,20,M,A1
+226,191,Arun Raju,35,M,A2
+227,192,Anil Kumar,33,M,A1
+228,192,Kiran Prasad,41,M,A2
+229,193,Unknown,32,M,A1
+230,194,Harish Shetty,29,M,A1
+231,195,Nagaraj Hegde,37,M,A1
+232,195,Naveen Gowda,21,M,A2
+233,196,Vinay Murthy,20,M,A1
+234,197,Unknown,28,M,A1
+235,198,Umesh Nayak,34,M,A1
+236,198,Prasad Patil,36,M,A2
+237,199,Unknown,41,M,A1
+238,200,Naveen Murthy,37,M,A1
+239,200,Basavaraj Kumar,25,M,A2
+240,201,Shivakumar Bhat,20,M,A1
+241,201,Harish Pasha,28,M,A2
+242,202,Anitha Patil,38,M,A1
+243,202,Suresh Setty,40,M,A2
+244,203,Manjunath Shetty,38,M,A1
+245,204,Unknown,24,M,A1
+246,205,Unknown,34,M,A1
+247,206,Umesh Pasha,18,M,A1
+248,206,Nagaratna Murthy,38,M,A2
+249,207,Vidya Nayak,33,M,A1
+250,207,Shivakumar Shetty,39,M,A2
+251,208,Unknown,43,M,A1
+252,209,Deepa Nayak,28,M,A1
+253,210,Suresh Kumar,45,M,A1
+254,211,Unknown,27,M,A1
+255,212,Unknown,37,M,A1
+256,213,Unknown,22,M,A1
+257,214,Unknown,24,M,A1
+258,215,Unknown,27,M,A1
+259,216,Ravi Patil,35,M,A1
+260,216,Girish Shetty,21,M,A2
+261,217,Naveen Setty,33,M,A1
+262,217,Kavya Raju,36,M,A2
+263,218,Imran Naik,20,M,A1
+264,219,Shwetha Patil,23,M,A1
+265,220,Ravi Nayak,28,M,A1
+266,221,Unknown,32,M,A1
+267,222,Prakash Gowda,22,M,A1
+268,223,Prakash Kumar,24,M,A1
+269,224,Nagaratna Patil,19,M,A1
+270,224,Suresh Kumar,18,M,A2
+271,225,Lokesh Murthy,24,M,A1
+272,226,Firoz Naik,35,M,A1
+273,226,Shivakumar Raju,42,M,A2
+274,227,Anitha Murthy,35,M,A1
+275,228,Unknown,24,M,A1
+276,229,Unknown,32,M,A1
+277,230,Unknown,22,M,A1
+278,231,Santosh Setty,20,M,A1
+279,232,Unknown,32,M,A1
+280,233,Unknown,31,M,A1
+281,234,Suresh Shetty,33,M,A1
+282,234,Roopa Naik,44,M,A2
+283,235,Savitha Gowda,30,M,A1
+284,236,Ramesh Prasad,24,M,A1
+285,237,Unknown,27,M,A1
+286,238,Vidya Achar,32,M,A1
+287,239,Unknown,29,M,A1
+288,240,Deepa Gowda,22,M,A1
+289,241,Nagaraj Shetty,35,M,A1
+290,241,Shivakumar Reddy,22,M,A2
+291,242,Basavaraj Achar,42,M,A1
+292,243,Sushma Shetty,19,M,A1
+293,244,Unknown,29,M,A1
+294,245,Prakash Setty,43,M,A1
+295,246,Unknown,38,M,A1
+296,247,Bhavya Naik,36,M,A1
+297,248,Unknown,27,M,A1
+298,249,Unknown,41,M,A1
+299,250,Arun Hegde,23,M,A1
+300,250,Prakash Bhat,43,M,A2
+301,251,Ramesh Patil,29,M,A1
+302,251,Arun Setty,22,M,A2
+303,252,Suresh Hegde,32,M,A1
+304,252,Prakash Shetty,23,M,A2
+305,253,Shivakumar Pasha,37,M,A1
+306,253,Geetha Setty,21,M,A2
+307,254,Kiran Prasad,38,M,A1
+308,255,Mahesh Murthy,42,M,A1
+309,255,Shwetha Achar,27,M,A2
+310,256,Unknown,34,M,A1
+311,257,Vinay Shetty,19,M,A1
+312,258,Mahesh Nayak,22,M,A1
+313,259,Rekha Pasha,18,M,A1
+314,259,Ramesh Nayak,44,M,A2
+315,260,Firoz Setty,28,M,A1
+316,261,Lokesh Shetty,19,M,A1
+317,262,Santosh Bhat,23,M,A1
+318,263,Ravi Gowda,37,M,A1
+319,263,Manjunath Rao,27,M,A2
+320,264,Kavya Rao,27,M,A1
+321,265,Unknown,38,M,A1
+322,266,Ramesh Rao,18,M,A1
+323,266,Shivakumar Hegde,23,M,A2
+324,267,Suresh Gowda,21,M,A1
+325,267,Savitha Patil,39,M,A2
+326,268,Unknown,39,M,A1
+327,269,Basavaraj Raju,45,M,A1
+328,270,Mahesh Prasad,26,M,A1
+329,271,Ravi Reddy,39,M,A1
+330,271,Arun Raju,39,M,A2
+331,272,Naveen Bhat,19,M,A1
+332,273,Basavaraj Pasha,26,M,A1
+333,274,Arun Raju,23,M,A1
+334,275,Ravi Hegde,43,M,A1
+335,276,Umesh Achar,20,M,A1
+336,277,Unknown,34,M,A1
+337,278,Bhavya Setty,39,M,A1
+338,278,Anil Reddy,41,M,A2
+339,279,Basavaraj Setty,20,M,A1
+340,280,Prakash Prasad,26,M,A1
+341,281,Imran Nayak,41,M,A1
+342,282,Arun Prasad,34,M,A1
+343,283,Santosh Shetty,40,M,A1
+344,284,Firoz Murthy,33,M,A1
+345,284,Nagaraj Rao,44,M,A2
+346,285,Anil Setty,35,M,A1
+347,286,Unknown,24,M,A1
+348,287,Manjunath Achar,29,M,A1
+349,288,Shwetha Patil,19,M,A1
+350,289,Roopa Pasha,20,M,A1
+351,289,Santosh Prasad,25,M,A2
+352,290,Unknown,33,M,A1
+353,291,Unknown,45,M,A1
+354,292,Santosh Murthy,43,M,A1
+355,293,Imran Patil,29,M,A1
+356,294,Unknown,25,M,A1
+357,295,Harish Nayak,33,M,A1
+358,296,Imran Hegde,19,M,A1
+359,296,Sushma Raju,40,M,A2
+360,297,Arun Gowda,28,M,A1
+361,298,Deepa Naik,21,M,A1
+362,298,Sushma Naik,20,M,A2
+363,299,Girish Murthy,23,M,A1
+364,300,Prakash Kumar,36,M,A1
+365,300,Kiran Nayak,28,M,A2
+366,301,Divya Achar,27,M,A1
+367,301,Firoz Raju,19,M,A2
+368,302,Unknown,20,M,A1
+369,303,Geetha Setty,25,M,A1
+370,303,Firoz Gowda,37,M,A2
+371,304,Vidya Shetty,39,M,A1
+372,304,Manjunath Setty,41,M,A2
+373,305,Mahesh Hegde,24,M,A1
+374,306,Bhavya Raju,25,M,A1
+375,307,Unknown,41,M,A1
+376,308,Unknown,26,M,A1
+377,309,Anil Reddy,38,M,A1
+378,309,Deepa Naik,33,M,A2
+379,310,Unknown,21,M,A1
+380,311,Unknown,35,M,A1
+381,312,Unknown,45,M,A1
+382,313,Firoz Prasad,45,M,A1
+383,314,Unknown,39,M,A1
+384,315,Rekha Bhat,33,M,A1
+385,315,Savitha Bhat,40,M,A2
+386,316,Nagaraj Kumar,33,M,A1
+387,317,Shivakumar Patil,25,M,A1
+388,318,Prakash Nayak,20,M,A1
+389,319,Girish Bhat,38,M,A1
+390,320,Naveen Murthy,42,M,A1
+391,321,Anil Reddy,31,M,A1
+392,322,Unknown,37,M,A1
+393,323,Manjunath Achar,45,M,A1
+394,324,Sushma Bhat,41,M,A1
+395,324,Divya Naik,20,M,A2
+396,325,Vinay Achar,31,M,A1
+397,326,Unknown,31,M,A1
+398,327,Arun Murthy,33,M,A1
+399,327,Prasad Setty,26,M,A2
+400,328,Savitha Rao,40,M,A1
+401,329,Suresh Rao,31,M,A1
+402,330,Vinay Rao,43,M,A1
+403,331,Kiran Reddy,44,M,A1
+404,332,Basavaraj Gowda,35,M,A1
+405,333,Prakash Kumar,44,M,A1
+406,333,Kavya Patil,42,M,A2
+407,334,Nagaratna Raju,36,M,A1
+408,335,Mahesh Hegde,19,M,A1
+409,336,Prakash Pasha,25,M,A1
+410,337,Lokesh Reddy,30,M,A1
+411,338,Nagaraj Naik,28,M,A1
+412,338,Ramesh Patil,44,M,A2
+413,339,Umesh Raju,45,M,A1
+414,340,Ravi Pasha,31,M,A1
+415,340,Basavaraj Murthy,23,M,A2
+416,341,Imran Patil,32,M,A1
+417,342,Bhavya Bhat,22,M,A1
+418,342,Vinay Prasad,42,M,A2
+419,343,Naveen Shetty,27,M,A1
+420,344,Lokesh Setty,38,M,A1
+421,344,Naveen Murthy,37,M,A2
+422,345,Divya Nayak,39,M,A1
+423,346,Unknown,24,M,A1
+424,347,Arun Setty,41,M,A1
+425,347,Lakshmi Prasad,34,M,A2
+426,348,Unknown,22,M,A1
+427,349,Unknown,43,M,A1
+428,350,Shwetha Naik,25,M,A1
+429,351,Bhavya Nayak,44,M,A1
+430,351,Shivakumar Naik,25,M,A2
+431,352,Deepa Pasha,36,M,A1
+432,353,Basavaraj Patil,30,M,A1
+433,354,Unknown,33,M,A1
+434,355,Geetha Naik,20,M,A1
+435,356,Unknown,35,M,A1
+436,357,Unknown,27,M,A1
+437,358,Unknown,41,M,A1
+438,359,Shivakumar Naik,18,M,A1
+439,359,Divya Shetty,43,M,A2
+440,360,Anitha Murthy,28,M,A1
+441,360,Manjunath Raju,38,M,A2
+442,361,Unknown,36,M,A1
+443,362,Deepa Achar,29,M,A1
+444,362,Ramesh Pasha,33,M,A2
+445,363,Savitha Rao,21,M,A1
+446,363,Savitha Murthy,18,M,A2
+447,364,Santosh Kumar,39,M,A1
+448,364,Imran Bhat,37,M,A2
+449,365,Nagaraj Pasha,18,M,A1
+450,366,Nagaraj Achar,37,M,A1
+451,367,Unknown,35,M,A1
+452,368,Unknown,44,M,A1
+453,369,Deepa Naik,44,M,A1
+454,370,Unknown,39,M,A1
+455,371,Rekha Nayak,18,M,A1
+456,372,Nagaratna Achar,33,M,A1
+457,372,Anil Kumar,33,M,A2
+458,373,Santosh Rao,26,M,A1
+459,374,Unknown,44,M,A1
+460,375,Unknown,29,M,A1
+461,376,Unknown,32,M,A1
+462,377,Nagaratna Raju,41,M,A1
+463,377,Lokesh Setty,31,M,A2
+464,378,Basavaraj Setty,40,M,A1
+465,378,Nagaratna Gowda,37,M,A2
+466,379,Imran Shetty,32,M,A1
+467,380,Santosh Kumar,19,M,A1
+468,381,Prasad Setty,31,M,A1
+469,381,Vidya Shetty,33,M,A2
+470,382,Santosh Rao,41,M,A1
+471,383,Manjunath Pasha,34,M,A1
+472,384,Umesh Gowda,31,M,A1
+473,385,Umesh Patil,28,M,A1
+474,386,Unknown,33,M,A1
+475,387,Prakash Rao,42,M,A1
+476,387,Prakash Setty,43,M,A2
+477,388,Naveen Raju,23,M,A1
+478,388,Harish Gowda,20,M,A2
+479,389,Shwetha Hegde,24,M,A1
+480,390,Roopa Patil,38,M,A1
+481,391,Savitha Naik,37,M,A1
+482,392,Unknown,21,M,A1
+483,393,Naveen Shetty,40,M,A1
+484,394,Divya Bhat,21,M,A1
+485,395,Shivakumar Rao,22,M,A1
+486,395,Suresh Patil,38,M,A2
+487,396,Mahesh Nayak,27,M,A1
+488,396,Umesh Achar,29,M,A2
+489,397,Kiran Murthy,31,M,A1
+490,397,Lokesh Murthy,43,M,A2
+491,398,Unknown,39,M,A1
+492,399,Manjunath Patil,39,M,A1
+493,399,Umesh Pasha,20,M,A2
+494,400,Ravi Rao,35,M,A1
+495,401,Deepa Naik,20,M,A1
+496,401,Rekha Rao,32,M,A2
+497,402,Unknown,22,M,A1
+498,403,Girish Raju,23,M,A1
+499,404,Unknown,42,M,A1
+500,405,Unknown,31,M,A1
+501,406,Deepa Bhat,42,M,A1
+502,407,Savitha Setty,21,M,A1
+503,408,Unknown,43,M,A1
+504,409,Unknown,32,M,A1
+505,410,Unknown,35,M,A1
+506,411,Unknown,26,M,A1
+507,412,Suresh Pasha,43,M,A1
+508,413,Prasad Bhat,36,M,A1
+509,413,Kiran Raju,31,M,A2
+510,414,Girish Shetty,36,M,A1
+511,415,Unknown,26,M,A1
+512,416,Unknown,33,M,A1
+513,417,Lakshmi Rao,36,M,A1
+514,417,Mahesh Prasad,28,M,A2
+515,418,Unknown,22,M,A1
+516,419,Girish Kumar,39,M,A1
+517,420,Arun Rao,27,M,A1
+518,421,Unknown,21,M,A1
+519,422,Vinay Shetty,35,M,A1
+520,423,Unknown,44,M,A1
+521,424,Unknown,24,M,A1
+522,425,Nagaratna Nayak,18,M,A1
+523,426,Unknown,19,M,A1
+524,427,Arun Naik,30,M,A1
+525,428,Imran Raju,42,M,A1
+526,428,Ramesh Setty,27,M,A2
+527,429,Unknown,28,M,A1
+528,430,Unknown,24,M,A1
+529,431,Vidya Gowda,25,M,A1
+530,432,Ravi Rao,44,M,A1
+531,432,Arun Kumar,41,M,A2
+532,433,Bhavya Shetty,21,M,A1
+533,434,Unknown,45,M,A1
+534,435,Unknown,21,M,A1
+535,436,Unknown,29,M,A1
+536,437,Basavaraj Gowda,38,M,A1
+537,438,Firoz Hegde,20,M,A1
+538,439,Vinay Gowda,18,M,A1
+539,440,Unknown,42,M,A1
+540,441,Suresh Kumar,36,M,A1
+541,442,Vinay Prasad,22,M,A1
+542,442,Prasad Achar,32,M,A2
+543,443,Shivakumar Pasha,39,M,A1
+544,444,Unknown,36,M,A1
+545,445,Savitha Naik,18,M,A1
+546,445,Firoz Setty,42,M,A2
+547,446,Deepa Prasad,41,M,A1
+548,447,Umesh Naik,33,M,A1
+549,447,Kavya Nayak,37,M,A2
+550,448,Unknown,36,M,A1
+551,449,Manjunath Achar,23,M,A1
+552,450,Unknown,28,M,A1
+553,451,Santosh Nayak,21,M,A1
+554,452,Unknown,21,M,A1
+555,453,Unknown,40,M,A1
+556,454,Unknown,25,M,A1
+557,455,Rekha Prasad,29,M,A1
+558,455,Ravi Rao,45,M,A2
+559,456,Unknown,40,M,A1
+560,457,Geetha Raju,19,M,A1
+561,458,Unknown,23,M,A1
+562,459,Deepa Nayak,32,M,A1
+563,459,Naveen Kumar,20,M,A2
+564,460,Unknown,35,M,A1
+565,461,Unknown,44,M,A1
+566,462,Unknown,19,M,A1
+567,463,Lokesh Murthy,31,M,A1
+568,464,Ramesh Raju,44,M,A1
+569,465,Basavaraj Shetty,29,M,A1
+570,466,Prakash Gowda,37,M,A1
+571,467,Unknown,18,M,A1
+572,468,Suresh Nayak,40,M,A1
+573,469,Unknown,18,M,A1
+574,470,Lokesh Pasha,39,M,A1
+575,471,Unknown,24,M,A1
+576,472,Basavaraj Rao,19,M,A1
+577,472,Arun Nayak,34,M,A2
+578,473,Savitha Kumar,34,M,A1
+579,473,Shivakumar Setty,34,M,A2
+580,474,Umesh Prasad,35,M,A1
+581,475,Prakash Nayak,23,M,A1
+582,475,Shwetha Raju,27,M,A2
+583,476,Unknown,36,M,A1
+584,477,Prakash Patil,24,M,A1
+585,478,Unknown,20,M,A1
+586,479,Kavya Patil,40,M,A1
+587,479,Roopa Raju,37,M,A2
+588,480,Umesh Raju,24,M,A1
+589,481,Unknown,28,M,A1
+590,482,Unknown,27,M,A1
+591,483,Unknown,26,M,A1
+592,484,Unknown,31,M,A1
+593,485,Girish Reddy,26,M,A1
+594,485,Firoz Prasad,27,M,A2
+595,486,Unknown,45,M,A1
+596,487,Unknown,45,M,A1
+597,488,Kavya Achar,25,M,A1
+598,489,Unknown,24,M,A1
+599,490,Manjunath Raju,32,M,A1
+600,491,Mahesh Bhat,31,M,A1
+601,492,Santosh Naik,27,M,A1
+602,492,Geetha Patil,18,M,A2
+603,493,Manjunath Setty,18,M,A1
+604,494,Unknown,34,M,A1
+605,495,Girish Setty,44,M,A1
+606,495,Kiran Shetty,35,M,A2
+607,496,Prasad Kumar,35,M,A1
+608,497,Unknown,18,M,A1
+609,498,Imran Naik,34,M,A1
+610,499,Unknown,19,M,A1
+611,500,Girish Bhat,35,M,A1
+612,501,Deepa Gowda,37,M,A1
+613,502,Mahesh Hegde,18,M,A1
+614,502,Geetha Kumar,20,M,A2
+615,503,Unknown,35,M,A1
+616,504,Unknown,21,M,A1
+617,505,Unknown,40,M,A1
+618,506,Unknown,22,M,A1
+619,507,Kiran Shetty,20,M,A1
+620,508,Prasad Kumar,32,M,A1
+621,508,Girish Nayak,18,M,A2
+622,509,Harish Setty,41,M,A1
+623,509,Harish Naik,36,M,A2
+624,510,Unknown,42,M,A1
+625,511,Imran Murthy,19,M,A1
+626,512,Unknown,36,M,A1
+627,513,Prakash Prasad,33,M,A1
+628,514,Anitha Prasad,29,M,A1
+629,515,Anitha Bhat,44,M,A1
+630,516,Nagaratna Hegde,30,M,A1
+631,516,Mahesh Nayak,36,M,A2
+632,517,Savitha Achar,30,M,A1
+633,517,Lokesh Raju,27,M,A2
+634,518,Lokesh Prasad,25,M,A1
+635,519,Imran Kumar,40,M,A1
+636,519,Deepa Gowda,34,M,A2
+637,520,Nagaraj Kumar,41,M,A1
+638,521,Bhavya Pasha,43,M,A1
+639,522,Unknown,19,M,A1
+640,523,Unknown,44,M,A1
+641,524,Naveen Achar,24,M,A1
+642,525,Unknown,30,M,A1
+643,526,Unknown,36,M,A1
+644,527,Suresh Pasha,31,M,A1
+645,527,Manjunath Kumar,33,M,A2
+646,528,Kiran Reddy,23,M,A1
+647,529,Basavaraj Murthy,40,M,A1
+648,529,Ramesh Prasad,19,M,A2
+649,530,Ramesh Setty,21,M,A1
+650,531,Unknown,37,M,A1
+651,532,Unknown,18,M,A1
+652,533,Umesh Patil,36,M,A1
+653,534,Girish Achar,20,M,A1
+654,534,Anil Patil,20,M,A2
+655,535,Kiran Hegde,30,M,A1
+656,536,Naveen Murthy,24,M,A1
+657,537,Roopa Setty,23,M,A1
+658,537,Vinay Reddy,26,M,A2
+659,538,Basavaraj Hegde,39,M,A1
+660,539,Unknown,42,M,A1
+661,540,Suresh Patil,21,M,A1
+662,540,Savitha Setty,36,M,A2
+663,541,Bhavya Gowda,40,M,A1
+664,542,Imran Murthy,31,M,A1
+665,542,Umesh Achar,25,M,A2
+666,543,Divya Achar,42,M,A1
+667,544,Imran Naik,23,M,A1
+668,545,Naveen Pasha,32,M,A1
+669,546,Umesh Hegde,27,M,A1
+670,546,Anitha Shetty,41,M,A2
+671,547,Unknown,24,M,A1
+672,548,Naveen Murthy,45,M,A1
+673,549,Unknown,23,M,A1
+674,550,Prakash Setty,36,M,A1
+675,551,Unknown,36,M,A1
+676,552,Unknown,39,M,A1
+677,553,Prakash Reddy,23,M,A1
+678,554,Ravi Rao,19,M,A1
+679,554,Ramesh Gowda,18,M,A2
+680,555,Prakash Murthy,31,M,A1
+681,556,Unknown,31,M,A1
+682,557,Unknown,33,M,A1
+683,558,Naveen Bhat,22,M,A1
+684,558,Firoz Setty,40,M,A2
+685,559,Prakash Setty,36,M,A1
+686,560,Unknown,33,M,A1
+687,561,Sushma Nayak,41,M,A1
+688,562,Unknown,40,M,A1
+689,563,Umesh Naik,44,M,A1
+690,564,Harish Shetty,42,M,A1
+691,565,Kiran Raju,36,M,A1
+692,565,Prakash Shetty,25,M,A2
+693,566,Mahesh Pasha,22,M,A1
+694,566,Anil Raju,32,M,A2
+695,567,Unknown,36,M,A1
+696,568,Kavya Prasad,20,M,A1
+697,569,Prasad Shetty,26,M,A1
+698,570,Vinay Achar,35,M,A1
+699,571,Anil Bhat,42,M,A1
+700,572,Girish Hegde,20,M,A1
+701,573,Unknown,29,M,A1
+702,574,Imran Kumar,19,M,A1
+703,574,Kiran Reddy,37,M,A2
+704,575,Imran Nayak,23,M,A1
+705,576,Unknown,25,M,A1
+706,577,Savitha Prasad,38,M,A1
+707,578,Nagaratna Bhat,26,M,A1
+708,578,Roopa Prasad,33,M,A2
+709,579,Bhavya Murthy,44,M,A1
+710,579,Umesh Rao,24,M,A2
+711,580,Ravi Reddy,18,M,A1
+712,581,Shwetha Achar,27,M,A1
+713,582,Imran Hegde,43,M,A1
+714,583,Imran Patil,34,M,A1
+715,584,Harish Shetty,38,M,A1
+716,584,Nagaratna Naik,23,M,A2
+717,585,Unknown,20,M,A1
+718,586,Unknown,29,M,A1
+719,587,Kiran Hegde,20,M,A1
+720,588,Nagaratna Raju,22,M,A1
+721,588,Savitha Shetty,20,M,A2
+722,589,Unknown,39,M,A1
+723,590,Anil Reddy,27,M,A1
+724,591,Unknown,42,M,A1
+725,592,Unknown,23,M,A1
+726,593,Vinay Reddy,18,M,A1
+727,593,Basavaraj Shetty,23,M,A2
+728,594,Anil Nayak,20,M,A1
+729,594,Kavya Setty,31,M,A2
+730,595,Unknown,45,M,A1
+731,596,Deepa Achar,25,M,A1
+732,597,Girish Rao,42,M,A1
+733,597,Imran Reddy,39,M,A2
+734,598,Firoz Reddy,24,M,A1
+735,599,Kiran Gowda,39,M,A1
+736,599,Imran Raju,24,M,A2
+737,600,Vinay Hegde,18,M,A1
+738,601,Unknown,20,M,A1
+739,602,Santosh Kumar,37,M,A1
+740,603,Unknown,35,M,A1
+741,604,Unknown,43,M,A1
+742,605,Lokesh Prasad,19,M,A1
+743,606,Harish Gowda,39,M,A1
+744,607,Prakash Patil,43,M,A1
+745,607,Santosh Achar,40,M,A2
+746,608,Lakshmi Nayak,42,M,A1
+747,609,Unknown,20,M,A1
+748,610,Unknown,23,M,A1
+749,611,Unknown,25,M,A1
+750,612,Girish Reddy,41,M,A1
+751,612,Divya Setty,34,M,A2
+752,613,Ramesh Gowda,42,M,A1
+753,614,Unknown,40,M,A1
+754,615,Anitha Raju,45,M,A1
+755,616,Shivakumar Prasad,39,M,A1
+756,616,Savitha Patil,21,M,A2
+757,617,Anitha Hegde,37,M,A1
+758,617,Rekha Kumar,19,M,A2
+759,618,Mahesh Murthy,36,M,A1
+760,618,Deepa Raju,26,M,A2
+761,619,Anil Hegde,25,M,A1
+762,620,Ramesh Prasad,26,M,A1
+763,621,Santosh Patil,19,M,A1
+764,621,Basavaraj Prasad,28,M,A2
+765,622,Arun Achar,30,M,A1
+766,622,Roopa Reddy,33,M,A2
+767,623,Manjunath Raju,42,M,A1
+768,624,Ravi Murthy,20,M,A1
+769,624,Bhavya Patil,39,M,A2
+770,625,Unknown,43,M,A1
+771,626,Suresh Rao,31,M,A1
+772,627,Harish Gowda,31,M,A1
+773,628,Unknown,23,M,A1
+774,629,Unknown,44,M,A1
+775,630,Prasad Rao,21,M,A1
+776,631,Umesh Raju,36,M,A1
+777,631,Naveen Prasad,37,M,A2
+778,632,Prasad Kumar,19,M,A1
+779,633,Ravi Murthy,28,M,A1
+780,633,Shwetha Pasha,22,M,A2
+781,634,Unknown,36,M,A1
+782,635,Vinay Naik,39,M,A1
+783,636,Unknown,24,M,A1
+784,637,Unknown,40,M,A1
+785,638,Kavya Shetty,30,M,A1
+786,639,Rekha Gowda,22,M,A1
+787,639,Sushma Gowda,30,M,A2
+788,640,Firoz Shetty,37,M,A1
+789,641,Unknown,32,M,A1
+790,642,Unknown,43,M,A1
+791,643,Anil Patil,31,M,A1
+792,644,Lokesh Nayak,25,M,A1
+793,644,Roopa Setty,45,M,A2
+794,645,Unknown,34,M,A1
+795,646,Imran Rao,22,M,A1
+796,646,Anil Gowda,24,M,A2
+797,647,Lokesh Hegde,41,M,A1
+798,647,Anil Hegde,41,M,A2
+799,648,Lakshmi Setty,42,M,A1
+800,648,Sushma Reddy,23,M,A2
+801,649,Unknown,35,M,A1
+802,650,Rekha Bhat,22,M,A1
+803,651,Anil Bhat,25,M,A1
+804,652,Mahesh Achar,23,M,A1
+805,653,Vinay Raju,24,M,A1
+806,654,Unknown,43,M,A1
+807,655,Unknown,32,M,A1
+808,656,Manjunath Murthy,40,M,A1
+809,657,Unknown,22,M,A1
+810,658,Unknown,43,M,A1
+811,659,Nagaraj Reddy,41,M,A1
+812,660,Girish Achar,21,M,A1
+813,660,Harish Hegde,24,M,A2
+814,661,Imran Reddy,34,M,A1
+815,661,Manjunath Setty,37,M,A2
+816,662,Unknown,34,M,A1
+817,663,Unknown,44,M,A1
+818,664,Naveen Patil,33,M,A1
+819,665,Harish Reddy,44,M,A1
+820,666,Manjunath Rao,39,M,A1
+821,666,Lokesh Raju,21,M,A2
+822,667,Kiran Rao,30,M,A1
+823,668,Firoz Murthy,21,M,A1
+824,669,Vinay Achar,45,M,A1
+825,670,Basavaraj Bhat,44,M,A1
+826,671,Unknown,29,M,A1
+827,672,Sushma Hegde,41,M,A1
+828,673,Savitha Rao,35,M,A1
+829,674,Unknown,43,M,A1
+830,675,Unknown,23,M,A1
+831,676,Manjunath Bhat,24,M,A1
+832,676,Lakshmi Gowda,45,M,A2
+833,677,Unknown,27,M,A1
+834,678,Manjunath Bhat,28,M,A1
+835,678,Lokesh Naik,20,M,A2
+836,679,Geetha Setty,26,M,A1
+837,680,Lokesh Rao,31,M,A1
+838,680,Prakash Raju,25,M,A2
+839,681,Unknown,29,M,A1
+840,682,Lakshmi Setty,25,M,A1
+841,683,Unknown,21,M,A1
+842,684,Naveen Nayak,24,M,A1
+843,684,Bhavya Prasad,41,M,A2
+844,685,Unknown,20,M,A1
+845,686,Shwetha Bhat,43,M,A1
+846,687,Rekha Nayak,32,M,A1
+847,687,Umesh Prasad,39,M,A2
+848,688,Nagaratna Pasha,39,M,A1
+849,688,Shwetha Murthy,26,M,A2
+850,689,Anil Reddy,25,M,A1
+851,689,Geetha Reddy,27,M,A2
+852,690,Geetha Bhat,45,M,A1
+853,691,Unknown,20,M,A1
+854,692,Unknown,44,M,A1
+855,693,Unknown,38,M,A1
+856,694,Unknown,45,M,A1
+857,695,Unknown,21,M,A1
+858,696,Prakash Patil,44,M,A1
+859,696,Firoz Gowda,45,M,A2
+860,697,Divya Rao,43,M,A1
+861,698,Firoz Nayak,26,M,A1
+862,699,Shivakumar Patil,29,M,A1
+863,699,Shivakumar Hegde,32,M,A2
+864,700,Ravi Bhat,39,M,A1
+865,701,Naveen Hegde,19,M,A1
+866,701,Ramesh Nayak,25,M,A2
+867,702,Unknown,20,M,A1
+868,703,Prakash Reddy,21,M,A1
+869,704,Shivakumar Rao,43,M,A1
+870,704,Ravi Bhat,42,M,A2
+871,705,Basavaraj Achar,39,M,A1
+872,705,Ramesh Kumar,33,M,A2
+873,706,Arun Pasha,21,M,A1
+874,707,Unknown,31,M,A1
+875,708,Unknown,31,M,A1
+876,709,Ravi Bhat,31,M,A1
+877,710,Lokesh Shetty,27,M,A1
+878,711,Unknown,32,M,A1
+879,712,Suresh Bhat,34,M,A1
+880,713,Unknown,29,M,A1
+881,714,Imran Naik,26,M,A1
+882,714,Santosh Reddy,25,M,A2
+883,715,Nagaraj Nayak,20,M,A1
+884,715,Rekha Reddy,37,M,A2
+885,716,Unknown,19,M,A1
+886,717,Divya Hegde,31,M,A1
+887,718,Ravi Nayak,44,M,A1
+888,719,Manjunath Reddy,44,M,A1
+889,720,Unknown,37,M,A1
+890,721,Rekha Pasha,19,M,A1
+891,721,Anitha Prasad,42,M,A2
+892,722,Nagaraj Naik,37,M,A1
+893,723,Savitha Pasha,18,M,A1
+894,723,Savitha Bhat,19,M,A2
+895,724,Unknown,19,M,A1
+896,725,Unknown,31,M,A1
+897,726,Vidya Murthy,18,M,A1
+898,726,Shwetha Patil,45,M,A2
+899,727,Vidya Murthy,31,M,A1
+900,728,Unknown,35,M,A1
+901,729,Anil Achar,36,M,A1
+902,729,Harish Murthy,20,M,A2
+903,730,Lokesh Murthy,18,M,A1
+904,731,Unknown,33,M,A1
+905,732,Ramesh Bhat,26,M,A1
+906,732,Ramesh Patil,28,M,A2
+907,733,Unknown,39,M,A1
+908,734,Shivakumar Kumar,19,M,A1
+909,734,Deepa Gowda,32,M,A2
+910,735,Ravi Kumar,24,M,A1
+911,735,Geetha Bhat,28,M,A2
+912,736,Lakshmi Setty,33,M,A1
+913,737,Unknown,42,M,A1
+914,738,Unknown,43,M,A1
+915,739,Unknown,43,M,A1
+916,740,Shivakumar Raju,32,M,A1
+917,741,Savitha Raju,24,M,A1
+918,741,Manjunath Nayak,45,M,A2
+919,742,Unknown,32,M,A1
+920,743,Suresh Patil,38,M,A1
+921,744,Unknown,42,M,A1
+922,745,Anil Gowda,38,M,A1
+923,745,Prasad Bhat,33,M,A2
+924,746,Rekha Bhat,29,M,A1
+925,747,Anitha Gowda,24,M,A1
+926,747,Ramesh Pasha,32,M,A2
+927,748,Unknown,39,M,A1
+928,749,Vinay Naik,42,M,A1
+929,750,Unknown,18,M,A1
+930,751,Roopa Shetty,18,M,A1
+931,752,Unknown,44,M,A1
+932,753,Lakshmi Reddy,25,M,A1
+933,753,Umesh Reddy,33,M,A2
+934,754,Naveen Shetty,30,M,A1
+935,754,Savitha Murthy,43,M,A2
+936,755,Imran Hegde,40,M,A1
+937,755,Lakshmi Kumar,21,M,A2
+938,756,Girish Shetty,40,M,A1
+939,757,Unknown,27,M,A1
+940,758,Unknown,37,M,A1
+941,759,Unknown,35,M,A1
+942,760,Girish Murthy,33,M,A1
+943,761,Rekha Pasha,25,M,A1
+944,761,Deepa Gowda,36,M,A2
+945,762,Vidya Hegde,40,M,A1
+946,762,Ravi Prasad,21,M,A2
+947,763,Nagaraj Bhat,26,M,A1
+948,764,Prakash Bhat,19,M,A1
+949,764,Kiran Achar,45,M,A2
+950,765,Umesh Murthy,22,M,A1
+951,765,Santosh Setty,45,M,A2
+952,766,Unknown,32,M,A1
+953,767,Ramesh Hegde,39,M,A1
+954,768,Manjunath Naik,28,M,A1
+955,769,Arun Rao,31,M,A1
+956,770,Girish Raju,31,M,A1
+957,771,Savitha Patil,41,M,A1
+958,771,Anitha Gowda,23,M,A2
+959,772,Prasad Achar,27,M,A1
+960,772,Girish Nayak,45,M,A2
+961,773,Unknown,24,M,A1
+962,774,Ramesh Kumar,45,M,A1
+963,774,Harish Murthy,21,M,A2
+964,775,Unknown,22,M,A1
+965,776,Vidya Bhat,28,M,A1
+966,776,Shwetha Achar,32,M,A2
+967,777,Rekha Rao,43,M,A1
+968,778,Unknown,43,M,A1
+969,779,Unknown,34,M,A1
+970,780,Suresh Shetty,31,M,A1
+971,780,Mahesh Setty,43,M,A2
+972,781,Roopa Gowda,24,M,A1
+973,782,Unknown,19,M,A1
+974,783,Unknown,22,M,A1
+975,784,Unknown,20,M,A1
+976,785,Unknown,37,M,A1
+977,786,Kiran Rao,34,M,A1
+978,787,Nagaratna Raju,29,M,A1
+979,787,Sushma Shetty,28,M,A2
+980,788,Imran Rao,23,M,A1
+981,788,Divya Reddy,20,M,A2
+982,789,Mahesh Naik,39,M,A1
+983,790,Basavaraj Setty,33,M,A1
+984,790,Mahesh Reddy,18,M,A2
+985,791,Prakash Reddy,21,M,A1
+986,791,Lakshmi Shetty,28,M,A2
+987,792,Umesh Achar,35,M,A1
+988,792,Vinay Rao,29,M,A2
+989,793,Unknown,21,M,A1
+990,794,Unknown,30,M,A1
+991,795,Unknown,42,M,A1
+992,796,Sushma Bhat,23,M,A1
+993,797,Prasad Kumar,25,M,A1
+994,797,Naveen Prasad,41,M,A2
+995,798,Unknown,26,M,A1
+996,799,Shwetha Hegde,45,M,A1
+997,800,Lokesh Gowda,31,M,A1
+998,800,Firoz Pasha,21,M,A2
+999,801,Imran Achar,32,M,A1
+1000,801,Girish Prasad,27,M,A2
+1001,802,Unknown,32,M,A1
+1002,803,Ramesh Patil,42,M,A1
+1003,804,Unknown,36,M,A1
+1004,805,Unknown,30,M,A1
+1005,806,Vinay Kumar,26,M,A1
+1006,807,Shwetha Setty,43,M,A1
+1007,807,Bhavya Bhat,33,M,A2
+1008,808,Deepa Setty,44,M,A1
+1009,808,Nagaratna Gowda,31,M,A2
+1010,809,Unknown,32,M,A1
+1011,810,Lakshmi Raju,37,M,A1
+1012,811,Ramesh Bhat,22,M,A1
+1013,812,Shwetha Pasha,36,M,A1
+1014,813,Suresh Kumar,28,M,A1
+1015,813,Sushma Bhat,39,M,A2
+1016,814,Naveen Reddy,33,M,A1
+1017,814,Anil Reddy,35,M,A2
+1018,815,Unknown,39,M,A1
+1019,816,Lokesh Nayak,44,M,A1
+1020,817,Shwetha Nayak,23,M,A1
+1021,817,Lokesh Prasad,30,M,A2
+1022,818,Unknown,45,M,A1
+1023,819,Unknown,31,M,A1
+1024,820,Geetha Nayak,23,M,A1
+1025,821,Ramesh Patil,23,M,A1
+1026,821,Lakshmi Kumar,31,M,A2
+1027,822,Imran Patil,37,M,A1
+1028,822,Anil Pasha,22,M,A2
+1029,823,Vinay Gowda,33,M,A1
+1030,824,Unknown,25,M,A1
+1031,825,Unknown,43,M,A1
+1032,826,Kavya Rao,26,M,A1
+1033,827,Santosh Murthy,39,M,A1
+1034,828,Ramesh Naik,34,M,A1
+1035,829,Unknown,27,M,A1
+1036,830,Unknown,35,M,A1
+1037,831,Nagaraj Pasha,43,M,A1
+1038,832,Imran Nayak,22,M,A1
+1039,832,Prasad Pasha,27,M,A2
+1040,833,Anitha Setty,23,M,A1
+1041,833,Prasad Raju,22,M,A2
+1042,834,Basavaraj Reddy,45,M,A1
+1043,834,Vidya Shetty,23,M,A2
+1044,835,Shivakumar Patil,32,M,A1
+1045,836,Anil Rao,27,M,A1
+1046,837,Unknown,29,M,A1
+1047,838,Unknown,26,M,A1
+1048,839,Kavya Reddy,29,M,A1
+1049,840,Unknown,32,M,A1
+1050,841,Unknown,23,M,A1
+1051,842,Suresh Bhat,37,M,A1
+1052,843,Kiran Pasha,39,M,A1
+1053,844,Ramesh Hegde,30,M,A1
+1054,845,Unknown,23,M,A1
+1055,846,Kiran Murthy,19,M,A1
+1056,846,Anitha Naik,26,M,A2
+1057,847,Unknown,38,M,A1
+1058,848,Shwetha Raju,43,M,A1
+1059,849,Unknown,25,M,A1
+1060,850,Unknown,21,M,A1
+1061,851,Sushma Hegde,20,M,A1
+1062,851,Geetha Naik,33,M,A2
+1063,852,Unknown,23,M,A1
+1064,853,Unknown,22,M,A1
+1065,854,Arun Reddy,18,M,A1
+1066,854,Arun Prasad,32,M,A2
+1067,855,Vinay Murthy,26,M,A1
+1068,855,Girish Setty,26,M,A2
+1069,856,Imran Prasad,21,M,A1
+1070,856,Roopa Prasad,41,M,A2
+1071,857,Divya Reddy,42,M,A1
+1072,858,Naveen Patil,39,M,A1
+1073,858,Mahesh Bhat,41,M,A2
+1074,859,Ravi Setty,34,M,A1
+1075,860,Deepa Rao,40,M,A1
+1076,860,Prakash Achar,30,M,A2
+1077,861,Roopa Bhat,39,M,A1
+1078,861,Mahesh Nayak,38,M,A2
+1079,862,Lokesh Prasad,29,M,A1
+1080,863,Kavya Gowda,33,M,A1
+1081,864,Kavya Achar,22,M,A1
+1082,864,Santosh Nayak,26,M,A2
+1083,865,Rekha Pasha,21,M,A1
+1084,865,Prakash Kumar,35,M,A2
+1085,866,Unknown,28,M,A1
+1086,867,Firoz Kumar,22,M,A1
+1087,868,Anitha Patil,36,M,A1
+1088,869,Unknown,35,M,A1
+1089,870,Unknown,45,M,A1
+1090,871,Suresh Prasad,22,M,A1
+1091,871,Kiran Nayak,35,M,A2
+1092,872,Unknown,38,M,A1
+1093,873,Sushma Gowda,40,M,A1
+1094,874,Unknown,27,M,A1
+1095,875,Unknown,39,M,A1
+1096,876,Unknown,21,M,A1
+1097,877,Prasad Bhat,37,M,A1
+1098,878,Manjunath Reddy,40,M,A1
+1099,879,Umesh Pasha,39,M,A1
+1100,880,Sushma Kumar,20,M,A1
+1101,880,Girish Prasad,32,M,A2
+1102,881,Unknown,37,M,A1
+1103,882,Unknown,30,M,A1
+1104,883,Unknown,32,M,A1
+1105,884,Unknown,40,M,A1
+1106,885,Unknown,39,M,A1
+1107,886,Anitha Rao,18,M,A1
+1108,887,Unknown,28,M,A1
+1109,888,Shwetha Nayak,32,M,A1
+1110,889,Savitha Bhat,35,M,A1
+1111,890,Unknown,25,M,A1
+1112,891,Kavya Nayak,33,M,A1
+1113,892,Unknown,44,M,A1
+1114,893,Kiran Reddy,33,M,A1
+1115,893,Suresh Rao,38,M,A2
+1116,894,Lakshmi Setty,40,M,A1
+1117,895,Manjunath Murthy,40,M,A1
+1118,895,Umesh Prasad,23,M,A2
+1119,896,Arun Shetty,34,M,A1
+1120,896,Geetha Reddy,22,M,A2
+1121,897,Unknown,24,M,A1
+1122,898,Unknown,18,M,A1
+1123,899,Ravi Pasha,34,M,A1
+1124,899,Firoz Achar,44,M,A2
+1125,900,Unknown,34,M,A1
+1126,901,Unknown,25,M,A1
+1127,902,Anil Reddy,34,M,A1
+1128,902,Girish Setty,27,M,A2
+1129,903,Ravi Achar,28,M,A1
+1130,904,Manjunath Naik,37,M,A1
+1131,905,Umesh Naik,19,M,A1
+1132,905,Firoz Setty,35,M,A2
+1133,906,Unknown,29,M,A1
+1134,907,Geetha Prasad,44,M,A1
+1135,907,Anitha Patil,23,M,A2
+1136,908,Ramesh Rao,43,M,A1
+1137,909,Ravi Pasha,21,M,A1
+1138,909,Roopa Shetty,31,M,A2
+1139,910,Vidya Shetty,25,M,A1
+1140,910,Savitha Achar,23,M,A2
+1141,911,Firoz Rao,21,M,A1
+1142,912,Firoz Kumar,19,M,A1
+1143,912,Nagaratna Setty,45,M,A2
+1144,913,Basavaraj Kumar,30,M,A1
+1145,914,Unknown,41,M,A1
+1146,915,Unknown,43,M,A1
+1147,916,Imran Naik,35,M,A1
+1148,916,Ramesh Pasha,38,M,A2
+1149,917,Kiran Nayak,34,M,A1
+1150,917,Imran Prasad,34,M,A2
+1151,918,Anil Prasad,38,M,A1
+1152,918,Imran Raju,39,M,A2
+1153,919,Unknown,29,M,A1
+1154,920,Deepa Naik,18,M,A1
+1155,921,Vidya Prasad,24,M,A1
+1156,921,Ravi Nayak,45,M,A2
+1157,922,Vinay Hegde,31,M,A1
+1158,923,Girish Setty,34,M,A1
+1159,923,Umesh Raju,28,M,A2
+1160,924,Divya Raju,19,M,A1
+1161,925,Prakash Achar,19,M,A1
+1162,926,Divya Pasha,24,M,A1
+1163,927,Nagaratna Pasha,20,M,A1
+1164,928,Deepa Hegde,19,M,A1
+1165,929,Unknown,20,M,A1
+1166,930,Bhavya Raju,38,M,A1
+1167,931,Unknown,43,M,A1
+1168,932,Santosh Rao,27,M,A1
+1169,932,Roopa Gowda,37,M,A2
+1170,933,Unknown,18,M,A1
+1171,934,Rekha Reddy,44,M,A1
+1172,934,Manjunath Setty,33,M,A2
+1173,935,Anitha Achar,41,M,A1
+1174,935,Manjunath Murthy,21,M,A2
+1175,936,Deepa Nayak,44,M,A1
+1176,937,Prasad Prasad,43,M,A1
+1177,938,Suresh Patil,26,M,A1
+1178,939,Nagaratna Setty,37,M,A1
+1179,940,Manjunath Pasha,21,M,A1
+1180,941,Nagaratna Reddy,21,M,A1
+1181,941,Shwetha Rao,29,M,A2
+1182,942,Shivakumar Pasha,26,M,A1
+1183,942,Deepa Pasha,18,M,A2
+1184,943,Shwetha Murthy,45,M,A1
+1185,943,Anitha Murthy,18,M,A2
+1186,944,Kiran Hegde,45,M,A1
+1187,944,Prakash Gowda,30,M,A2
+1188,945,Nagaratna Achar,36,M,A1
+1189,946,Arun Gowda,39,M,A1
+1190,947,Umesh Gowda,28,M,A1
+1191,947,Imran Naik,33,M,A2
+1192,948,Firoz Setty,37,M,A1
+1193,948,Firoz Nayak,24,M,A2
+1194,949,Rekha Murthy,26,M,A1
+1195,949,Anitha Prasad,26,M,A2
+1196,950,Lakshmi Rao,25,M,A1
+1197,950,Ravi Setty,32,M,A2
+1198,951,Basavaraj Raju,27,M,A1
+1199,952,Anil Nayak,26,M,A1
+1200,953,Santosh Hegde,36,M,A1
+1201,954,Sushma Achar,33,M,A1
+1202,954,Nagaraj Reddy,20,M,A2
+1203,955,Shwetha Raju,45,M,A1
+1204,956,Savitha Pasha,37,M,A1
+1205,956,Prasad Reddy,18,M,A2
+1206,957,Unknown,29,M,A1
+1207,958,Kavya Shetty,43,M,A1
+1208,958,Girish Reddy,23,M,A2
+1209,959,Prasad Bhat,34,M,A1
+1210,959,Sushma Murthy,29,M,A2
+1211,960,Imran Nayak,28,M,A1
+1212,960,Nagaratna Naik,28,M,A2
+1213,961,Mahesh Gowda,32,M,A1
+1214,962,Prakash Rao,24,M,A1
+1215,963,Deepa Pasha,29,M,A1
+1216,963,Kiran Achar,36,M,A2
+1217,964,Ramesh Achar,29,M,A1
+1218,964,Anitha Bhat,29,M,A2
+1219,965,Manjunath Setty,28,M,A1
+1220,966,Unknown,24,M,A1
+1221,967,Basavaraj Raju,41,M,A1
+1222,967,Girish Rao,18,M,A2
+1223,968,Santosh Hegde,27,M,A1
+1224,968,Roopa Kumar,30,M,A2
+1225,969,Unknown,39,M,A1
+1226,970,Prasad Achar,19,M,A1
+1227,970,Prasad Patil,26,M,A2
+1228,971,Unknown,31,M,A1
+1229,972,Basavaraj Setty,38,M,A1
+1230,973,Unknown,41,M,A1
+1231,974,Santosh Gowda,38,M,A1
+1232,975,Vinay Naik,31,M,A1
+1233,975,Basavaraj Prasad,29,M,A2
+1234,976,Firoz Prasad,35,M,A1
+1235,977,Suresh Nayak,22,M,A1
+1236,977,Rekha Murthy,45,M,A2
+1237,978,Anil Setty,41,M,A1
+1238,979,Naveen Achar,40,M,A1
+1239,980,Lokesh Naik,42,M,A1
+1240,981,Naveen Gowda,31,M,A1
+1241,981,Harish Achar,22,M,A2
+1242,982,Unknown,45,M,A1
+1243,983,Unknown,28,M,A1
+1244,984,Harish Shetty,35,M,A1
+1245,985,Roopa Shetty,21,M,A1
+1246,985,Anil Pasha,36,M,A2
+1247,986,Nagaraj Shetty,30,M,A1
+1248,986,Naveen Kumar,36,M,A2
+1249,987,Santosh Murthy,20,M,A1
+1250,988,Rekha Murthy,24,M,A1
+1251,989,Unknown,36,M,A1
+1252,990,Shivakumar Setty,30,M,A1
+1253,991,Unknown,25,M,A1
+1254,992,Unknown,23,M,A1
+1255,993,Divya Pasha,35,M,A1
+1256,994,Unknown,23,M,A1
+1257,995,Divya Shetty,40,M,A1
+1258,995,Santosh Hegde,38,M,A2
+1259,996,Manjunath Patil,28,M,A1
+1260,996,Ravi Rao,25,M,A2
+1261,997,Santosh Reddy,40,M,A1
+1262,997,Vinay Murthy,19,M,A2
+1263,998,Naveen Murthy,30,M,A1
+1264,999,Unknown,32,M,A1
+1265,1000,Ramesh Naik,37,M,A1
+1266,1001,Unknown,25,M,A1
+1267,1002,Unknown,45,M,A1
+1268,1003,Lokesh Hegde,39,M,A1
+1269,1004,Manjunath Bhat,36,M,A1
+1270,1005,Unknown,21,M,A1
+1271,1006,Manjunath Murthy,39,M,A1
+1272,1006,Sushma Nayak,20,M,A2
+1273,1007,Lokesh Raju,42,M,A1
+1274,1008,Unknown,28,M,A1
+1275,1009,Unknown,41,M,A1
+1276,1010,Girish Rao,27,M,A1
+1277,1010,Kiran Bhat,44,M,A2
+1278,1011,Rekha Reddy,26,M,A1
+1279,1011,Imran Reddy,43,M,A2
+1280,1012,Unknown,43,M,A1
+1281,1013,Girish Shetty,38,M,A1
+1282,1014,Prakash Shetty,39,M,A1
+1283,1014,Prakash Achar,42,M,A2
+1284,1015,Anitha Achar,38,M,A1
+1285,1016,Santosh Prasad,27,M,A1
+1286,1017,Shivakumar Kumar,41,M,A1
+1287,1017,Girish Setty,24,M,A2
+1288,1018,Firoz Hegde,35,M,A1
+1289,1018,Kiran Nayak,36,M,A2
+1290,1019,Firoz Hegde,18,M,A1
+1291,1020,Unknown,22,M,A1
+1292,1021,Anitha Prasad,20,M,A1
+1293,1021,Roopa Kumar,44,M,A2
+1294,1022,Sushma Patil,18,M,A1
+1295,1023,Kiran Kumar,18,M,A1
+1296,1024,Umesh Bhat,18,M,A1
+1297,1024,Shivakumar Achar,23,M,A2
+1298,1025,Nagaratna Achar,21,M,A1
+1299,1026,Divya Nayak,42,M,A1
+1300,1026,Umesh Naik,20,M,A2
+1301,1027,Unknown,26,M,A1
+1302,1028,Naveen Naik,22,M,A1
+1303,1029,Nagaratna Achar,38,M,A1
+1304,1030,Harish Nayak,20,M,A1
+1305,1031,Imran Naik,23,M,A1
+1306,1031,Prakash Pasha,31,M,A2
+1307,1032,Rekha Shetty,30,M,A1
+1308,1032,Sushma Raju,18,M,A2
+1309,1033,Unknown,39,M,A1
+1310,1034,Anitha Prasad,19,M,A1
+1311,1034,Rekha Reddy,30,M,A2
+1312,1035,Unknown,28,M,A1
+1313,1036,Anil Prasad,39,M,A1
+1314,1036,Nagaratna Patil,24,M,A2
+1315,1037,Prasad Setty,44,M,A1
+1316,1038,Santosh Hegde,19,M,A1
+1317,1038,Naveen Rao,21,M,A2
+1318,1039,Suresh Rao,27,M,A1
+1319,1040,Kavya Patil,28,M,A1
+1320,1040,Basavaraj Setty,26,M,A2
+1321,1041,Ramesh Reddy,38,M,A1
+1322,1042,Ramesh Patil,36,M,A1
+1323,1043,Naveen Prasad,22,M,A1
+1324,1043,Geetha Hegde,23,M,A2
+1325,1044,Prasad Prasad,38,M,A1
+1326,1045,Anitha Achar,33,M,A1
+1327,1045,Shivakumar Achar,24,M,A2
+1328,1046,Kiran Achar,20,M,A1
+1329,1047,Vidya Rao,21,M,A1
+1330,1048,Shivakumar Gowda,27,M,A1
+1331,1048,Shivakumar Rao,27,M,A2
+1332,1049,Lokesh Rao,32,M,A1
+1333,1049,Kiran Achar,41,M,A2
+1334,1050,Prasad Raju,23,M,A1
+1335,1051,Harish Patil,35,M,A1
+1336,1052,Lokesh Shetty,29,M,A1
+1337,1053,Unknown,28,M,A1
+1338,1054,Suresh Nayak,18,M,A1
+1339,1055,Unknown,35,M,A1
+1340,1056,Prasad Shetty,43,M,A1
+1341,1056,Basavaraj Nayak,44,M,A2
+1342,1057,Umesh Hegde,42,M,A1
+1343,1058,Rekha Reddy,28,M,A1
+1344,1058,Prasad Patil,28,M,A2
+1345,1059,Santosh Reddy,30,M,A1
+1346,1060,Unknown,27,M,A1
+1347,1061,Manjunath Pasha,22,M,A1
+1348,1061,Suresh Rao,39,M,A2
+1349,1062,Unknown,24,M,A1
+1350,1063,Unknown,25,M,A1
+1351,1064,Anil Murthy,26,M,A1
+1352,1065,Divya Pasha,42,M,A1
+1353,1065,Rekha Kumar,44,M,A2
+1354,1066,Unknown,37,M,A1
+1355,1067,Ravi Naik,22,M,A1
+1356,1068,Mahesh Gowda,31,M,A1
+1357,1069,Ramesh Reddy,42,M,A1
+1358,1069,Umesh Raju,30,M,A2
+1359,1070,Firoz Pasha,42,M,A1
+1360,1070,Nagaratna Murthy,33,M,A2
+1361,1071,Basavaraj Gowda,45,M,A1
+1362,1072,Lakshmi Rao,45,M,A1
+1363,1073,Manjunath Kumar,23,M,A1
+1364,1074,Vidya Achar,26,M,A1
+1365,1075,Nagaratna Kumar,18,M,A1
+1366,1076,Shwetha Patil,19,M,A1
+1367,1077,Vinay Prasad,27,M,A1
+1368,1077,Shivakumar Raju,29,M,A2
+1369,1078,Geetha Murthy,29,M,A1
+1370,1079,Rekha Rao,32,M,A1
+1371,1080,Firoz Achar,37,M,A1
+1372,1081,Prasad Pasha,42,M,A1
+1373,1082,Unknown,45,M,A1
+1374,1083,Lakshmi Prasad,29,M,A1
+1375,1083,Prasad Naik,29,M,A2
+1376,1084,Unknown,24,M,A1
+1377,1085,Ramesh Kumar,33,M,A1
+1378,1086,Divya Setty,25,M,A1
+1379,1087,Santosh Kumar,40,M,A1
+1380,1088,Nagaraj Gowda,43,M,A1
+1381,1089,Bhavya Murthy,39,M,A1
+1382,1089,Bhavya Shetty,24,M,A2
+1383,1090,Unknown,45,M,A1
+1384,1091,Anil Shetty,44,M,A1
+1385,1092,Unknown,37,M,A1
+1386,1093,Savitha Gowda,45,M,A1
+1387,1094,Unknown,45,M,A1
+1388,1095,Unknown,19,M,A1
+1389,1096,Firoz Reddy,19,M,A1
+1390,1097,Arun Gowda,29,M,A1
+1391,1098,Vidya Nayak,39,M,A1
+1392,1099,Unknown,42,M,A1
+1393,1100,Kiran Nayak,28,M,A1
+1394,1101,Unknown,26,M,A1
+1395,1102,Mahesh Nayak,33,M,A1
+1396,1102,Santosh Prasad,19,M,A2
+1397,1103,Unknown,37,M,A1
+1398,1104,Basavaraj Kumar,18,M,A1
+1399,1104,Imran Pasha,24,M,A2
+1400,1105,Mahesh Setty,28,M,A1
+1401,1105,Manjunath Kumar,35,M,A2
+1402,1106,Shwetha Setty,19,M,A1
+1403,1107,Unknown,20,M,A1
+1404,1108,Lakshmi Patil,21,M,A1
+1405,1109,Unknown,41,M,A1
+1406,1110,Vinay Rao,19,M,A1
+1407,1110,Basavaraj Setty,45,M,A2
+1408,1111,Harish Achar,25,M,A1
+1409,1112,Unknown,32,M,A1
+1410,1113,Vinay Patil,34,M,A1
+1411,1114,Mahesh Reddy,39,M,A1
+1412,1114,Firoz Pasha,21,M,A2
+1413,1115,Prasad Hegde,39,M,A1
+1414,1115,Nagaratna Achar,33,M,A2
+1415,1116,Arun Patil,42,M,A1
+1416,1117,Vinay Pasha,30,M,A1
+1417,1118,Unknown,28,M,A1
+1418,1119,Unknown,30,M,A1
+1419,1120,Unknown,27,M,A1
+1420,1121,Unknown,40,M,A1
+1421,1122,Shivakumar Setty,25,M,A1
+1422,1122,Suresh Rao,42,M,A2
+1423,1123,Imran Pasha,40,M,A1
+1424,1124,Unknown,38,M,A1
+1425,1125,Divya Gowda,31,M,A1
+1426,1126,Nagaraj Rao,44,M,A1
+1427,1126,Basavaraj Reddy,27,M,A2
+1428,1127,Mahesh Bhat,25,M,A1
+1429,1127,Lakshmi Achar,41,M,A2
+1430,1128,Ramesh Achar,21,M,A1
+1431,1128,Kiran Prasad,28,M,A2
+1432,1129,Mahesh Prasad,38,M,A1
+1433,1129,Suresh Raju,23,M,A2
+1434,1130,Girish Prasad,42,M,A1
+1435,1131,Shivakumar Bhat,43,M,A1
+1436,1131,Kavya Shetty,22,M,A2
+1437,1132,Unknown,40,M,A1
+1438,1133,Ramesh Murthy,30,M,A1
+1439,1134,Ravi Bhat,36,M,A1
+1440,1135,Prakash Murthy,39,M,A1
+1441,1136,Umesh Murthy,43,M,A1
+1442,1136,Ramesh Prasad,22,M,A2
+1443,1137,Lokesh Bhat,41,M,A1
+1444,1137,Ravi Rao,30,M,A2
+1445,1138,Unknown,38,M,A1
+1446,1139,Unknown,25,M,A1
+1447,1140,Deepa Raju,40,M,A1
+1448,1141,Santosh Prasad,20,M,A1
+1449,1142,Unknown,38,M,A1
+1450,1143,Prakash Hegde,23,M,A1
+1451,1144,Firoz Kumar,41,M,A1
+1452,1144,Firoz Bhat,40,M,A2
+1453,1145,Unknown,41,M,A1
+1454,1146,Unknown,33,M,A1
+1455,1147,Harish Naik,41,M,A1
+1456,1148,Lokesh Reddy,38,M,A1
+1457,1148,Divya Naik,37,M,A2
+1458,1149,Unknown,29,M,A1
+1459,1150,Unknown,40,M,A1
+1460,1151,Divya Achar,22,M,A1
+1461,1151,Roopa Kumar,25,M,A2
+1462,1152,Kavya Bhat,31,M,A1
+1463,1152,Sushma Hegde,26,M,A2
+1464,1153,Sushma Hegde,20,M,A1
+1465,1153,Nagaraj Prasad,36,M,A2
+1466,1154,Unknown,23,M,A1
+1467,1155,Unknown,31,M,A1
+1468,1156,Unknown,43,M,A1
+1469,1157,Lokesh Pasha,28,M,A1
+1470,1158,Unknown,23,M,A1
+1471,1159,Unknown,18,M,A1
+1472,1160,Suresh Bhat,26,M,A1
+1473,1161,Unknown,20,M,A1
+1474,1162,Shivakumar Gowda,45,M,A1
+1475,1162,Manjunath Murthy,19,M,A2
+1476,1163,Unknown,18,M,A1
+1477,1164,Ramesh Setty,32,M,A1
+1478,1165,Savitha Reddy,27,M,A1
+1479,1165,Lakshmi Rao,21,M,A2
+1480,1166,Unknown,45,M,A1
+1481,1167,Unknown,23,M,A1
+1482,1168,Unknown,23,M,A1
+1483,1169,Suresh Shetty,30,M,A1
+1484,1170,Unknown,38,M,A1
+1485,1171,Ramesh Rao,41,M,A1
+1486,1171,Shwetha Prasad,37,M,A2
+1487,1172,Unknown,39,M,A1
+1488,1173,Unknown,29,M,A1
+1489,1174,Unknown,24,M,A1
+1490,1175,Umesh Murthy,33,M,A1
+1491,1175,Arun Prasad,29,M,A2
+1492,1176,Unknown,19,M,A1
+1493,1177,Vinay Hegde,18,M,A1
+1494,1177,Mahesh Naik,39,M,A2
+1495,1178,Kiran Naik,19,M,A1
+1496,1179,Unknown,32,M,A1
+1497,1180,Unknown,23,M,A1
+1498,1181,Lakshmi Reddy,41,M,A1
+1499,1181,Imran Kumar,26,M,A2
+1500,1182,Unknown,20,M,A1
+1501,1183,Anil Hegde,22,M,A1
+1502,1184,Vinay Setty,29,M,A1
+1503,1184,Basavaraj Patil,37,M,A2
+1504,1185,Rekha Reddy,29,M,A1
+1505,1186,Naveen Bhat,29,M,A1
+1506,1186,Shwetha Bhat,27,M,A2
+1507,1187,Anil Naik,32,M,A1
+1508,1188,Unknown,45,M,A1
+1509,1189,Imran Prasad,27,M,A1
+1510,1190,Unknown,31,M,A1
+1511,1191,Suresh Shetty,35,M,A1
+1512,1192,Unknown,43,M,A1
+1513,1193,Unknown,32,M,A1
+1514,1194,Savitha Rao,20,M,A1
+1515,1194,Arun Patil,23,M,A2
+1516,1195,Sushma Hegde,23,M,A1
+1517,1196,Unknown,43,M,A1
+1518,1197,Unknown,24,M,A1
+1519,1198,Unknown,34,M,A1
+1520,1199,Unknown,38,M,A1
+1521,1200,Lakshmi Kumar,36,M,A1
+1522,1201,Unknown,39,M,A1
+1523,1202,Kavya Murthy,43,M,A1
+1524,1202,Basavaraj Shetty,35,M,A2
+1525,1203,Kavya Gowda,28,M,A1
+1526,1204,Unknown,40,M,A1
+1527,1205,Unknown,26,M,A1
+1528,1206,Unknown,24,M,A1
+1529,1207,Firoz Setty,29,M,A1
+1530,1207,Harish Shetty,36,M,A2
+1531,1208,Santosh Raju,21,M,A1
+1532,1209,Geetha Hegde,18,M,A1
+1533,1209,Prasad Bhat,18,M,A2
+1534,1210,Unknown,26,M,A1
+1535,1211,Unknown,38,M,A1
+1536,1212,Unknown,32,M,A1
+1537,1213,Vinay Achar,18,M,A1
+1538,1213,Rekha Kumar,40,M,A2
+1539,1214,Unknown,27,M,A1
+1540,1215,Basavaraj Achar,18,M,A1
+1541,1216,Naveen Prasad,42,M,A1
+1542,1216,Deepa Kumar,42,M,A2
+1543,1217,Vinay Reddy,29,M,A1
+1544,1218,Naveen Nayak,33,M,A1
+1545,1219,Basavaraj Nayak,23,M,A1
+1546,1220,Unknown,26,M,A1
+1547,1221,Rekha Setty,20,M,A1
+1548,1221,Shivakumar Patil,44,M,A2
+1549,1222,Unknown,27,M,A1
+1550,1223,Unknown,35,M,A1
+1551,1224,Mahesh Pasha,23,M,A1
+1552,1224,Ravi Hegde,23,M,A2
+1553,1225,Savitha Raju,33,M,A1
+1554,1226,Sushma Reddy,20,M,A1
+1555,1226,Kiran Hegde,31,M,A2
+1556,1227,Unknown,45,M,A1
+1557,1228,Basavaraj Prasad,33,M,A1
+1558,1229,Unknown,42,M,A1
+1559,1230,Anil Kumar,40,M,A1
+1560,1231,Umesh Rao,23,M,A1
+1561,1232,Rekha Patil,18,M,A1
+1562,1232,Shwetha Patil,42,M,A2
+1563,1233,Unknown,22,M,A1
+1564,1234,Unknown,23,M,A1
+1565,1235,Arun Shetty,20,M,A1
+1566,1235,Kavya Hegde,34,M,A2
+1567,1236,Divya Kumar,45,M,A1
+1568,1237,Bhavya Murthy,41,M,A1
+1569,1237,Firoz Bhat,28,M,A2
+1570,1238,Unknown,36,M,A1
+1571,1239,Nagaraj Prasad,34,M,A1
+1572,1239,Arun Prasad,18,M,A2
+1573,1240,Prasad Kumar,31,M,A1
+1574,1240,Kavya Naik,35,M,A2
+1575,1241,Unknown,21,M,A1
+1576,1242,Manjunath Gowda,31,M,A1
+1577,1243,Unknown,28,M,A1
+1578,1244,Rekha Gowda,32,M,A1
+1579,1245,Unknown,37,M,A1
+1580,1246,Unknown,26,M,A1
+1581,1247,Nagaratna Reddy,19,M,A1
+1582,1248,Unknown,41,M,A1
+1583,1249,Manjunath Murthy,39,M,A1
+1584,1250,Naveen Setty,24,M,A1
+1585,1250,Roopa Setty,40,M,A2
+1586,1251,Imran Bhat,36,M,A1
+1587,1251,Vinay Rao,40,M,A2
+1588,1252,Shwetha Naik,35,M,A1
+1589,1252,Suresh Nayak,27,M,A2
+1590,1253,Bhavya Hegde,30,M,A1
+1591,1253,Girish Setty,29,M,A2
+1592,1254,Savitha Naik,38,M,A1
+1593,1255,Unknown,23,M,A1
+1594,1256,Unknown,21,M,A1
+1595,1257,Arun Naik,38,M,A1
+1596,1258,Unknown,38,M,A1
+1597,1259,Unknown,20,M,A1
+1598,1260,Unknown,18,M,A1
+1599,1261,Unknown,36,M,A1
+1600,1262,Imran Raju,41,M,A1
+1601,1262,Shivakumar Murthy,22,M,A2
+1602,1263,Shivakumar Patil,44,M,A1
+1603,1264,Lokesh Reddy,26,M,A1
+1604,1265,Vidya Bhat,45,M,A1
+1605,1265,Sushma Nayak,36,M,A2
+1606,1266,Arun Murthy,30,M,A1
+1607,1267,Nagaratna Patil,43,M,A1
+1608,1267,Harish Naik,25,M,A2
+1609,1268,Imran Naik,37,M,A1
+1610,1269,Harish Gowda,35,M,A1
+1611,1269,Prasad Setty,22,M,A2
+1612,1270,Geetha Hegde,45,M,A1
+1613,1270,Deepa Setty,34,M,A2
+1614,1271,Harish Kumar,21,M,A1
+1615,1271,Vinay Gowda,21,M,A2
+1616,1272,Bhavya Patil,22,M,A1
+1617,1273,Firoz Kumar,34,M,A1
+1618,1274,Shivakumar Setty,45,M,A1
+1619,1275,Unknown,36,M,A1
+1620,1276,Girish Hegde,21,M,A1
+1621,1276,Lokesh Raju,24,M,A2
+1622,1277,Prakash Reddy,25,M,A1
+1623,1278,Anil Gowda,25,M,A1
+1624,1279,Anitha Reddy,28,M,A1
+1625,1279,Sushma Pasha,42,M,A2
+1626,1280,Anitha Shetty,22,M,A1
+1627,1281,Manjunath Shetty,18,M,A1
+1628,1282,Nagaratna Naik,19,M,A1
+1629,1282,Anitha Raju,32,M,A2
+1630,1283,Unknown,44,M,A1
+1631,1284,Lakshmi Patil,43,M,A1
+1632,1285,Ravi Patil,45,M,A1
+1633,1285,Rekha Setty,44,M,A2
+1634,1286,Unknown,41,M,A1
+1635,1287,Unknown,39,M,A1
+1636,1288,Lokesh Setty,27,M,A1
+1637,1289,Unknown,27,M,A1
+1638,1290,Lakshmi Setty,35,M,A1
+1639,1290,Rekha Kumar,21,M,A2
+1640,1291,Harish Hegde,29,M,A1
+1641,1292,Unknown,36,M,A1
+1642,1293,Unknown,45,M,A1
+1643,1294,Nagaraj Prasad,37,M,A1
+1644,1294,Divya Nayak,23,M,A2
+1645,1295,Lokesh Nayak,30,M,A1
+1646,1296,Arun Setty,43,M,A1
+1647,1296,Sushma Shetty,31,M,A2
+1648,1297,Geetha Raju,34,M,A1
+1649,1298,Anil Kumar,31,M,A1
+1650,1298,Vidya Kumar,20,M,A2
+1651,1299,Geetha Raju,27,M,A1
+1652,1300,Unknown,33,M,A1
+1653,1301,Vidya Patil,32,M,A1
+1654,1302,Basavaraj Kumar,25,M,A1
+1655,1303,Shivakumar Prasad,40,M,A1
+1656,1304,Anitha Pasha,41,M,A1
+1657,1305,Unknown,26,M,A1
+1658,1306,Unknown,33,M,A1
+1659,1307,Unknown,19,M,A1
+1660,1308,Prakash Prasad,39,M,A1
+1661,1308,Deepa Naik,28,M,A2
+1662,1309,Ravi Setty,24,M,A1
+1663,1310,Unknown,41,M,A1
+1664,1311,Sushma Rao,38,M,A1
+1665,1311,Suresh Raju,24,M,A2
+1666,1312,Nagaratna Pasha,28,M,A1
+1667,1313,Shwetha Pasha,34,M,A1
+1668,1314,Umesh Achar,26,M,A1
+1669,1315,Unknown,41,M,A1
+1670,1316,Vinay Raju,25,M,A1
+1671,1316,Harish Shetty,18,M,A2
+1672,1317,Suresh Reddy,26,M,A1
+1673,1317,Naveen Patil,34,M,A2
+1674,1318,Imran Nayak,28,M,A1
+1675,1319,Basavaraj Bhat,20,M,A1
+1676,1319,Ravi Murthy,35,M,A2
+1677,1320,Unknown,27,M,A1
+1678,1321,Manjunath Patil,41,M,A1
+1679,1322,Shivakumar Murthy,38,M,A1
+1680,1323,Anitha Gowda,38,M,A1
+1681,1323,Vinay Hegde,41,M,A2
+1682,1324,Unknown,29,M,A1
+1683,1325,Basavaraj Kumar,38,M,A1
+1684,1325,Divya Raju,32,M,A2
+1685,1326,Arun Kumar,19,M,A1
+1686,1327,Manjunath Raju,31,M,A1
+1687,1328,Lakshmi Reddy,44,M,A1
+1688,1329,Unknown,30,M,A1
+1689,1330,Deepa Prasad,32,M,A1
+1690,1330,Divya Setty,42,M,A2
+1691,1331,Arun Murthy,26,M,A1
+1692,1331,Arun Gowda,37,M,A2
+1693,1332,Savitha Naik,25,M,A1
+1694,1332,Naveen Raju,39,M,A2
+1695,1333,Unknown,40,M,A1
+1696,1334,Santosh Pasha,31,M,A1
+1697,1334,Ramesh Bhat,35,M,A2
+1698,1335,Divya Reddy,39,M,A1
+1699,1336,Bhavya Naik,28,M,A1
+1700,1337,Unknown,40,M,A1
+1701,1338,Bhavya Reddy,35,M,A1
+1702,1339,Santosh Raju,45,M,A1
+1703,1340,Vidya Reddy,27,M,A1
+1704,1340,Basavaraj Prasad,35,M,A2
+1705,1341,Deepa Setty,43,M,A1
+1706,1341,Basavaraj Shetty,26,M,A2
+1707,1342,Imran Achar,44,M,A1
+1708,1342,Umesh Gowda,36,M,A2
+1709,1343,Divya Nayak,23,M,A1
+1710,1343,Prasad Gowda,25,M,A2
+1711,1344,Arun Gowda,32,M,A1
+1712,1345,Unknown,31,M,A1
+1713,1346,Manjunath Gowda,29,M,A1
+1714,1347,Unknown,34,M,A1
+1715,1348,Firoz Achar,39,M,A1
+1716,1348,Mahesh Rao,37,M,A2
+1717,1349,Prakash Reddy,30,M,A1
+1718,1350,Unknown,38,M,A1
+1719,1351,Prasad Prasad,35,M,A1
+1720,1352,Umesh Setty,38,M,A1
+1721,1352,Lokesh Hegde,38,M,A2
+1722,1353,Naveen Shetty,38,M,A1
+1723,1353,Anitha Patil,22,M,A2
+1724,1354,Umesh Murthy,30,M,A1
+1725,1354,Rekha Pasha,40,M,A2
+1726,1355,Firoz Naik,29,M,A1
+1727,1355,Basavaraj Gowda,28,M,A2
+1728,1356,Unknown,27,M,A1
+1729,1357,Unknown,40,M,A1
+1730,1358,Naveen Achar,41,M,A1
+1731,1358,Prakash Setty,41,M,A2
+1732,1359,Mahesh Setty,20,M,A1
+1733,1359,Suresh Raju,21,M,A2
+1734,1360,Unknown,42,M,A1
+1735,1361,Basavaraj Raju,29,M,A1
+1736,1362,Prakash Patil,30,M,A1
+1737,1363,Unknown,25,M,A1
+1738,1364,Naveen Hegde,41,M,A1
+1739,1365,Unknown,41,M,A1
+1740,1366,Vinay Murthy,34,M,A1
+1741,1367,Unknown,18,M,A1
+1742,1368,Unknown,19,M,A1
+1743,1369,Anitha Setty,19,M,A1
+1744,1369,Nagaratna Setty,35,M,A2
+1745,1370,Prasad Gowda,43,M,A1
+1746,1371,Firoz Murthy,22,M,A1
+1747,1371,Manjunath Setty,44,M,A2
+1748,1372,Unknown,39,M,A1
+1749,1373,Girish Hegde,36,M,A1
+1750,1374,Ravi Murthy,35,M,A1
+1751,1374,Ramesh Nayak,28,M,A2
+1752,1375,Prakash Shetty,20,M,A1
+1753,1376,Naveen Rao,18,M,A1
+1754,1377,Umesh Shetty,23,M,A1
+1755,1378,Geetha Naik,42,M,A1
+1756,1378,Mahesh Naik,23,M,A2
+1757,1379,Unknown,19,M,A1
+1758,1380,Firoz Patil,39,M,A1
+1759,1380,Lakshmi Kumar,38,M,A2
+1760,1381,Basavaraj Kumar,29,M,A1
+1761,1382,Santosh Murthy,31,M,A1
+1762,1383,Vidya Patil,44,M,A1
+1763,1384,Lakshmi Gowda,45,M,A1
+1764,1384,Nagaraj Naik,18,M,A2
+1765,1385,Unknown,37,M,A1
+1766,1386,Unknown,20,M,A1
+1767,1387,Anil Reddy,37,M,A1
+1768,1388,Basavaraj Pasha,30,M,A1
+1769,1389,Vidya Raju,24,M,A1
+1770,1390,Unknown,43,M,A1
+1771,1391,Ravi Nayak,43,M,A1
+1772,1392,Unknown,30,M,A1
+1773,1393,Arun Reddy,45,M,A1
+1774,1393,Manjunath Hegde,30,M,A2
+1775,1394,Unknown,25,M,A1
+1776,1395,Vinay Bhat,37,M,A1
+1777,1395,Kavya Patil,32,M,A2
+1778,1396,Prasad Achar,41,M,A1
+1779,1397,Girish Kumar,33,M,A1
+1780,1398,Bhavya Shetty,30,M,A1
+1781,1399,Shivakumar Naik,38,M,A1
+1782,1400,Manjunath Setty,45,M,A1
+1783,1400,Prasad Kumar,23,M,A2
+1784,1401,Vinay Setty,44,M,A1
+1785,1401,Vinay Kumar,41,M,A2
+1786,1402,Unknown,29,M,A1
+1787,1403,Kiran Bhat,22,M,A1
+1788,1404,Unknown,18,M,A1
+1789,1405,Naveen Shetty,29,M,A1
+1790,1405,Geetha Shetty,26,M,A2
+1791,1406,Unknown,24,M,A1
+1792,1407,Unknown,24,M,A1
+1793,1408,Firoz Bhat,21,M,A1
+1794,1409,Kavya Rao,28,M,A1
+1795,1410,Roopa Setty,40,M,A1
+1796,1411,Unknown,25,M,A1
+1797,1412,Anitha Kumar,41,M,A1
+1798,1412,Suresh Raju,28,M,A2
+1799,1413,Harish Murthy,30,M,A1
+1800,1414,Naveen Naik,23,M,A1
+1801,1414,Prasad Pasha,32,M,A2
+1802,1415,Rekha Rao,26,M,A1
+1803,1416,Kiran Setty,19,M,A1
+1804,1416,Suresh Murthy,22,M,A2
+1805,1417,Umesh Pasha,40,M,A1
+1806,1417,Roopa Nayak,23,M,A2
+1807,1418,Umesh Bhat,33,M,A1
+1808,1419,Rekha Prasad,33,M,A1
+1809,1419,Sushma Reddy,21,M,A2
+1810,1420,Vidya Bhat,32,M,A1
+1811,1420,Nagaratna Murthy,20,M,A2
+1812,1421,Anil Prasad,19,M,A1
+1813,1422,Unknown,38,M,A1
+1814,1423,Manjunath Pasha,24,M,A1
+1815,1424,Kiran Hegde,22,M,A1
+1816,1424,Shivakumar Bhat,34,M,A2
+1817,1425,Lokesh Patil,23,M,A1
+1818,1426,Unknown,41,M,A1
+1819,1427,Manjunath Hegde,26,M,A1
+1820,1427,Shwetha Murthy,23,M,A2
+1821,1428,Prasad Reddy,43,M,A1
+1822,1428,Prakash Naik,24,M,A2
+1823,1429,Savitha Prasad,21,M,A1
+1824,1430,Manjunath Reddy,32,M,A1
+1825,1430,Arun Pasha,45,M,A2
+1826,1431,Vinay Kumar,33,M,A1
+1827,1431,Firoz Raju,37,M,A2
+1828,1432,Firoz Pasha,45,M,A1
+1829,1432,Naveen Hegde,29,M,A2
+1830,1433,Suresh Gowda,33,M,A1
+1831,1433,Naveen Rao,29,M,A2
+1832,1434,Mahesh Hegde,23,M,A1
+1833,1435,Anil Kumar,32,M,A1
+1834,1436,Naveen Nayak,26,M,A1
+1835,1437,Geetha Naik,24,M,A1
+1836,1438,Unknown,41,M,A1
+1837,1439,Unknown,21,M,A1
+1838,1440,Unknown,27,M,A1
+1839,1441,Imran Kumar,28,M,A1
+1840,1442,Roopa Murthy,25,M,A1
+1841,1442,Santosh Achar,41,M,A2
+1842,1443,Nagaraj Gowda,31,M,A1
+1843,1444,Umesh Rao,38,M,A1
+1844,1445,Unknown,20,M,A1
+1845,1446,Roopa Shetty,31,M,A1
+1846,1446,Sushma Nayak,25,M,A2
+1847,1447,Umesh Hegde,29,M,A1
+1848,1448,Unknown,27,M,A1
+1849,1449,Kavya Gowda,36,M,A1
+1850,1450,Manjunath Murthy,37,M,A1
+1851,1451,Harish Bhat,25,M,A1
+1852,1451,Kiran Raju,24,M,A2
+1853,1452,Bhavya Patil,39,M,A1
+1854,1452,Prakash Pasha,33,M,A2
+1855,1453,Unknown,45,M,A1
+1856,1454,Unknown,25,M,A1
+1857,1455,Arun Kumar,32,M,A1
+1858,1456,Umesh Rao,19,M,A1
+1859,1456,Shivakumar Hegde,29,M,A2
+1860,1457,Umesh Nayak,23,M,A1
+1861,1458,Unknown,31,M,A1
+1862,1459,Harish Kumar,29,M,A1
+1863,1460,Basavaraj Nayak,18,M,A1
+1864,1461,Imran Kumar,18,M,A1
+1865,1462,Roopa Achar,26,M,A1
+1866,1463,Sushma Patil,27,M,A1
+1867,1463,Prakash Naik,37,M,A2
+1868,1464,Manjunath Gowda,18,M,A1
+1869,1464,Rekha Kumar,39,M,A2
+1870,1465,Firoz Prasad,24,M,A1
+1871,1465,Rekha Shetty,42,M,A2
+1872,1466,Imran Kumar,33,M,A1
+1873,1467,Prasad Pasha,45,M,A1
+1874,1468,Umesh Reddy,44,M,A1
+1875,1469,Shwetha Kumar,34,M,A1
+1876,1470,Prasad Shetty,25,M,A1
+1877,1471,Imran Achar,30,M,A1
+1878,1471,Deepa Murthy,22,M,A2
+1879,1472,Unknown,22,M,A1
+1880,1473,Unknown,34,M,A1
+1881,1474,Shwetha Nayak,41,M,A1
+1882,1475,Lakshmi Prasad,25,M,A1
+1883,1476,Unknown,29,M,A1
+1884,1477,Imran Gowda,23,M,A1
+1885,1477,Suresh Murthy,27,M,A2
+1886,1478,Unknown,23,M,A1
+1887,1479,Anil Setty,45,M,A1
+1888,1480,Lokesh Pasha,45,M,A1
+1889,1480,Anitha Hegde,43,M,A2
+1890,1481,Kiran Patil,32,M,A1
+1891,1482,Anil Achar,25,M,A1
+1892,1483,Shwetha Prasad,27,M,A1
+1893,1483,Kiran Setty,37,M,A2
+1894,1484,Ramesh Gowda,39,M,A1
+1895,1485,Unknown,27,M,A1
+1896,1486,Prakash Patil,43,M,A1
+1897,1486,Deepa Kumar,27,M,A2
+1898,1487,Suresh Patil,30,M,A1
+1899,1488,Vinay Pasha,18,M,A1
+1900,1489,Santosh Reddy,19,M,A1
+1901,1489,Umesh Nayak,20,M,A2
+1902,1490,Umesh Reddy,28,M,A1
+1903,1491,Ramesh Shetty,36,M,A1
+1904,1492,Girish Reddy,28,M,A1
+1905,1493,Unknown,24,M,A1
+1906,1494,Unknown,19,M,A1
+1907,1495,Unknown,26,M,A1
+1908,1496,Lakshmi Gowda,22,M,A1
+1909,1497,Umesh Gowda,21,M,A1
+1910,1498,Unknown,32,M,A1
+1911,1499,Firoz Raju,28,M,A1
+1912,1500,Naveen Prasad,41,M,A1
+1913,1501,Unknown,28,M,A1
+1914,1502,Unknown,28,M,A1
+1915,1503,Unknown,45,M,A1
+1916,1504,Santosh Kumar,28,M,A1
+1917,1504,Mahesh Naik,31,M,A2
+1918,1505,Basavaraj Naik,42,M,A1
+1919,1506,Deepa Hegde,27,M,A1
+1920,1506,Manjunath Prasad,44,M,A2
+1921,1507,Kiran Naik,31,M,A1
+1922,1508,Unknown,27,M,A1
+1923,1509,Lokesh Setty,18,M,A1
+1924,1510,Ravi Gowda,18,M,A1
+1925,1510,Harish Rao,34,M,A2
+1926,1511,Divya Nayak,34,M,A1
+1927,1511,Ravi Shetty,19,M,A2
+1928,1512,Unknown,37,M,A1
+1929,1513,Naveen Pasha,21,M,A1
+1930,1514,Savitha Shetty,24,M,A1
+1931,1514,Deepa Pasha,37,M,A2
+1932,1515,Nagaraj Naik,23,M,A1
+1933,1515,Santosh Naik,28,M,A2
+1934,1516,Shivakumar Pasha,32,M,A1
+1935,1517,Unknown,18,M,A1
+1936,1518,Bhavya Kumar,21,M,A1
+1937,1518,Imran Setty,18,M,A2
+1938,1519,Ramesh Shetty,23,M,A1
+1939,1519,Arun Achar,44,M,A2
+1940,1520,Prakash Murthy,30,M,A1
+1941,1520,Santosh Achar,42,M,A2
+1942,1521,Anil Hegde,23,M,A1
+1943,1522,Kiran Pasha,26,M,A1
+1944,1523,Unknown,29,M,A1
+1945,1524,Unknown,32,M,A1
+1946,1525,Savitha Gowda,24,M,A1
+1947,1526,Basavaraj Bhat,24,M,A1
+1948,1527,Kiran Hegde,18,M,A1
+1949,1527,Shivakumar Prasad,24,M,A2
+1950,1528,Harish Murthy,34,M,A1
+1951,1528,Bhavya Raju,36,M,A2
+1952,1529,Santosh Kumar,37,M,A1
+1953,1530,Ramesh Murthy,40,M,A1
+1954,1531,Rekha Gowda,30,M,A1
+1955,1532,Girish Gowda,41,M,A1
+1956,1532,Prasad Nayak,25,M,A2
+1957,1533,Ravi Rao,33,M,A1
+1958,1534,Ramesh Setty,36,M,A1
+1959,1535,Divya Reddy,41,M,A1
+1960,1535,Ravi Setty,39,M,A2
+1961,1536,Unknown,32,M,A1
+1962,1537,Unknown,35,M,A1
+1963,1538,Anil Gowda,36,M,A1
+1964,1539,Bhavya Patil,33,M,A1
+1965,1539,Geetha Bhat,26,M,A2
+1966,1540,Imran Prasad,42,M,A1
+1967,1541,Basavaraj Achar,30,M,A1
+1968,1542,Unknown,40,M,A1
+1969,1543,Nagaraj Prasad,31,M,A1
+1970,1544,Divya Murthy,24,M,A1
+1971,1545,Prasad Achar,39,M,A1
+1972,1546,Kiran Achar,37,M,A1
+1973,1546,Manjunath Reddy,28,M,A2
+1974,1547,Unknown,25,M,A1
+1975,1548,Lakshmi Pasha,21,M,A1
+1976,1549,Prasad Naik,30,M,A1
+1977,1550,Suresh Gowda,23,M,A1
+1978,1551,Firoz Setty,26,M,A1
+1979,1552,Manjunath Naik,40,M,A1
+1980,1552,Roopa Naik,24,M,A2
+1981,1553,Manjunath Pasha,26,M,A1
+1982,1554,Unknown,42,M,A1
+1983,1555,Unknown,24,M,A1
+1984,1556,Unknown,39,M,A1
+1985,1557,Bhavya Rao,28,M,A1
+1986,1557,Santosh Hegde,24,M,A2
+1987,1558,Arun Raju,44,M,A1
+1988,1559,Unknown,37,M,A1
+1989,1560,Unknown,29,M,A1
+1990,1561,Suresh Raju,29,M,A1
+1991,1562,Prasad Bhat,24,M,A1
+1992,1563,Suresh Setty,18,M,A1
+1993,1564,Unknown,35,M,A1
+1994,1565,Shwetha Pasha,18,M,A1
+1995,1566,Unknown,33,M,A1
+1996,1567,Umesh Prasad,35,M,A1
+1997,1567,Anitha Bhat,42,M,A2
+1998,1568,Arun Achar,23,M,A1
+1999,1568,Santosh Achar,23,M,A2
+2000,1569,Santosh Naik,22,M,A1
+2001,1570,Santosh Kumar,32,M,A1
+2002,1571,Shivakumar Gowda,23,M,A1
+2003,1572,Nagaratna Naik,36,M,A1
+2004,1572,Manjunath Gowda,30,M,A2
+2005,1573,Roopa Achar,40,M,A1
+2006,1573,Deepa Shetty,39,M,A2
+2007,1574,Deepa Kumar,38,M,A1
+2008,1574,Anil Gowda,35,M,A2
+2009,1575,Vidya Naik,20,M,A1
+2010,1576,Lokesh Kumar,22,M,A1
+2011,1576,Vidya Gowda,40,M,A2
+2012,1577,Unknown,25,M,A1
+2013,1578,Prakash Murthy,23,M,A1
+2014,1579,Roopa Gowda,21,M,A1
+2015,1580,Lakshmi Setty,33,M,A1
+2016,1580,Ravi Hegde,25,M,A2
+2017,1581,Unknown,44,M,A1
+2018,1582,Harish Rao,22,M,A1
+2019,1582,Lakshmi Pasha,34,M,A2
+2020,1583,Firoz Hegde,21,M,A1
+2021,1583,Kavya Bhat,33,M,A2
+2022,1584,Ramesh Raju,39,M,A1
+2023,1584,Rekha Shetty,31,M,A2
+2024,1585,Shivakumar Prasad,20,M,A1
+2025,1586,Prakash Gowda,20,M,A1
+2026,1587,Unknown,44,M,A1
+2027,1588,Shivakumar Achar,23,M,A1
+2028,1589,Suresh Achar,31,M,A1
+2029,1590,Santosh Raju,35,M,A1
+2030,1590,Santosh Pasha,31,M,A2
+2031,1591,Unknown,40,M,A1
+2032,1592,Unknown,29,M,A1
+2033,1593,Harish Murthy,36,M,A1
+2034,1594,Anil Achar,21,M,A1
+2035,1594,Naveen Hegde,42,M,A2
+2036,1595,Umesh Setty,20,M,A1
+2037,1596,Prasad Nayak,45,M,A1
+2038,1597,Unknown,30,M,A1
+2039,1598,Anitha Prasad,44,M,A1
+2040,1598,Suresh Shetty,40,M,A2
+2041,1599,Kiran Naik,41,M,A1
+2042,1600,Unknown,38,M,A1
+2043,1601,Rekha Nayak,34,M,A1
+2044,1602,Unknown,44,M,A1
+2045,1603,Umesh Reddy,23,M,A1
+2046,1603,Arun Kumar,41,M,A2
+2047,1604,Unknown,41,M,A1
+2048,1605,Unknown,42,M,A1
+2049,1606,Santosh Kumar,30,M,A1
+2050,1607,Savitha Raju,27,M,A1
+2051,1608,Divya Gowda,23,M,A1
+2052,1609,Unknown,32,M,A1
+2053,1610,Ravi Patil,44,M,A1
+2054,1611,Firoz Hegde,31,M,A1
+2055,1612,Bhavya Rao,45,M,A1
+2056,1613,Prasad Naik,27,M,A1
+2057,1614,Unknown,35,M,A1
+2058,1615,Unknown,29,M,A1
+2059,1616,Unknown,45,M,A1
+2060,1617,Imran Raju,26,M,A1
+2061,1617,Nagaratna Murthy,28,M,A2
+2062,1618,Deepa Kumar,32,M,A1
+2063,1619,Unknown,33,M,A1
+2064,1620,Deepa Patil,44,M,A1
+2065,1621,Unknown,32,M,A1
+2066,1622,Unknown,37,M,A1
+2067,1623,Mahesh Reddy,41,M,A1
+2068,1624,Unknown,32,M,A1
+2069,1625,Arun Naik,42,M,A1
+2070,1625,Santosh Patil,27,M,A2
+2071,1626,Imran Raju,32,M,A1
+2072,1627,Deepa Gowda,22,M,A1
+2073,1628,Lokesh Naik,29,M,A1
+2074,1628,Santosh Naik,38,M,A2
+2075,1629,Imran Prasad,37,M,A1
+2076,1630,Bhavya Hegde,38,M,A1
+2077,1631,Prakash Raju,45,M,A1
+2078,1632,Unknown,38,M,A1
+2079,1633,Ramesh Prasad,41,M,A1
+2080,1633,Harish Nayak,22,M,A2
+2081,1634,Unknown,33,M,A1
+2082,1635,Unknown,26,M,A1
+2083,1636,Roopa Setty,28,M,A1
+2084,1637,Unknown,34,M,A1
+2085,1638,Lokesh Naik,33,M,A1
+2086,1638,Suresh Kumar,45,M,A2
+2087,1639,Sushma Pasha,38,M,A1
+2088,1640,Lokesh Nayak,40,M,A1
+2089,1641,Mahesh Bhat,43,M,A1
+2090,1641,Deepa Kumar,44,M,A2
+2091,1642,Unknown,18,M,A1
+2092,1643,Unknown,36,M,A1
+2093,1644,Naveen Raju,20,M,A1
+2094,1644,Girish Achar,39,M,A2
+2095,1645,Ravi Prasad,36,M,A1
+2096,1646,Unknown,32,M,A1
+2097,1647,Unknown,36,M,A1
+2098,1648,Unknown,41,M,A1
+2099,1649,Ramesh Bhat,20,M,A1
+2100,1649,Lokesh Setty,37,M,A2
+2101,1650,Unknown,30,M,A1
+2102,1651,Shwetha Prasad,41,M,A1
+2103,1652,Imran Hegde,22,M,A1
+2104,1653,Anil Bhat,40,M,A1
+2105,1654,Naveen Shetty,31,M,A1
+2106,1655,Basavaraj Raju,22,M,A1
+2107,1655,Shwetha Raju,29,M,A2
+2108,1656,Santosh Patil,41,M,A1
+2109,1656,Firoz Murthy,43,M,A2
+2110,1657,Unknown,20,M,A1
+2111,1658,Arun Kumar,27,M,A1
+2112,1659,Unknown,36,M,A1
+2113,1660,Prakash Setty,26,M,A1
+2114,1660,Kiran Naik,22,M,A2
+2115,1661,Shivakumar Nayak,38,M,A1
+2116,1662,Vidya Bhat,35,M,A1
+2117,1663,Ramesh Naik,36,M,A1
+2118,1663,Deepa Hegde,37,M,A2
+2119,1664,Roopa Patil,18,M,A1
+2120,1665,Unknown,28,M,A1
+2121,1666,Unknown,28,M,A1
+2122,1667,Umesh Bhat,43,M,A1
+2123,1668,Anitha Reddy,41,M,A1
+2124,1668,Naveen Murthy,31,M,A2
+2125,1669,Prasad Setty,36,M,A1
+2126,1670,Unknown,21,M,A1
+2127,1671,Unknown,44,M,A1
+2128,1672,Basavaraj Pasha,28,M,A1
+2129,1672,Nagaraj Kumar,31,M,A2
+2130,1673,Firoz Pasha,36,M,A1
+2131,1674,Rekha Kumar,39,M,A1
+2132,1674,Girish Kumar,27,M,A2
+2133,1675,Girish Setty,25,M,A1
+2134,1676,Santosh Nayak,28,M,A1
+2135,1677,Unknown,24,M,A1
+2136,1678,Savitha Murthy,39,M,A1
+2137,1679,Nagaraj Gowda,40,M,A1
+2138,1680,Harish Patil,18,M,A1
+2139,1681,Unknown,32,M,A1
+2140,1682,Unknown,33,M,A1
+2141,1683,Unknown,23,M,A1
+2142,1684,Unknown,40,M,A1
+2143,1685,Unknown,31,M,A1
+2144,1686,Mahesh Achar,41,M,A1
+2145,1686,Vinay Gowda,21,M,A2
+2146,1687,Harish Kumar,42,M,A1
+2147,1687,Shivakumar Nayak,29,M,A2
+2148,1688,Umesh Rao,33,M,A1
+2149,1688,Geetha Pasha,42,M,A2
+2150,1689,Prasad Naik,37,M,A1
+2151,1689,Anitha Patil,39,M,A2
+2152,1690,Firoz Raju,21,M,A1
+2153,1691,Harish Shetty,29,M,A1
+2154,1692,Unknown,40,M,A1
+2155,1693,Basavaraj Hegde,34,M,A1
+2156,1694,Unknown,19,M,A1
+2157,1695,Unknown,18,M,A1
+2158,1696,Shivakumar Rao,33,M,A1
+2159,1696,Umesh Shetty,30,M,A2
+2160,1697,Lokesh Patil,29,M,A1
+2161,1698,Kavya Hegde,28,M,A1
+2162,1699,Unknown,36,M,A1
+2163,1700,Shivakumar Setty,27,M,A1
+2164,1701,Basavaraj Hegde,40,M,A1
+2165,1702,Unknown,28,M,A1
+2166,1703,Nagaraj Prasad,29,M,A1
+2167,1704,Unknown,18,M,A1
+2168,1705,Unknown,30,M,A1
+2169,1706,Ramesh Setty,20,M,A1
+2170,1706,Imran Gowda,22,M,A2
+2171,1707,Unknown,38,M,A1
+2172,1708,Ramesh Achar,44,M,A1
+2173,1708,Nagaratna Raju,22,M,A2
+2174,1709,Arun Achar,20,M,A1
+2175,1710,Suresh Prasad,45,M,A1
+2176,1711,Prakash Gowda,26,M,A1
+2177,1712,Unknown,34,M,A1
+2178,1713,Divya Kumar,24,M,A1
+2179,1714,Arun Nayak,33,M,A1
+2180,1714,Imran Bhat,32,M,A2
+2181,1715,Harish Nayak,31,M,A1
+2182,1716,Manjunath Kumar,38,M,A1
+2183,1716,Prasad Murthy,21,M,A2
+2184,1717,Anitha Kumar,33,M,A1
+2185,1718,Anil Murthy,42,M,A1
+2186,1719,Unknown,21,M,A1
+2187,1720,Deepa Hegde,28,M,A1
+2188,1720,Divya Hegde,35,M,A2
+2189,1721,Savitha Naik,45,M,A1
+2190,1721,Deepa Gowda,42,M,A2
+2191,1722,Unknown,34,M,A1
+2192,1723,Unknown,20,M,A1
+2193,1724,Shwetha Murthy,41,M,A1
+2194,1724,Mahesh Raju,37,M,A2
+2195,1725,Anil Patil,43,M,A1
+2196,1725,Santosh Kumar,34,M,A2
+2197,1726,Unknown,38,M,A1
+2198,1727,Nagaratna Nayak,20,M,A1
+2199,1727,Ramesh Prasad,23,M,A2
+2200,1728,Kavya Prasad,42,M,A1
+2201,1728,Girish Hegde,44,M,A2

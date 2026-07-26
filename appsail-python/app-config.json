@@ -1,0 +1,13 @@
+{
+  "command": "python3 app.py",
+  "build_path": "./",
+  "stack": "python_3_13",
+  "env_variables": {
+    "CLINK_SOURCE": "auto"
+  },
+  "memory": 1024,
+  "scripts": {
+    "preserve": "python3 -m pip install -r ./requirements.txt -t ./ --upgrade",
+    "predeploy": "python3 -m pip install -r ./requirements.txt -t ./ --upgrade"
+  }
+}

@@ -1,0 +1,12 @@
+ActCode,SectionCode,SectionDescription,Active
+IPC,302,Murder,1
+IPC,307,Attempt to murder,1
+IPC,323,Voluntarily causing hurt,1
+IPC,356,Assault to commit theft carried by a person,1
+IPC,379,Theft,1
+IPC,380,Theft in dwelling house,1
+IPC,392,Robbery,1
+IPC,411,Receiving stolen property,1
+IPC,457,House-breaking by night,1
+IPC,354,Assault on woman to outrage modesty,1
+IPC,420,Cheating and dishonestly inducing delivery,1

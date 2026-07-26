@@ -1,0 +1,13 @@
+{
+  "deployment": {
+    "name": "crimelink_function",
+    "stack": "python_3_13",
+    "type": "advancedio",
+    "env_variables": {
+      "ENGINE_URL": "https://crimelink-engine-10128587118.development.catalystappsail.com"
+    }
+  },
+  "execution": {
+    "main": "main.py"
+  }
+}

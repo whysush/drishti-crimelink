@@ -1,0 +1,26 @@
+CourtID,CourtName,DistrictID,StateID,Active
+5001,Bengaluru Urban JMFC Court,572,29,1
+5002,Bengaluru Rural JMFC Court,583,29,1
+5003,Ramanagara JMFC Court,584,29,1
+5004,Mandya JMFC Court,573,29,1
+5005,Mysuru JMFC Court,577,29,1
+5006,Chamarajanagar JMFC Court,578,29,1
+5007,Tumakuru JMFC Court,571,29,1
+5008,Kolar JMFC Court,581,29,1
+5009,Chikkaballapura JMFC Court,582,29,1
+5010,Chikkaballapura District & Sessions Court,582,29,1
+5011,Hassan JMFC Court,574,29,1
+5012,Shivamogga JMFC Court,568,29,1
+5013,Davanagere JMFC Court,567,29,1
+5014,Davanagere District & Sessions Court,567,29,1
+5015,Chitradurga JMFC Court,566,29,1
+5016,Chitradurga District & Sessions Court,566,29,1
+5017,Belagavi JMFC Court,555,29,1
+5018,Dharwad JMFC Court,562,29,1
+5019,Kalaburagi JMFC Court,579,29,1
+5020,Kalaburagi District & Sessions Court,579,29,1
+5021,Ballari JMFC Court,565,29,1
+5022,Dakshina Kannada JMFC Court,575,29,1
+5023,Dakshina Kannada District & Sessions Court,575,29,1
+5024,Udupi JMFC Court,569,29,1
+5025,Udupi District & Sessions Court,569,29,1

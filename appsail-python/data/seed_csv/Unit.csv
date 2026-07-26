@@ -1,0 +1,70 @@
+UnitID,UnitName,TypeID,ParentUnit,NationalityID,StateID,DistrictID,Active
+1,Bengaluru Urban Town PS,1,0,1,29,572,1
+2,Bengaluru Urban North PS,1,0,1,29,572,1
+3,Bengaluru Urban South PS,1,0,1,29,572,1
+4,Bengaluru Rural Town PS,1,0,1,29,583,1
+5,Bengaluru Rural North PS,1,0,1,29,583,1
+6,Bengaluru Rural South PS,1,0,1,29,583,1
+7,Ramanagara Town PS,1,0,1,29,584,1
+8,Ramanagara North PS,1,0,1,29,584,1
+9,Ramanagara South PS,1,0,1,29,584,1
+10,Ramanagara East PS,1,0,1,29,584,1
+11,Mandya Town PS,1,0,1,29,573,1
+12,Mandya North PS,1,0,1,29,573,1
+13,Mandya South PS,1,0,1,29,573,1
+14,Mandya East PS,1,0,1,29,573,1
+15,Mysuru Town PS,1,0,1,29,577,1
+16,Mysuru North PS,1,0,1,29,577,1
+17,Mysuru South PS,1,0,1,29,577,1
+18,Mysuru East PS,1,0,1,29,577,1
+19,Chamarajanagar Town PS,1,0,1,29,578,1
+20,Chamarajanagar North PS,1,0,1,29,578,1
+21,Chamarajanagar South PS,1,0,1,29,578,1
+22,Chamarajanagar East PS,1,0,1,29,578,1
+23,Tumakuru Town PS,1,0,1,29,571,1
+24,Tumakuru North PS,1,0,1,29,571,1
+25,Tumakuru South PS,1,0,1,29,571,1
+26,Tumakuru East PS,1,0,1,29,571,1
+27,Kolar Town PS,1,0,1,29,581,1
+28,Kolar North PS,1,0,1,29,581,1
+29,Kolar South PS,1,0,1,29,581,1
+30,Chikkaballapura Town PS,1,0,1,29,582,1
+31,Chikkaballapura North PS,1,0,1,29,582,1
+32,Chikkaballapura South PS,1,0,1,29,582,1
+33,Chikkaballapura East PS,1,0,1,29,582,1
+34,Hassan Town PS,1,0,1,29,574,1
+35,Hassan North PS,1,0,1,29,574,1
+36,Hassan South PS,1,0,1,29,574,1
+37,Shivamogga Town PS,1,0,1,29,568,1
+38,Shivamogga North PS,1,0,1,29,568,1
+39,Shivamogga South PS,1,0,1,29,568,1
+40,Shivamogga East PS,1,0,1,29,568,1
+41,Davanagere Town PS,1,0,1,29,567,1
+42,Davanagere North PS,1,0,1,29,567,1
+43,Davanagere South PS,1,0,1,29,567,1
+44,Davanagere East PS,1,0,1,29,567,1
+45,Chitradurga Town PS,1,0,1,29,566,1
+46,Chitradurga North PS,1,0,1,29,566,1
+47,Chitradurga South PS,1,0,1,29,566,1
+48,Belagavi Town PS,1,0,1,29,555,1
+49,Belagavi North PS,1,0,1,29,555,1
+50,Belagavi South PS,1,0,1,29,555,1
+51,Belagavi East PS,1,0,1,29,555,1
+52,Dharwad Town PS,1,0,1,29,562,1
+53,Dharwad North PS,1,0,1,29,562,1
+54,Dharwad South PS,1,0,1,29,562,1
+55,Kalaburagi Town PS,1,0,1,29,579,1
+56,Kalaburagi North PS,1,0,1,29,579,1
+57,Kalaburagi South PS,1,0,1,29,579,1
+58,Kalaburagi East PS,1,0,1,29,579,1
+59,Ballari Town PS,1,0,1,29,565,1
+60,Ballari North PS,1,0,1,29,565,1
+61,Ballari South PS,1,0,1,29,565,1
+62,Dakshina Kannada Town PS,1,0,1,29,575,1
+63,Dakshina Kannada North PS,1,0,1,29,575,1
+64,Dakshina Kannada South PS,1,0,1,29,575,1
+65,Dakshina Kannada East PS,1,0,1,29,575,1
+66,Udupi Town PS,1,0,1,29,569,1
+67,Udupi North PS,1,0,1,29,569,1
+68,Udupi South PS,1,0,1,29,569,1
+69,Udupi East PS,1,0,1,29,569,1

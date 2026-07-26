@@ -1,0 +1,19 @@
+{
+  "functions": {
+    "targets": [
+      "crimelink_function"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "client": {
+    "source": "crimelink-app",
+    "plugin": "zcatalyst-cli-plugin-react"
+  },
+  "appsail": [
+    {
+      "source": "appsail-python",
+      "name": "crimelink-engine"
+    }
+  ]
+}

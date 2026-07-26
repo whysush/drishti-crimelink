@@ -1,0 +1,8 @@
+RankID,RankName,Hierarchy,Active
+1,Superintendent of Police,3,1
+2,Deputy SP,4,1
+3,Inspector,5,1
+4,Sub-Inspector,6,1
+5,Assistant SI,7,1
+6,Head Constable,8,1
+7,Police Constable,9,1

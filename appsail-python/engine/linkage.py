@@ -17,6 +17,7 @@ from sklearn.cluster import AgglomerativeClustering, DBSCAN
 from collections import Counter
 
 from .fingerprint import DRIVER_LABELS
+from .forecast import project
 
 # plain-language phrase for each crime sub-head (for human-readable group titles)
 PLAIN_CRIME = {
@@ -177,6 +178,7 @@ def build_series(fp, clusters, min_cohesion=0.45):
             "recency_days": recency_days,
             "gravity": "Heinous" if heinous else "Non-Heinous",
             "weak_name": weak_name,
+            "forecast": project(members_out, now),
             "_member_idx": members,
         })
 

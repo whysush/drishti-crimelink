@@ -49,7 +49,7 @@ class CSVBackend:
         with open(path, encoding="utf-8") as f:
             return list(csv.DictReader(f))
 
-    def load(self):
+    def load(self, only_undetected=True):
         casemaster = self._load("CaseMaster")
         chargesheet = self._load("ChargesheetDetails")
         accused = self._load("Accused")
@@ -62,11 +62,14 @@ class CSVBackend:
         subheads = {r["CrimeSubHeadID"]: r["CrimeHeadName"] for r in self._load("CrimeSubHead")}
         heads = {r["CrimeHeadID"]: r["CrimeGroupName"] for r in self._load("CrimeHead")}
         gravity = {r["GravityOffenceID"]: r["LookupValue"] for r in self._load("GravityOffence")}
+        occupations = {r["OccupationID"]: r["OccupationName"]
+                       for r in self._load("OccupationMaster")}
 
         labels = dict(units=units, districts=districts, subheads=subheads,
-                      heads=heads, gravity=gravity)
+                      heads=heads, gravity=gravity, occupations=occupations)
         return build_cases(casemaster, chargesheet, accused, victim,
-                           complainant, actsec, labels)
+                           complainant, actsec, labels,
+                           only_undetected=only_undetected)
 
 
 class DatastoreBackend:
@@ -109,14 +112,25 @@ class DatastoreBackend:
         subheads = {r["CrimeSubHeadID"]: r["CrimeHeadName"] for r in rows("CrimeSubHead")}
         heads = {r["CrimeHeadID"]: r["CrimeGroupName"] for r in rows("CrimeHead")}
         gravity = {r["GravityOffenceID"]: r["LookupValue"] for r in rows("GravityOffence")}
+        occupations = {r["OccupationID"]: r["OccupationName"]
+                       for r in rows("OccupationMaster")}
         labels = dict(units=units, districts=districts, subheads=subheads,
-                      heads=heads, gravity=gravity)
+                      heads=heads, gravity=gravity, occupations=occupations)
         return build_cases(casemaster, chargesheet, accused, victim,
                            complainant, actsec, labels)
 
 
-def build_cases(casemaster, chargesheet, accused, victim, complainant, actsec, labels):
-    """Join FIR + children into engine `case` dicts, restricted to cstype='C'."""
+def build_cases(casemaster, chargesheet, accused, victim, complainant, actsec, labels,
+                only_undetected=True):
+    """Join FIR + children into engine `case` dicts.
+
+    Linkage only ever runs on undetected cases (cstype='C') — that is the whole
+    premise. But the analytical side of the platform (hotspots, trend baselines,
+    socio-economic correlation) has to see the *whole* crime picture, or a "spike"
+    is measured against a population that excludes every solved case. So the
+    caller chooses: `only_undetected=True` for the linkage spine, False for
+    analytics over all FIRs.
+    """
     undetected_ids = {r["CaseMasterID"] for r in chargesheet if r.get("cstype") == "C"}
     cs_by_case = {r["CaseMasterID"]: r for r in chargesheet}
 
@@ -136,11 +150,12 @@ def build_cases(casemaster, chargesheet, accused, victim, complainant, actsec, l
 
     units, districts = labels["units"], labels["districts"]
     subheads, heads, gravity = labels["subheads"], labels["heads"], labels["gravity"]
+    occupations = labels.get("occupations", {})
 
     cases = []
     for r in casemaster:
         cid = r["CaseMasterID"]
-        if cid not in undetected_ids:
+        if only_undetected and cid not in undetected_ids:
             continue
         unit = units.get(r.get("PoliceStationID"), {})
         did_raw = unit.get("DistrictID")            # string key for lookups below
@@ -179,8 +194,11 @@ def build_cases(casemaster, chargesheet, accused, victim, complainant, actsec, l
             "act_sections": acts_by_case[cid],
             "victims": victims,
             "accused_names": names,
-            "complainant_occupations": [o for o in occs if o],
+            "complainant_occupations": [occupations.get(o, o) for o in occs if o],
             "registered_date": r.get("CrimeRegisteredDate"),
             "csdate": cs_by_case.get(cid, {}).get("csdate"),
+            "undetected": cid in undetected_ids,
+            "cstype": cs_by_case.get(cid, {}).get("cstype"),
+            "complainant_occupation_ids": [o for o in occs if o],
         })
     return cases

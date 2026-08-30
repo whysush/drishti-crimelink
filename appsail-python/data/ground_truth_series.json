@@ -1,0 +1,680 @@
+{
+  "planted_series": [
+    {
+      "series_key": "S1",
+      "label": "Chain-snatch bike duo",
+      "subhead": 10,
+      "district": "Bengaluru Urban",
+      "weak_name": "Manjunath Gowda",
+      "size": 7,
+      "members": [
+        {
+          "CaseMasterID": 1,
+          "CrimeNo": "105720001202500001",
+          "PoliceStationID": 1,
+          "IncidentFromDate": "2025-03-24 21:50:00",
+          "weak_name_present": true
+        },
+        {
+          "CaseMasterID": 2,
+          "CrimeNo": "105720001202500002",
+          "PoliceStationID": 1,
+          "IncidentFromDate": "2025-04-01 23:55:00",
+          "weak_name_present": true
+        },
+        {
+          "CaseMasterID": 3,
+          "CrimeNo": "105720002202500001",
+          "PoliceStationID": 2,
+          "IncidentFromDate": "2025-04-19 23:38:00",
+          "weak_name_present": true
+        },
+        {
+          "CaseMasterID": 4,
+          "CrimeNo": "105720001202500003",
+          "PoliceStationID": 1,
+          "IncidentFromDate": "2025-04-26 01:09:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 5,
+          "CrimeNo": "105720002202500002",
+          "PoliceStationID": 2,
+          "IncidentFromDate": "2025-04-25 01:17:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 6,
+          "CrimeNo": "105720001202500004",
+          "PoliceStationID": 1,
+          "IncidentFromDate": "2025-04-28 23:10:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 7,
+          "CrimeNo": "105720003202500001",
+          "PoliceStationID": 3,
+          "IncidentFromDate": "2025-05-11 02:43:00",
+          "weak_name_present": false
+        }
+      ]
+    },
+    {
+      "series_key": "S2",
+      "label": "Rear-ventilator burglary crew",
+      "subhead": 11,
+      "district": "Mysuru",
+      "weak_name": "Suresh Naik",
+      "size": 6,
+      "members": [
+        {
+          "CaseMasterID": 8,
+          "CrimeNo": "105770016202400001",
+          "PoliceStationID": 16,
+          "IncidentFromDate": "2024-06-15 23:46:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 9,
+          "CrimeNo": "105770017202400001",
+          "PoliceStationID": 17,
+          "IncidentFromDate": "2024-06-20 23:13:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 10,
+          "CrimeNo": "105770018202400001",
+          "PoliceStationID": 18,
+          "IncidentFromDate": "2024-07-05 02:43:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 11,
+          "CrimeNo": "105770016202400002",
+          "PoliceStationID": 16,
+          "IncidentFromDate": "2024-07-06 02:20:00",
+          "weak_name_present": true
+        },
+        {
+          "CaseMasterID": 12,
+          "CrimeNo": "105770015202400001",
+          "PoliceStationID": 15,
+          "IncidentFromDate": "2024-07-13 01:22:00",
+          "weak_name_present": true
+        },
+        {
+          "CaseMasterID": 13,
+          "CrimeNo": "105770017202400002",
+          "PoliceStationID": 17,
+          "IncidentFromDate": "2024-07-10 01:54:00",
+          "weak_name_present": false
+        }
+      ]
+    },
+    {
+      "series_key": "S3",
+      "label": "Two-wheeler lifters (tech corridor)",
+      "subhead": 12,
+      "district": "Bengaluru Urban",
+      "weak_name": null,
+      "size": 8,
+      "members": [
+        {
+          "CaseMasterID": 14,
+          "CrimeNo": "105720003202500002",
+          "PoliceStationID": 3,
+          "IncidentFromDate": "2025-04-04 11:32:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 15,
+          "CrimeNo": "105720003202500003",
+          "PoliceStationID": 3,
+          "IncidentFromDate": "2025-04-16 13:46:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 16,
+          "CrimeNo": "105720001202500005",
+          "PoliceStationID": 1,
+          "IncidentFromDate": "2025-04-20 16:44:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 17,
+          "CrimeNo": "105720001202500006",
+          "PoliceStationID": 1,
+          "IncidentFromDate": "2025-04-25 11:09:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 18,
+          "CrimeNo": "105720003202500004",
+          "PoliceStationID": 3,
+          "IncidentFromDate": "2025-05-06 15:25:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 19,
+          "CrimeNo": "105720003202500005",
+          "PoliceStationID": 3,
+          "IncidentFromDate": "2025-05-19 11:01:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 20,
+          "CrimeNo": "105720001202500007",
+          "PoliceStationID": 1,
+          "IncidentFromDate": "2025-05-28 14:28:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 21,
+          "CrimeNo": "105720002202500003",
+          "PoliceStationID": 2,
+          "IncidentFromDate": "2025-06-13 15:24:00",
+          "weak_name_present": false
+        }
+      ]
+    },
+    {
+      "series_key": "S4",
+      "label": "Highway waylay robbers",
+      "subhead": 13,
+      "district": "Ramanagara",
+      "weak_name": "Ravi Kumar",
+      "size": 6,
+      "members": [
+        {
+          "CaseMasterID": 22,
+          "CrimeNo": "105840007202400001",
+          "PoliceStationID": 7,
+          "IncidentFromDate": "2024-07-26 02:36:00",
+          "weak_name_present": true
+        },
+        {
+          "CaseMasterID": 23,
+          "CrimeNo": "105840008202400001",
+          "PoliceStationID": 8,
+          "IncidentFromDate": "2024-08-05 21:01:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 24,
+          "CrimeNo": "105840009202400001",
+          "PoliceStationID": 9,
+          "IncidentFromDate": "2024-08-11 02:52:00",
+          "weak_name_present": true
+        },
+        {
+          "CaseMasterID": 25,
+          "CrimeNo": "105840007202400002",
+          "PoliceStationID": 7,
+          "IncidentFromDate": "2024-08-19 23:20:00",
+          "weak_name_present": true
+        },
+        {
+          "CaseMasterID": 26,
+          "CrimeNo": "105840009202400002",
+          "PoliceStationID": 9,
+          "IncidentFromDate": "2024-09-16 01:06:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 27,
+          "CrimeNo": "105840010202400001",
+          "PoliceStationID": 10,
+          "IncidentFromDate": "2024-08-20 01:41:00",
+          "weak_name_present": true
+        }
+      ]
+    },
+    {
+      "series_key": "S5",
+      "label": "Daytime lock-break burglars",
+      "subhead": 11,
+      "district": "Tumakuru",
+      "weak_name": "Suresh Naik",
+      "size": 5,
+      "members": [
+        {
+          "CaseMasterID": 28,
+          "CrimeNo": "105710024202400001",
+          "PoliceStationID": 24,
+          "IncidentFromDate": "2024-02-03 10:13:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 29,
+          "CrimeNo": "105710026202400001",
+          "PoliceStationID": 26,
+          "IncidentFromDate": "2024-02-15 14:14:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 30,
+          "CrimeNo": "105710023202400001",
+          "PoliceStationID": 23,
+          "IncidentFromDate": "2024-02-29 12:07:00",
+          "weak_name_present": true
+        },
+        {
+          "CaseMasterID": 31,
+          "CrimeNo": "105710025202400001",
+          "PoliceStationID": 25,
+          "IncidentFromDate": "2024-03-01 17:58:00",
+          "weak_name_present": true
+        },
+        {
+          "CaseMasterID": 32,
+          "CrimeNo": "105710024202400002",
+          "PoliceStationID": 24,
+          "IncidentFromDate": "2024-03-10 16:09:00",
+          "weak_name_present": false
+        }
+      ]
+    },
+    {
+      "series_key": "S6",
+      "label": "Festival-crowd chain snatchers",
+      "subhead": 10,
+      "district": "Mandya",
+      "weak_name": null,
+      "size": 6,
+      "members": [
+        {
+          "CaseMasterID": 33,
+          "CrimeNo": "105730012202500001",
+          "PoliceStationID": 12,
+          "IncidentFromDate": "2025-04-28 13:58:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 34,
+          "CrimeNo": "105730013202500001",
+          "PoliceStationID": 13,
+          "IncidentFromDate": "2025-05-06 14:23:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 35,
+          "CrimeNo": "105730012202500002",
+          "PoliceStationID": 12,
+          "IncidentFromDate": "2025-05-14 13:43:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 36,
+          "CrimeNo": "105730014202500001",
+          "PoliceStationID": 14,
+          "IncidentFromDate": "2025-05-25 16:37:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 37,
+          "CrimeNo": "105730012202500003",
+          "PoliceStationID": 12,
+          "IncidentFromDate": "2025-05-18 16:42:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 38,
+          "CrimeNo": "105730011202500001",
+          "PoliceStationID": 11,
+          "IncidentFromDate": "2025-06-27 12:47:00",
+          "weak_name_present": false
+        }
+      ]
+    },
+    {
+      "series_key": "S7",
+      "label": "Temple-town chain snatchers",
+      "subhead": 10,
+      "district": "Hassan",
+      "weak_name": "Imran Pasha",
+      "size": 6,
+      "members": [
+        {
+          "CaseMasterID": 39,
+          "CrimeNo": "105740034202500001",
+          "PoliceStationID": 34,
+          "IncidentFromDate": "2025-02-24 15:26:00",
+          "weak_name_present": true
+        },
+        {
+          "CaseMasterID": 40,
+          "CrimeNo": "105740034202500002",
+          "PoliceStationID": 34,
+          "IncidentFromDate": "2025-03-08 11:08:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 41,
+          "CrimeNo": "105740035202500001",
+          "PoliceStationID": 35,
+          "IncidentFromDate": "2025-03-10 11:24:00",
+          "weak_name_present": true
+        },
+        {
+          "CaseMasterID": 42,
+          "CrimeNo": "105740034202500003",
+          "PoliceStationID": 34,
+          "IncidentFromDate": "2025-03-17 13:46:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 43,
+          "CrimeNo": "105740034202500004",
+          "PoliceStationID": 34,
+          "IncidentFromDate": "2025-04-17 14:30:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 44,
+          "CrimeNo": "105740034202500005",
+          "PoliceStationID": 34,
+          "IncidentFromDate": "2025-04-10 13:22:00",
+          "weak_name_present": false
+        }
+      ]
+    },
+    {
+      "series_key": "S8",
+      "label": "ATM two-wheeler theft ring",
+      "subhead": 12,
+      "district": "Davanagere",
+      "weak_name": null,
+      "size": 6,
+      "members": [
+        {
+          "CaseMasterID": 45,
+          "CrimeNo": "105670041202400001",
+          "PoliceStationID": 41,
+          "IncidentFromDate": "2024-09-23 21:54:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 46,
+          "CrimeNo": "105670044202400001",
+          "PoliceStationID": 44,
+          "IncidentFromDate": "2024-10-05 23:53:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 47,
+          "CrimeNo": "105670042202400001",
+          "PoliceStationID": 42,
+          "IncidentFromDate": "2024-10-17 01:07:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 48,
+          "CrimeNo": "105670041202400002",
+          "PoliceStationID": 41,
+          "IncidentFromDate": "2024-10-08 22:32:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 49,
+          "CrimeNo": "105670044202400002",
+          "PoliceStationID": 44,
+          "IncidentFromDate": "2024-11-10 23:07:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 50,
+          "CrimeNo": "105670044202400003",
+          "PoliceStationID": 44,
+          "IncidentFromDate": "2024-11-12 01:07:00",
+          "weak_name_present": false
+        }
+      ]
+    },
+    {
+      "series_key": "S9",
+      "label": "NH bypass knife robbers",
+      "subhead": 13,
+      "district": "Chitradurga",
+      "weak_name": "Ravi Kumar",
+      "size": 5,
+      "members": [
+        {
+          "CaseMasterID": 51,
+          "CrimeNo": "105660045202500001",
+          "PoliceStationID": 45,
+          "IncidentFromDate": "2025-03-08 21:59:00",
+          "weak_name_present": true
+        },
+        {
+          "CaseMasterID": 52,
+          "CrimeNo": "105660047202500001",
+          "PoliceStationID": 47,
+          "IncidentFromDate": "2025-03-22 02:56:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 53,
+          "CrimeNo": "105660046202500001",
+          "PoliceStationID": 46,
+          "IncidentFromDate": "2025-03-28 22:45:00",
+          "weak_name_present": true
+        },
+        {
+          "CaseMasterID": 54,
+          "CrimeNo": "105660046202500002",
+          "PoliceStationID": 46,
+          "IncidentFromDate": "2025-03-29 21:42:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 55,
+          "CrimeNo": "105660047202500002",
+          "PoliceStationID": 47,
+          "IncidentFromDate": "2025-04-13 21:59:00",
+          "weak_name_present": true
+        }
+      ]
+    },
+    {
+      "series_key": "S10",
+      "label": "Compound-wall burglars",
+      "subhead": 11,
+      "district": "Belagavi",
+      "weak_name": null,
+      "size": 6,
+      "members": [
+        {
+          "CaseMasterID": 56,
+          "CrimeNo": "105550051202400001",
+          "PoliceStationID": 51,
+          "IncidentFromDate": "2024-04-16 02:16:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 57,
+          "CrimeNo": "105550049202400001",
+          "PoliceStationID": 49,
+          "IncidentFromDate": "2024-04-27 02:34:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 58,
+          "CrimeNo": "105550048202400001",
+          "PoliceStationID": 48,
+          "IncidentFromDate": "2024-05-08 23:34:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 59,
+          "CrimeNo": "105550049202400002",
+          "PoliceStationID": 49,
+          "IncidentFromDate": "2024-05-19 21:13:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 60,
+          "CrimeNo": "105550051202400002",
+          "PoliceStationID": 51,
+          "IncidentFromDate": "2024-05-26 21:24:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 61,
+          "CrimeNo": "105550048202400002",
+          "PoliceStationID": 48,
+          "IncidentFromDate": "2024-06-15 22:34:00",
+          "weak_name_present": false
+        }
+      ]
+    },
+    {
+      "series_key": "S11",
+      "label": "Market chain snatchers",
+      "subhead": 10,
+      "district": "Dharwad",
+      "weak_name": "Basavaraj Patil",
+      "size": 6,
+      "members": [
+        {
+          "CaseMasterID": 62,
+          "CrimeNo": "105620054202500001",
+          "PoliceStationID": 54,
+          "IncidentFromDate": "2025-11-22 13:07:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 63,
+          "CrimeNo": "105620053202500001",
+          "PoliceStationID": 53,
+          "IncidentFromDate": "2025-12-06 14:44:00",
+          "weak_name_present": true
+        },
+        {
+          "CaseMasterID": 64,
+          "CrimeNo": "105620053202500002",
+          "PoliceStationID": 53,
+          "IncidentFromDate": "2025-12-12 14:31:00",
+          "weak_name_present": true
+        },
+        {
+          "CaseMasterID": 65,
+          "CrimeNo": "105620053202500003",
+          "PoliceStationID": 53,
+          "IncidentFromDate": "2025-12-31 17:41:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 66,
+          "CrimeNo": "105620054202600001",
+          "PoliceStationID": 54,
+          "IncidentFromDate": "2026-01-17 12:47:00",
+          "weak_name_present": true
+        },
+        {
+          "CaseMasterID": 67,
+          "CrimeNo": "105620053202500004",
+          "PoliceStationID": 53,
+          "IncidentFromDate": "2025-12-22 14:53:00",
+          "weak_name_present": false
+        }
+      ]
+    },
+    {
+      "series_key": "S12",
+      "label": "Sharp-weapon assault series",
+      "subhead": 22,
+      "district": "Kalaburagi",
+      "weak_name": null,
+      "size": 5,
+      "members": [
+        {
+          "CaseMasterID": 68,
+          "CrimeNo": "105790056202500001",
+          "PoliceStationID": 56,
+          "IncidentFromDate": "2025-04-25 22:10:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 69,
+          "CrimeNo": "105790055202500001",
+          "PoliceStationID": 55,
+          "IncidentFromDate": "2025-05-09 22:03:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 70,
+          "CrimeNo": "105790057202500001",
+          "PoliceStationID": 57,
+          "IncidentFromDate": "2025-05-19 02:37:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 71,
+          "CrimeNo": "105790058202500001",
+          "PoliceStationID": 58,
+          "IncidentFromDate": "2025-06-03 01:23:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 72,
+          "CrimeNo": "105790055202500002",
+          "PoliceStationID": 55,
+          "IncidentFromDate": "2025-06-20 02:07:00",
+          "weak_name_present": false
+        }
+      ]
+    },
+    {
+      "series_key": "S13",
+      "label": "Coastal two-wheeler theft",
+      "subhead": 12,
+      "district": "Dakshina Kannada",
+      "weak_name": null,
+      "size": 6,
+      "members": [
+        {
+          "CaseMasterID": 73,
+          "CrimeNo": "105750064202500001",
+          "PoliceStationID": 64,
+          "IncidentFromDate": "2025-02-13 12:54:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 74,
+          "CrimeNo": "105750065202500001",
+          "PoliceStationID": 65,
+          "IncidentFromDate": "2025-02-19 11:16:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 75,
+          "CrimeNo": "105750063202500001",
+          "PoliceStationID": 63,
+          "IncidentFromDate": "2025-03-13 12:43:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 76,
+          "CrimeNo": "105750064202500002",
+          "PoliceStationID": 64,
+          "IncidentFromDate": "2025-03-09 13:29:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 77,
+          "CrimeNo": "105750062202500001",
+          "PoliceStationID": 62,
+          "IncidentFromDate": "2025-04-02 11:16:00",
+          "weak_name_present": false
+        },
+        {
+          "CaseMasterID": 78,
+          "CrimeNo": "105750064202500003",
+          "PoliceStationID": 64,
+          "IncidentFromDate": "2025-03-20 13:31:00",
+          "weak_name_present": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,7 +1,16 @@
-// Terrain generator — ONE smooth mesh PER DISTRICT so colours never leak across
-// borders. Vertices are shared WITHIN a district (smooth shading) but duplicated
-// at borders (each district owns its edge copies), giving crisp, non-bleeding
-// district fills. Elevation rises with crime volume (+ gentle relief).
+// Terrain — one crisp extruded plateau per district.
+//
+// The earlier build sampled a jittered grid and clipped it to the district
+// polygons, which meant every border was stair-stepped at grid resolution, fbm
+// noise made the districts lumpy, and the height came from an inverse-distance
+// blend that bled across boundaries. It read as melted dunes, not a map.
+//
+// This extrudes each district straight from its real GeoJSON outline instead, so
+// the boundary is exact, the top is flat, and a district's height is its own case
+// count rather than a smear of its neighbours'. Same data encoding — taller means
+// more unsolved cases — but it now reads as a map you could put on a wall.
+import * as THREE from "three";
+
 import { makeProjection } from "./geo";
 import { District } from "./types";
 
@@ -11,16 +20,21 @@ const toXY = (lon: number, lat: number): [number, number] => {
   return [x - 50, 50 - y];
 };
 
-function hash(x: number, y: number) { const h = Math.sin(x * 127.1 + y * 311.7) * 43758.5453; return h - Math.floor(h); }
-function vnoise(x: number, y: number) {
-  const xi = Math.floor(x), yi = Math.floor(y), xf = x - xi, yf = y - yi;
-  const u = xf * xf * (3 - 2 * xf), v = yf * yf * (3 - 2 * yf);
-  const tl = hash(xi, yi), tr = hash(xi + 1, yi), bl = hash(xi, yi + 1), br = hash(xi + 1, yi + 1);
-  return (tl * (1 - u) + tr * u) * (1 - v) + (bl * (1 - u) + br * u) * v;
-}
-function fbm(x: number, y: number) { return 0.6 * vnoise(x, y) + 0.3 * vnoise(x * 2.1, y * 2.1) + 0.1 * vnoise(x * 4.3, y * 4.3); }
+// A tall spread turned the state into disconnected towers with chasms between
+// them. Kept shallow, the plateaus still rank by case load but the map reads as one
+// landmass — which is what a map is supposed to do.
+const BASE_H = 2.8;      // every district stands off the ground: it is land, not a gap
+const CRIME_H = 2.6;     // additional height at the busiest district
+const BEVEL = 0.07;      // a chamfer this small only catches the light on the rim
+
+// The source outlines carry ~19,800 vertices across 30 districts — far more than a
+// 100-unit-wide map can show. Extruded raw, every micro-vertex became a corrugation
+// down the side walls and a burr on the rim. Simplifying first is what makes the
+// edges read as clean lines instead of noise.
+const SIMPLIFY = 0.28;
 
 type Ring = number[][];
+
 function inRing(x: number, y: number, r: Ring) {
   let inside = false;
   for (let i = 0, j = r.length - 1; i < r.length; j = i++) {
@@ -30,78 +44,158 @@ function inRing(x: number, y: number, r: Ring) {
   return inside;
 }
 
-interface DPoly { rings: Ring[]; }
-interface DFeat { code: number; polys: DPoly[]; bbox: [number, number, number, number]; cx: number; cy: number; value: number; }
+/** Douglas-Peucker on an open polyline. */
+function rdpOpen(pts: Ring, eps: number): Ring {
+  if (pts.length < 3) return pts;
+  const keep = new Uint8Array(pts.length);
+  keep[0] = keep[pts.length - 1] = 1;
+  const stack: [number, number][] = [[0, pts.length - 1]];
+  while (stack.length) {
+    const [lo, hi] = stack.pop()!;
+    if (hi - lo < 2) continue;
+    const [ax, ay] = pts[lo], [bx, by] = pts[hi];
+    const dx = bx - ax, dy = by - ay;
+    const len = Math.hypot(dx, dy) || 1e-12;
+    let best = -1, bestD = eps;
+    for (let i = lo + 1; i < hi; i++) {
+      const [px, py] = pts[i];
+      const d = Math.abs((px - ax) * dy - (py - ay) * dx) / len;
+      if (d > bestD) { bestD = d; best = i; }
+    }
+    if (best > 0) { keep[best] = 1; stack.push([lo, best], [best, hi]); }
+  }
+  const out: Ring = [];
+  for (let i = 0; i < pts.length; i++) if (keep[i]) out.push(pts[i]);
+  return out;
+}
 
-export interface DistrictMesh { code: number; active: boolean; positions: Float32Array; indices: Uint32Array; }
-export interface Terrain { meshes: DistrictMesh[]; sampleY: (lon: number, lat: number) => number; }
+/**
+ * Simplify one ring.
+ *
+ * These rings are closed — the last point repeats the first — so running
+ * Douglas-Peucker straight down them anchors on a zero-length segment, measures
+ * every deviation as zero, and discards the entire outline. The fix is to anchor
+ * on the point furthest from the start and simplify the two halves, which is what
+ * gives a closed ring the two real endpoints the algorithm needs.
+ */
+function simplify(ring: Ring, eps: number): Ring {
+  const n = ring.length;
+  const closed = n > 2 && ring[0][0] === ring[n - 1][0] && ring[0][1] === ring[n - 1][1];
+  const pts = closed ? ring.slice(0, -1) : ring;
+  if (pts.length < 6) return ring;
 
-const STEP = 0.45;            // high-poly (per-district meshes -> no colour leak)
-const JIT = 0.12 * STEP;
-const CRIME_H = 11;
-const RELIEF_H = 2.2;
-const DETAIL_H = 0.5;
+  let far = 0, fd = -1;
+  for (let i = 1; i < pts.length; i++) {
+    const dx = pts[i][0] - pts[0][0], dy = pts[i][1] - pts[0][1];
+    const d = dx * dx + dy * dy;
+    if (d > fd) { fd = d; far = i; }
+  }
+  const out = rdpOpen(pts.slice(0, far + 1), eps)
+    .concat(rdpOpen(pts.slice(far), eps).slice(1));
+  if (out.length < 4) return ring;
+  return closed ? out.concat([out[0]]) : out;
+}
+
+export interface DistrictMesh {
+  code: number;
+  active: boolean;
+  geometry: THREE.BufferGeometry;
+  /** top-face height, so pins and borders can sit exactly on the plateau */
+  height: number;
+  /** outline of the top face, for the border pass */
+  outline: THREE.Vector3[][];
+}
+
+export interface Terrain {
+  meshes: DistrictMesh[];
+  sampleY: (lon: number, lat: number) => number;
+  heightOf: (code: number) => number;
+}
 
 export function buildTerrain(districts: District[]): Terrain {
   const byCode = new Map(districts.map((d) => [Number(d.district_id), d]));
   const maxU = Math.max(1, ...districts.map((d) => d.unsolved));
 
-  const feats: DFeat[] = PROJ.features.map((f) => {
-    const polys: DPoly[] = f.coords.map((poly) => ({ rings: poly.map((ring) => ring.map(([lo, la]) => toXY(lo, la))) }));
-    let minx = 1e9, miny = 1e9, maxx = -1e9, maxy = -1e9, sx = 0, sy = 0, n = 0;
-    for (const p of polys) for (const [x, y] of p.rings[0]) { minx = Math.min(minx, x); miny = Math.min(miny, y); maxx = Math.max(maxx, x); maxy = Math.max(maxy, y); sx += x; sy += y; n++; }
-    const d = byCode.get(f.censuscode);
-    return { code: f.censuscode, polys, bbox: [minx, miny, maxx, maxy], cx: sx / n, cy: sy / n, value: d ? d.unsolved / maxU : 0 };
-  });
-  const valueByCode = new Map(feats.map((f) => [f.code, f.value]));
-
-  const inFeat = (x: number, y: number, ft: DFeat) => {
-    if (x < ft.bbox[0] || x > ft.bbox[2] || y < ft.bbox[1] || y > ft.bbox[3]) return false;
-    for (const p of ft.polys) { if (!inRing(x, y, p.rings[0])) continue; let hole = false; for (let h = 1; h < p.rings.length; h++) if (inRing(x, y, p.rings[h])) { hole = true; break; } if (!hole) return true; }
-    return false;
-  };
-  const districtAt = (x: number, y: number): number => { for (const ft of feats) if (inFeat(x, y, ft)) return ft.code; return -1; };
-  const crimeField = (x: number, y: number) => { let num = 0, den = 0; for (const ft of feats) { const dx = x - ft.cx, dy = y - ft.cy, w = 1 / (dx * dx + dy * dy + 4); num += ft.value * w; den += w; } return den ? num / den : 0; };
-  const elevation = (x: number, y: number) => (fbm(x * 0.16 + 5, y * 0.16 + 9) - 0.5) * RELIEF_H + (fbm(x * 0.6 + 2, y * 0.6 + 7) - 0.5) * DETAIL_H + crimeField(x, y) * CRIME_H;
-
-  let minx = 1e9, miny = 1e9, maxx = -1e9, maxy = -1e9;
-  for (const ft of feats) { minx = Math.min(minx, ft.bbox[0]); miny = Math.min(miny, ft.bbox[1]); maxx = Math.max(maxx, ft.bbox[2]); maxy = Math.max(maxy, ft.bbox[3]); }
-  const cols = Math.ceil((maxx - minx) / STEP) + 1, rows = Math.ceil((maxy - miny) / STEP) + 1;
-
-  const N = cols * rows;
-  const code = new Int32Array(N).fill(-1);
-  const wx = new Float32Array(N), wy = new Float32Array(N), wz = new Float32Array(N);
-  for (let i = 0; i < cols; i++) for (let j = 0; j < rows; j++) {
-    const x = minx + i * STEP + (hash(i * 3.1, j * 7.7) - 0.5) * JIT;
-    const y = miny + j * STEP + (hash(i * 5.9, j * 2.3) - 0.5) * JIT;
-    const c = districtAt(x, y); if (c === -1) continue;
-    const k = i * rows + j; code[k] = c; wx[k] = x; wy[k] = elevation(x, y); wz[k] = -y;
-  }
-
-  const majority = (a: number, b: number, c: number) => (a === b || a === c ? a : b === c ? b : a);
-  const triKeys = new Map<number, number[]>();  // district -> flat node keys (3/tri)
-  const addTri = (a: number, b: number, c: number) => {
-    if (code[a] < 0 || code[b] < 0 || code[c] < 0) return;
-    const d = majority(code[a], code[b], code[c]);
-    const arr = triKeys.get(d) || []; arr.push(a, b, c); triKeys.set(d, arr);
-  };
-  for (let i = 0; i < cols - 1; i++) for (let j = 0; j < rows - 1; j++) {
-    const a = i * rows + j, b = (i + 1) * rows + j, c = i * rows + (j + 1), d = (i + 1) * rows + (j + 1);
-    addTri(a, b, d); addTri(a, d, c);
-  }
-
   const meshes: DistrictMesh[] = [];
-  triKeys.forEach((keys, dcode) => {
-    const local = new Map<number, number>(); const pos: number[] = []; const idx: number[] = [];
-    for (const k of keys) {
-      let li = local.get(k);
-      if (li === undefined) { li = pos.length / 3; local.set(k, li); pos.push(wx[k], wy[k], wz[k]); }
-      idx.push(li);
-    }
-    meshes.push({ code: dcode, active: (valueByCode.get(dcode) ?? 0) > 0, positions: new Float32Array(pos), indices: new Uint32Array(idx) });
-  });
+  const heights = new Map<number, number>();
+  // kept in projected space for the point-in-district test that places pins
+  const shapes: { code: number; polys: Ring[][] }[] = [];
 
-  return { meshes, sampleY: (lon, lat) => { const [x, y] = toXY(lon, lat); return elevation(x, y); } };
+  for (const f of PROJ.features) {
+    const d = byCode.get(f.censuscode);
+    const value = d ? d.unsolved / maxU : 0;
+    const height = BASE_H + Math.sqrt(value) * CRIME_H;
+    heights.set(f.censuscode, height);
+
+    const polys: Ring[][] = [];
+    const threeShapes: THREE.Shape[] = [];
+    const outline: THREE.Vector3[][] = [];
+
+    for (const poly of f.coords) {
+      const rings: Ring[] = poly.map((ring) =>
+        simplify(ring.map(([lo, la]) => toXY(lo, la)), SIMPLIFY));
+      if (!rings.length || rings[0].length < 3) continue;
+      polys.push(rings);
+
+      const shape = new THREE.Shape(rings[0].map(([x, y]) => new THREE.Vector2(x, y)));
+      // inner rings are holes — enclaves must not be filled in
+      for (let h = 1; h < rings.length; h++) {
+        if (rings[h].length >= 3) {
+          shape.holes.push(new THREE.Path(rings[h].map(([x, y]) => new THREE.Vector2(x, y))));
+        }
+      }
+      threeShapes.push(shape);
+      outline.push(rings[0].map(([x, y]) => new THREE.Vector3(x, height, -y)));
+    }
+    if (!threeShapes.length) continue;
+
+    const geometry = new THREE.ExtrudeGeometry(threeShapes, {
+      depth: height,
+      bevelEnabled: true,
+      bevelThickness: BEVEL,
+      bevelSize: BEVEL,
+      bevelOffset: 0,
+      bevelSegments: 1,
+      curveSegments: 1,          // outlines are already dense polylines
+    });
+    // shapes are authored in XY; stand them up so height runs along world Y
+    geometry.rotateX(-Math.PI / 2);
+    geometry.computeVertexNormals();
+
+    meshes.push({
+      code: f.censuscode,
+      active: value > 0,
+      geometry,
+      height,
+      outline,
+    });
+    shapes.push({ code: f.censuscode, polys });
+  }
+
+  const districtAt = (x: number, y: number): number => {
+    for (const s of shapes) {
+      for (const rings of s.polys) {
+        if (!inRing(x, y, rings[0])) continue;
+        let hole = false;
+        for (let h = 1; h < rings.length; h++) if (inRing(x, y, rings[h])) { hole = true; break; }
+        if (!hole) return s.code;
+      }
+    }
+    return -1;
+  };
+
+  return {
+    meshes,
+    heightOf: (code) => heights.get(code) ?? BASE_H,
+    sampleY: (lon, lat) => {
+      const [x, y] = toXY(lon, lat);
+      const c = districtAt(x, y);
+      return c === -1 ? 0 : (heights.get(c) ?? BASE_H);
+    },
+  };
 }
 
-export function worldXZ(lon: number, lat: number): [number, number] { const [x, y] = toXY(lon, lat); return [x, -y]; }
+export function worldXZ(lon: number, lat: number): [number, number] {
+  const [x, y] = toXY(lon, lat);
+  return [x, -y];
+}

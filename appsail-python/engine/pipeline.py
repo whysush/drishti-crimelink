@@ -18,11 +18,11 @@ DEFAULT_PARAMS = dict(
 )
 
 
-def run(cases, params=None, weights=None):
+def run(cases, params=None, weights=None, sub=None):
     p = dict(DEFAULT_PARAMS)
     if params:
         p.update(params)
-    fp = Fingerprints(cases, weights=weights)
+    fp = Fingerprints(cases, weights=weights, sub=sub)
     clusters = cluster(fp, distance_threshold=p["distance_threshold"],
                        min_size=p["min_size"], method=p["method"])
     series = build_series(fp, clusters, min_cohesion=p["min_cohesion"])

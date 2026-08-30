@@ -1,7 +1,9 @@
 {
   "functions": {
     "targets": [
-      "crimelink_function"
+      "crimelink_function",
+      "crimelink_recompute",
+      "crimelink_newfir"
     ],
     "ignore": [],
     "source": "functions"

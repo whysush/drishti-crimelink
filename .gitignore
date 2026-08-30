@@ -1,6 +1,8 @@
 # ---- dependencies / builds / venvs ----
 node_modules/
 crimelink-app/build/
+# the Catalyst CLI stages deploys here, vendoring every pip dependency (~56MB)
+.build/
 .venv*/
 __pycache__/
 *.pyc
@@ -21,6 +23,8 @@ __pycache__/
 !/appsail-python/app-config.json
 !/appsail-python/requirements.txt
 !/appsail-python/run_local.py
+!/appsail-python/brief.py
+!/appsail-python/pdfdoc.py
 !/appsail-python/README.md
 !/appsail-python/.gitignore
 !/appsail-python/engine/

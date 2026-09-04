@@ -214,3 +214,17 @@ export interface Me {
   source: string; auth_mode: string;
   permissions: string[]; roles: string[];
 }
+
+export interface Robustness {
+  negative_control: {
+    question: string; answer: string; method: string;
+    real_groups: number; clean: boolean;
+    runs: { seed: number; groups: number; groups_of_4_plus: number }[];
+  };
+  degradation: {
+    question: string; method: string; note: string;
+    rows: { text_blank_pct: number; groups: number; precision?: number;
+            recall?: number; recovered?: number; of?: number }[];
+  };
+  baseline: { precision: number; recall: number; f1: number } | null;
+}

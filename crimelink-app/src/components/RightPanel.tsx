@@ -1,7 +1,7 @@
 import React from "react";
 import {
   AlertsResult, AnomalyResult, District, Group, Hotspot, NetworkGraphData, Person,
-  RiskDistrict, Socio, Station, UCase, Validation,
+  RiskDistrict, Robustness, Socio, Station, UCase, Validation,
 } from "../types";
 import { TFn, TSFn, SigFn, PhFn } from "../i18n";
 import { Status, STATUSES } from "../workspace";
@@ -22,7 +22,7 @@ import ModelPanel from "./ModelPanel";
  */
 export default function RightPanel({
   nav, groups, selectedGroup, districtSel, districtCases, districtGroups,
-  persons, validation, districts, statuses, t, ts, sig, ph, loading,
+  persons, validation, robust, districts, statuses, t, ts, sig, ph, loading,
   hotspots, hotspotMethod, hotspotScanned, selectedHotspot, onSelectHotspot,
   alerts, risk, anomalies, graph, socio, stations,
   onOpenGroup, onShowPerson, onPickCase, onBack, onCloseDistrict, onSetStatus, onBrief, onDistrict,
@@ -31,7 +31,7 @@ export default function RightPanel({
   groups: Group[]; selectedGroup: Group | null;
   districtSel: { id: number; name: string } | null;
   districtCases: UCase[]; districtGroups: Group[];
-  persons: Person[]; validation: Validation | null; districts: District[];
+  persons: Person[]; validation: Validation | null; robust: Robustness | null; districts: District[];
   statuses: Record<string, Status>; t: TFn; ts: TSFn; sig: SigFn; ph: PhFn;
   loading: boolean;
   onOpenGroup: (id: string) => void;
@@ -70,7 +70,7 @@ export default function RightPanel({
         {nav === "triage" && (
           <TriagePanel districts={districts} t={t} onOpenGroup={onOpenGroup} onPickCase={onPickCase} />
         )}
-        {nav === "model" && <ModelPanel v={validation} t={t} />}
+        {nav === "model" && <ModelPanel v={validation} r={robust} t={t} />}
         {nav === "hotspots" && (
           <HotspotsPanel hotspots={hotspots} selected={selectedHotspot}
             onSelect={onSelectHotspot} method={hotspotMethod} scanned={hotspotScanned} />

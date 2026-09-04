@@ -20,6 +20,7 @@ Endpoints:
   GET  /persons               cross-FIR persons of interest (name resolution)
   POST /match                 LIVE TRIAGE: score a new FIR against every group
   GET  /validation            measured accuracy, signal ablation, limitations
+  GET  /robustness            negative control + graceful-degradation checks
   GET  /brief/<series_id>     printable case brief (PDF, or HTML with ?format=html)
   GET  /hotspots              spatiotemporal clusters (place x time-of-day)
   GET  /stations              station-level rollup for district drill-down
@@ -46,6 +47,7 @@ from engine.linkage import edges_for_series
 from engine.nlquery import answer as nl_answer
 from engine.persons import resolve as resolve_persons
 from engine.pipeline import run, series_for_case
+from engine.robustness import report as robustness_report
 from engine.triage import match as triage_match
 from engine.validation import report as validation_report
 
@@ -64,7 +66,7 @@ DATA_DIR = os.getenv("CLINK_DATA_DIR", os.path.join(HERE, "data", "seed_csv"))
 
 _LOCK = threading.Lock()
 _CACHE = {"fp": None, "series": None, "cases": None, "params": None, "source": None,
-          "persons": None, "validation": None,
+          "persons": None, "validation": None, "robustness": None,
           # the analytical side runs over ALL FIRs, not just the undetected spine
           "all_cases": None, "hotspots": None, "analytics": None}
 GT_PATH = os.path.join(HERE, "data", "ground_truth_series.json")
@@ -72,6 +74,19 @@ _LOG = logging.getLogger()
 
 # CLINK_SOURCE: "auto" (try Data Store, fall back to CSV), "datastore", or "csv"
 SOURCE = os.getenv("CLINK_SOURCE", "auto").lower()
+
+
+def _load_ground_truth():
+    """The planted series, when a ground-truth file is bundled. None otherwise."""
+    if not os.path.isfile(GT_PATH):
+        return None
+    try:
+        import json
+        with open(GT_PATH) as fh:
+            return json.load(fh)
+    except Exception as e:  # noqa: BLE001
+        _LOG.warning("ground truth unreadable (%s)", e)
+        return None
 
 
 def _public_series(s):
@@ -111,7 +126,7 @@ def _compute(cases, params=None, source=None):
     fp, series = run(cases, params)
     with _LOCK:
         _CACHE.update(fp=fp, series=series, cases=cases, params=params,
-                      persons=None, validation=None,
+                      persons=None, validation=None, robustness=None,
                       hotspots=None, analytics=None)
         if source is not None:
             _CACHE["source"] = source
@@ -522,19 +537,28 @@ def brief_endpoint(series_id):
     })
 
 
+@app.get("/robustness")
+def robustness():
+    """Does it invent groups from noise, and how does it behave on sparse text?
+
+    Kept off /validation because it re-runs the whole pipeline several times; the
+    client loads it behind the main panel rather than making everything wait.
+    """
+    _ensure_loaded()
+    if _CACHE["robustness"] is None:
+        gt = _load_ground_truth()
+        rep = robustness_report(_CACHE["cases"] or [], gt, _CACHE["params"])
+        with _LOCK:
+            _CACHE["robustness"] = rep
+    return jsonify(**_CACHE["robustness"])
+
+
 @app.get("/validation")
 def validation():
     """Measured accuracy, per-signal ablation, forecast back-test, limitations."""
     _ensure_loaded()
     if _CACHE["validation"] is None:
-        gt = None
-        if os.path.isfile(GT_PATH):
-            try:
-                import json
-                with open(GT_PATH) as fh:
-                    gt = json.load(fh)
-            except Exception as e:  # noqa: BLE001
-                _LOG.warning("ground truth unreadable (%s)", e)
+        gt = _load_ground_truth()
         rep = validation_report(_CACHE["fp"], _CACHE["series"] or [],
                                 _CACHE["cases"] or [], gt, _CACHE["params"])
         with _LOCK:

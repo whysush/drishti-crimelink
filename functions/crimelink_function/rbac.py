@@ -66,6 +66,7 @@ ROUTE_PERMS = {
     "/network": "leads.read",
     "/socio": "model.read",
     "/validation": "model.read",
+    "/robustness": "model.read",
     "/brief/*": "brief.export",
     "/recompute": "recompute",
 }

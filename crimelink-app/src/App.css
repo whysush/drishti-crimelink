@@ -1272,3 +1272,18 @@ textarea:focus-visible, a:focus-visible, [role="tab"]:focus-visible {
   letter-spacing:.14em; text-transform:uppercase; color:var(--pred); margin-bottom:7px;}
 .fc-report p{margin:0 0 8px; font-size:13.2px; line-height:1.62; color:var(--ink-2);}
 .fc-report p:last-child{margin-bottom:0; font-size:12.3px; color:var(--ink-3);}
+
+/* ── robustness checks in the Model panel ─────────────────────────────────── */
+.rb{border:1px solid var(--line-2); background:var(--panel-2); padding:11px 13px; margin-bottom:12px;}
+.rb.clean{border-left:3px solid var(--ok);}
+.rb.dirty{border-left:3px solid var(--sev);}
+.rb-q{font-size:12px; color:var(--ink-3); margin-bottom:5px;}
+.rb-a{font-size:14px; color:var(--ink); font-weight:600; margin-bottom:9px;}
+.rb-bars{display:flex; gap:1px; background:var(--line); border:1px solid var(--line);}
+.rb-bar{flex:1; background:var(--panel); padding:8px 6px; text-align:center;}
+.rb-bar b{display:block; font-family:var(--f-mono); font-size:19px;
+  font-variant-numeric:tabular-nums;}
+.rb-bar span{font-size:9px; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-3);}
+.rb-bar.real b{color:var(--sev);}
+.rb-bar.null b{color:var(--ok);}
+.rb-m{margin:8px 0 0; font-size:11px; line-height:1.5; color:var(--ink-3);}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Validation } from "../types";
+import { Robustness, Validation } from "../types";
 import { TFn } from "../i18n";
 
 /**
@@ -13,7 +13,9 @@ import { TFn } from "../i18n";
  * The limitations section is not a disclaimer. For a police tool, knowing when to
  * distrust the output is the difference between a lead and a wrongful accusation.
  */
-export default function ModelPanel({ v, t }: { v: Validation | null; t: TFn }) {
+export default function ModelPanel({ v, r, t }: {
+  v: Validation | null; r?: Robustness | null; t: TFn;
+}) {
   if (!v) return <div className="empty">{t("loading")}</div>;
 
   const a = v.accuracy;
@@ -113,6 +115,52 @@ export default function ModelPanel({ v, t }: { v: Validation | null; t: TFn }) {
         <Row k="Groups found" v={v.data_profile.groups_found} />
         <Row k="Cases placed in a group" v={v.data_profile.cases_grouped} />
       </div>
+
+      {r && (
+        <>
+          <div className="gv-sub">Does it invent groups?</div>
+          <div className={`rb ${r.negative_control.clean ? "clean" : "dirty"}`}>
+            <div className="rb-q">{r.negative_control.question}</div>
+            <div className="rb-a">{r.negative_control.answer}</div>
+            <div className="rb-bars">
+              <div className="rb-bar real">
+                <b>{r.negative_control.real_groups}</b><span>on the real data</span>
+              </div>
+              {r.negative_control.runs.map((run) => (
+                <div className="rb-bar null" key={run.seed}>
+                  <b>{run.groups}</b><span>scrambled #{run.seed}</span>
+                </div>
+              ))}
+            </div>
+            <p className="rb-m">{r.negative_control.method}.</p>
+          </div>
+
+          <div className="gv-sub">What happens when the text is missing?</div>
+          <div className="rb">
+            <div className="rb-q">{r.degradation.question}</div>
+            <div className="tw">
+              <table className="mdl-t">
+                <thead>
+                  <tr><th>Brief facts blank</th><th>Groups</th><th>Precision</th>
+                    <th>Recall</th><th>Recovered</th></tr>
+                </thead>
+                <tbody>
+                  {r.degradation.rows.map((row) => (
+                    <tr key={row.text_blank_pct} className={row.text_blank_pct === 0 ? "win" : ""}>
+                      <td>{row.text_blank_pct === 0 ? "none — full text" : `${row.text_blank_pct}%`}</td>
+                      <td>{row.groups}</td>
+                      <td>{row.precision?.toFixed(3) ?? "—"}</td>
+                      <td>{row.recall?.toFixed(3) ?? "—"}</td>
+                      <td>{row.recovered != null ? `${row.recovered}/${row.of}` : "—"}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="rb-m">{r.degradation.note}</p>
+          </div>
+        </>
+      )}
 
       <div className="gv-sub">{t("limitations")}</div>
       <div className="lim">

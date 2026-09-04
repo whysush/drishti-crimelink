@@ -54,6 +54,7 @@ ROUTES = {
     "/persons": "/persons",
     "/match": "/match",
     "/validation": "/validation",
+    "/robustness": "/robustness",
     "/hotspots": "/hotspots",
     "/stations": "/stations",
     "/alerts": "/alerts",

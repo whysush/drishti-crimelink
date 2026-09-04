@@ -3,7 +3,7 @@ import "./App.css";
 import { api, setViewAs } from "./api";
 import {
   AlertsResult, AnomalyResult, District, Group, Hotspot, NetworkGraphData, Person,
-  RiskDistrict, Socio, Station, Stats, UCase, Validation, Me,
+  RiskDistrict, Robustness, Socio, Station, Stats, UCase, Validation, Me,
 } from "./types";
 import { useLang } from "./i18n";
 import { Status, loadStatuses, saveStatuses } from "./workspace";
@@ -69,6 +69,7 @@ export default function App() {
   const [cases, setCases] = useState<UCase[]>([]);
   const [persons, setPersons] = useState<Person[]>([]);
   const [validation, setValidation] = useState<Validation | null>(null);
+  const [robust, setRobust] = useState<Robustness | null>(null);
   const [me, setMe] = useState<Me | null>(null);
   const [hotspots, setHotspots] = useState<Hotspot[]>([]);
   const [hotspotMeta, setHotspotMeta] = useState({ method: "", scanned: 0 });
@@ -122,6 +123,8 @@ export default function App() {
         // some roles, not a failure, so it must not surface as an error
         api.persons().then((p) => setPersons(p.persons)).catch(() => setPersons([]));
         api.validation().then(setValidation).catch(() => setValidation(null));
+        // re-runs the pipeline several times, so it trails the rest
+        api.robustness().then(setRobust).catch(() => setRobust(null));
         api.hotspots().then((h) => {
           setHotspots(h.hotspots);
           setHotspotMeta({ method: h.method, scanned: h.scanned_cases });
@@ -431,7 +434,7 @@ export default function App() {
       <RightPanel
         nav={nav} groups={visibleGroups} selectedGroup={group}
         districtSel={dist} districtCases={districtCases} districtGroups={districtGroups}
-        persons={persons} validation={validation} districts={districts}
+        persons={persons} validation={validation} robust={robust} districts={districts}
         statuses={statuses} t={t} ts={ts} sig={sig} ph={ph} loading={loading}
         hotspots={hotspots} hotspotMethod={hotspotMeta.method}
         hotspotScanned={hotspotMeta.scanned}

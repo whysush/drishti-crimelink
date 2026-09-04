@@ -1,6 +1,6 @@
 import {
   Group, Stats, UCase, District, QueryResult, Person, TriageResult, Validation, CaseFile,
-  Hotspot, Station, AlertsResult, RiskDistrict, NetworkGraphData, AnomalyResult, Socio, Me,
+  Hotspot, Station, AlertsResult, RiskDistrict, NetworkGraphData, AnomalyResult, Socio, Me, Robustness,
 } from "./types";
 
 // Prod: REACT_APP_API_BASE = the crimelink_function gateway. Dev: engine on :9055.
@@ -157,6 +157,7 @@ export const api = {
     get<{ count: number; cross_station: number; persons: Person[] }>(
       `/persons${limit ? `?limit=${limit}` : ""}`),
   validation: () => get<Validation>("/validation"),
+  robustness: () => get<Robustness>("/robustness"),
   match: (fir: NewFir) => post<TriageResult>("/match", fir),
 
   // analytical platform

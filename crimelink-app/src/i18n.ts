@@ -28,6 +28,7 @@ const T: Dict = {
   kpi_connected: ["cases connected", "ಜೋಡಿಸಿದ ಪ್ರಕರಣ"],
   // tabs
   tab_leads: ["Leads", "ಸುಳಿವು"],
+  tab_forecast: ["Forecast", "ಮುನ್ಸೂಚನೆ"],
   tab_people: ["People", "ವ್ಯಕ್ತಿಗಳು"],
   tab_triage: ["New FIR", "ಹೊಸ ಎಫ್‌ಐಆರ್"],
   tab_model: ["Model", "ಮಾದರಿ"],
@@ -166,6 +167,41 @@ const S: Dict = {
   ],
   gv_between: ["Between {a} and {b}", "{a} ಮತ್ತು {b} ನಡುವೆ"],
   gv_recent: ["most recent {n} days ago", "ಇತ್ತೀಚಿನದು {n} ದಿನಗಳ ಹಿಂದೆ"],
+  // The written forecast report. Split into sentences rather than one blob so the
+  // Kannada can follow its own word order instead of being forced through English
+  // syntax with the values dropped in.
+  fc_r_rhythm: [
+    "Looking at {n} offences, this group has been striking roughly every {gap} days — usually somewhere between {lo} and {hi} days apart. They work {hours}{day}.",
+    "{n} ಅಪರಾಧಗಳನ್ನು ನೋಡಿದರೆ, ಈ ಗುಂಪು ಸುಮಾರು ಪ್ರತಿ {gap} ದಿನಗಳಿಗೊಮ್ಮೆ ಕೃತ್ಯ ಎಸಗಿದೆ — ಸಾಮಾನ್ಯವಾಗಿ {lo} ರಿಂದ {hi} ದಿನಗಳ ಅಂತರದಲ್ಲಿ. ಇವರು {hours}{day} ಕಾರ್ಯನಿರತರಾಗಿರುತ್ತಾರೆ.",
+  ],
+  fc_r_day: [", most often on a {d}", ", ಹೆಚ್ಚಾಗಿ {d} ದಂದು"],
+  fc_r_when: [
+    "On that pattern the next offence would be due between {a} and {b}{tail}",
+    "ಆ ಮಾದರಿಯಂತೆ ಮುಂದಿನ ಅಪರಾಧ {a} ಮತ್ತು {b} ನಡುವೆ ನಿರೀಕ್ಷಿತ{tail}",
+  ],
+  fc_r_elapsed: [
+    " — a window that has already passed in this dataset, which is why this group reads as one to review rather than one to patrol.",
+    " — ಈ ದತ್ತಾಂಶದಲ್ಲಿ ಈ ಅವಧಿ ಈಗಾಗಲೇ ಮುಗಿದಿದೆ, ಆದ್ದರಿಂದ ಈ ಗುಂಪು ಗಸ್ತಿಗಿಂತ ಪರಿಶೀಲನೆಗೆ ಸೂಕ್ತವಾಗಿದೆ.",
+  ],
+  fc_r_open: [" — a window that is open right now.", " — ಈ ಅವಧಿ ಈಗ ತೆರೆದಿದೆ."],
+  fc_r_ahead: [" — a window still ahead.", " — ಈ ಅವಧಿ ಇನ್ನೂ ಮುಂದಿದೆ."],
+  fc_r_where: [
+    "The likely area is within about {km} km of where they have already been active — that circle covers the areas around {places} in {districts}.",
+    "ಸಂಭಾವ್ಯ ಪ್ರದೇಶವು ಅವರು ಈಗಾಗಲೇ ಸಕ್ರಿಯರಾಗಿದ್ದ ಸ್ಥಳದಿಂದ ಸುಮಾರು {km} ಕಿ.ಮೀ ವ್ಯಾಪ್ತಿಯಲ್ಲಿದೆ — ಆ ವೃತ್ತವು {districts} ನಲ್ಲಿನ {places} ಸುತ್ತಮುತ್ತಲಿನ ಪ್ರದೇಶಗಳನ್ನು ಒಳಗೊಂಡಿದೆ.",
+  ],
+  fc_r_where_plain: [
+    "The likely area is within about {km} km of the centre of their known offences in {districts}.",
+    "ಸಂಭಾವ್ಯ ಪ್ರದೇಶವು {districts} ನಲ್ಲಿನ ಅವರ ತಿಳಿದ ಅಪರಾಧಗಳ ಕೇಂದ್ರದಿಂದ ಸುಮಾರು {km} ಕಿ.ಮೀ ವ್ಯಾಪ್ತಿಯಲ್ಲಿದೆ.",
+  ],
+  fc_r_nogeo: [
+    "No usable coordinates, so the area cannot be projected for this group.",
+    "ಬಳಸಬಹುದಾದ ನಿರ್ದೇಶಾಂಕಗಳಿಲ್ಲ, ಆದ್ದರಿಂದ ಈ ಗುಂಪಿಗೆ ಪ್ರದೇಶವನ್ನು ಊಹಿಸಲಾಗುವುದಿಲ್ಲ.",
+  ],
+  fc_r_trust: [
+    "Confidence is {level}. Across all groups, this method puts the next offence inside the projected area about 93% of the time, but gets the timing right only about half the time — so treat the place as the useful part and the date as a rough guide.",
+    "ವಿಶ್ವಾಸ {level}. ಎಲ್ಲಾ ಗುಂಪುಗಳಲ್ಲಿ, ಈ ವಿಧಾನವು ಮುಂದಿನ ಅಪರಾಧವನ್ನು ಸುಮಾರು 93% ಸಮಯ ಊಹಿಸಿದ ಪ್ರದೇಶದೊಳಗೆ ಇರಿಸುತ್ತದೆ, ಆದರೆ ಸಮಯವನ್ನು ಅರ್ಧದಷ್ಟು ಬಾರಿ ಮಾತ್ರ ಸರಿಯಾಗಿ ಹೇಳುತ್ತದೆ — ಆದ್ದರಿಂದ ಸ್ಥಳವನ್ನು ಉಪಯುಕ್ತ ಭಾಗವೆಂದು ಮತ್ತು ದಿನಾಂಕವನ್ನು ಸ್ಥೂಲ ಮಾರ್ಗದರ್ಶಿಯೆಂದು ಪರಿಗಣಿಸಿ.",
+  ],
+  fc_r_head: ["In plain words", "ಸರಳ ಮಾತಿನಲ್ಲಿ"],
   fc_lede: [
     "On this group's own rhythm, the next offence would fall {lo}–{hi} days after the last offence — around day {c}.",
     "ಈ ಗುಂಪಿನ ಸ್ವಂತ ಲಯದ ಪ್ರಕಾರ, ಮುಂದಿನ ಅಪರಾಧ ಕೊನೆಯ ಅಪರಾಧದ ನಂತರ {lo}–{hi} ದಿನಗಳಲ್ಲಿ ಸಂಭವಿಸಬಹುದು — ಸುಮಾರು {c}ನೇ ದಿನ.",
@@ -218,6 +254,12 @@ const KEY = "drishti.lang";
 
 export function useLang() {
   const [lang, setLang] = useState<Lang>(() => {
+    // ?lang=kn wins over the stored preference, so a link can open the interface
+    // in Kannada for someone who has never set it.
+    try {
+      const q = new URLSearchParams(window.location.search).get("lang");
+      if (q === "kn" || q === "en") return q;
+    } catch { /* no URL in a non-browser context */ }
     try {
       return (localStorage.getItem(KEY) as Lang) || "en";
     } catch {

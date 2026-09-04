@@ -3,8 +3,7 @@ html, body { margin: 0; padding: 0; }
 body {
   background: #0a0a0b;
   color: #ececed;
-  font-family: "IBM Plex Sans", "Noto Sans Kannada", system-ui, -apple-system,
-    "Segoe UI", Roboto, sans-serif;
+  font-family: "IBM Plex Mono", "Noto Sans Kannada", ui-monospace, Menlo, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;

@@ -8,10 +8,13 @@ import { TFn, Lang } from "../i18n";
  * for the map, and it puts the four things this product does side by side where
  * they can be compared rather than buried in a tab row.
  */
-export type Nav = "leads" | "hotspots" | "alerts" | "network"
+export type Nav = "leads" | "forecast" | "hotspots" | "alerts" | "network"
                 | "people" | "triage" | "insights" | "model";
 
 const ICONS: Record<Nav, React.ReactNode> = {
+  // a projected arc reaching past the last recorded point
+  forecast: (<><path d="M2.5 14.5c2.5-6 6-9 9.5-9" /><path d="M9 3.2l3 2.3-3 2.4" />
+    <circle cx="14.5" cy="12" r="4.2" strokeDasharray="2.2 2" /><circle cx="14.5" cy="12" r="1" /></>),
   // concentric rings — a hotspot
   hotspots: (<><circle cx="10" cy="11" r="2" /><circle cx="10" cy="11" r="5" />
     <path d="M10 2.5v2M15.5 5.5l-1.4 1.4M4.5 5.5l1.4 1.4" /></>),
@@ -51,6 +54,7 @@ export default function Rail({
   };
   const items: { id: Nav; label: string; badge?: number }[] = [
     { id: "leads", label: t("tab_leads") },
+    { id: "forecast", label: t("tab_forecast") },
     { id: "hotspots", label: t("tab_hotspots"), badge: nHotspots || undefined },
     { id: "alerts", label: t("tab_alerts"), badge: nAlerts || undefined },
     { id: "network", label: t("tab_network") },
@@ -80,7 +84,7 @@ export default function Rail({
           const need = NEEDS[it.id];
           const locked = !!need && !can(need);
           return (
-            <button key={it.id} className={`rail-i ${nav === it.id ? "on" : ""} ${locked ? "locked" : ""}`}
+            <button key={it.id} className={`rail-i ${nav === it.id ? "on" : ""} ${locked ? "locked" : ""} ${it.id === "forecast" ? "rail-flag" : ""}`}
               onClick={() => !locked && onNav(it.id)} aria-current={nav === it.id}
               disabled={locked}
               title={locked ? `Your role cannot open this — it needs "${need}"` : undefined}>

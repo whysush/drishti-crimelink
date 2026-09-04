@@ -1,5 +1,5 @@
 import React from "react";
-import { Forecast } from "../types";
+import { Forecast, Group } from "../types";
 import { TFn, TSFn, PhFn } from "../i18n";
 
 /**
@@ -12,7 +12,70 @@ import { TFn, TSFn, PhFn } from "../i18n";
  * The confidence and the caveat are not fine print — they are the reason a police
  * user can defend acting on this, so they sit in the card, not behind a tooltip.
  */
-export default function ForecastCard({ f, t, ts, ph }: { f?: Forecast; t: TFn; ts: TSFn; ph: PhFn }) {
+/**
+ * The projection, written out the way an officer would say it.
+ *
+ * A radius and a pair of coordinates is a measurement, not an explanation — you
+ * cannot brief a shift from "8.3 km of 14.135, 76.535". This turns the same numbers
+ * into a short report: how often this group offends, when the next one is due,
+ * and which named stations sit inside the projected area. Stations are worked out
+ * by distance from the projected centre, so the places listed are the places the
+ * ring actually covers rather than just everywhere the group has ever been.
+ */
+function narrative(f: Forecast, g: Group | null | undefined,
+                   ts: TSFn, ph: PhFn): string[] {
+  const zone = f.zone;
+  const day = f.likely_day ? ts("fc_r_day", { d: ph(f.likely_day) }) : "";
+  const rhythm = ts("fc_r_rhythm", {
+    n: f.n_events ?? 0, gap: f.median_gap_days ?? 0,
+    lo: f.gap_iqr_days?.[0] ?? 0, hi: f.gap_iqr_days?.[1] ?? 0,
+    hours: ph(f.likely_hours), day,
+  });
+
+  const tail = f.status === "elapsed" ? ts("fc_r_elapsed")
+    : f.status === "open" ? ts("fc_r_open") : ts("fc_r_ahead");
+  const when = ts("fc_r_when", {
+    a: (f.window_from || "").slice(0, 10), b: (f.window_to || "").slice(0, 10), tail,
+  });
+
+  let where: string;
+  if (zone && g) {
+    // Name only the stations the projected circle actually reaches, worked out by
+    // distance from its centre. Listing every station the group ever touched would
+    // overstate the area the ring is claiming.
+    const R = 6371, rad = (d: number) => (d * Math.PI) / 180;
+    const inside = (g.members || [])
+      .filter((m) => m.lat != null && m.lon != null)
+      .filter((m) => {
+        const dLat = rad((m.lat as number) - zone.lat);
+        const dLon = rad((m.lon as number) - zone.lon);
+        const a = Math.sin(dLat / 2) ** 2 +
+          Math.cos(rad(zone.lat)) * Math.cos(rad(m.lat as number)) * Math.sin(dLon / 2) ** 2;
+        return 2 * R * Math.asin(Math.sqrt(Math.min(1, a))) <= zone.radius_km;
+      })
+      .map((m) => m.station)
+      .filter(Boolean);
+    const stations = Array.from(new Set(inside));
+    const districts = (g.districts || []).join(", ");
+    const km = Math.round(zone.radius_km);
+    where = stations.length
+      ? ts("fc_r_where", {
+          km, districts,
+          places: stations.slice(0, 4).join(", ") +
+            (stations.length > 4 ? ` +${stations.length - 4}` : ""),
+        })
+      : ts("fc_r_where_plain", { km, districts });
+  } else {
+    where = ts("fc_r_nogeo");
+  }
+
+  const trust = ts("fc_r_trust", { level: ph(f.confidence_level).toLowerCase() });
+  return [rhythm, when, where, trust];
+}
+
+export default function ForecastCard({ f, g, t, ts, ph }: {
+  f?: Forecast; g?: Group | null; t: TFn; ts: TSFn; ph: PhFn;
+}) {
   if (!f) return null;
   if (!f.available) {
     return (
@@ -37,6 +100,11 @@ export default function ForecastCard({ f, t, ts, ph }: { f?: Forecast; t: TFn; t
 
       <div className="fc-lede">
         {ts("fc_lede", { lo, hi, c: f.days_after_last ?? 0 })}
+      </div>
+
+      <div className="fc-report">
+        <div className="fc-report-h">{ts("fc_r_head")}</div>
+        {narrative(f, g, ts, ph).map((para, i) => <p key={i}>{para}</p>)}
       </div>
 
       <div className="fc-grid">

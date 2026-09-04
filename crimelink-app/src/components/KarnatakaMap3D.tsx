@@ -31,11 +31,23 @@ const COL_INACTIVE = "#383839";   // no data — unmistakably land, deliberately
 const COL_SELECT = "#f4f1ea";     // clicked (bone — the only lit land)
 const COL_HOVER = "#7d7d8d";
 const ACCENT = "#8a8a99";
-const WEB = "#5b9dff";            // inferred links
-const PIN = "#ff4d4d";            // individual case pins (severity)
-const FORECAST = "#ff9f1c";       // projected next-strike zone
-const HOTSPOT = "#f4f1ea";        // measured concentration — a fact, so neutral bone
-const RISK = "#ff4d4d";           // forward risk — the brief's "red zone"
+// The palette encodes epistemic status, not just category. Anything RECORDED is
+// red, anything MEASURED is neutral bone, anything INFERRED is blue, and anything
+// PREDICTED is amber — one colour the eye can learn once and trust everywhere.
+//
+// Risk previously shared red with case pins, so a forecast for next month looked
+// identical to a crime that already happened. That is the one confusion this map
+// cannot afford, so forward risk now sits with the rest of the predictions.
+const PIN = "#ff4d4d";            // recorded — an offence that happened
+const WEB_LINK = "#5b9dff";       // inferred — a link we computed
+const HOTSPOT = "#f4f1ea";        // measured — an observed concentration
+// Forecast is teal, deliberately nowhere near the warm end of the palette. Red and
+// yellow now carry risk SEVERITY, so a projection drawn in either would read as a
+// severity grade instead of a prediction.
+const FORECAST = "#00e5d0";       // PREDICTED — projected next-strike zone
+const RISK_HIGH = "#ff4d4d";      // PREDICTED RISK — Critical / High districts
+const RISK_MED = "#ffd60a";       // PREDICTED RISK — Elevated districts
+const TRAIL = "#c084fc";          // one person's recorded case history
 
 function DistrictMeshMesh({ m, color, onOver, onOut, onPick }: {
   m: DistrictMesh; color: string; onOver: (code: number, e: any) => void; onOut: () => void; onPick: (code: number) => void;
@@ -164,9 +176,9 @@ function GroupOverlay({ group, terrain }: { group: Group; terrain: Terrain }) {
   const hub = new THREE.Vector3(c.x, c.y + 5, c.z);
   return (
     <group>
-      {pts.map((p, i) => <Line key={"l" + i} points={[hub, p]} color={WEB} lineWidth={2} dashed dashSize={0.8} gapSize={0.45} transparent opacity={0.95} />)}
-      {pts.map((p, i) => <mesh key={i} position={p}><sphereGeometry args={[0.38, 16, 16]} /><meshStandardMaterial color="#dceaff" emissive={WEB} emissiveIntensity={1.9} /></mesh>)}
-      <mesh position={hub}><sphereGeometry args={[0.5, 16, 16]} /><meshStandardMaterial color="#ffffff" emissive={WEB} emissiveIntensity={1.5} /></mesh>
+      {pts.map((p, i) => <Line key={"l" + i} points={[hub, p]} color={WEB_LINK} lineWidth={2} dashed dashSize={0.8} gapSize={0.45} transparent opacity={0.95} />)}
+      {pts.map((p, i) => <mesh key={i} position={p}><sphereGeometry args={[0.38, 16, 16]} /><meshStandardMaterial color="#dceaff" emissive={WEB_LINK} emissiveIntensity={1.9} /></mesh>)}
+      <mesh position={hub}><sphereGeometry args={[0.5, 16, 16]} /><meshStandardMaterial color="#ffffff" emissive={WEB_LINK} emissiveIntensity={1.5} /></mesh>
     </group>
   );
 }
@@ -231,18 +243,25 @@ function RiskZones({ risk, districts, terrain }: {
   const ref = useRef<any>(null);
   const zones = useMemo(() => {
     const byId = new Map(districts.map((d) => [Number(d.district_id), d]));
+    // Elevated districts are drawn too, in yellow. Showing only the red tier hid
+    // the districts a commander would actually watch next, and left the map
+    // implying everywhere else was fine.
     return risk
-      .filter((r) => r.level === "Critical" || r.level === "High")
+      .filter((r) => r.level === "Critical" || r.level === "High" || r.level === "Elevated")
       .map((r) => {
         const d = byId.get(Number(r.district_id));
         if (!d) return null;
+        const top = r.level === "Critical" || r.level === "High";
         return {
           id: r.district,
           pts: ringPoints(d.lat, d.lon, 26 + r.risk * 22, terrain, 1.6),
           risk: r.risk,
+          color: top ? RISK_HIGH : RISK_MED,
+          top,
         };
       })
-      .filter(Boolean) as { id: string; pts: THREE.Vector3[]; risk: number }[];
+      .filter(Boolean) as { id: string; pts: THREE.Vector3[]; risk: number;
+                            color: string; top: boolean }[];
   }, [risk, districts, terrain]);
 
   useFrame(({ clock }) => {
@@ -258,7 +277,7 @@ function RiskZones({ risk, districts, terrain }: {
   return (
     <group ref={ref}>
       {zones.map((z) => (
-        <Line key={z.id} points={z.pts} color={RISK} lineWidth={1.4 + z.risk * 2.4}
+        <Line key={z.id} points={z.pts} color={z.color} lineWidth={1.4 + z.risk * 2.4}
           transparent opacity={0.4} raycast={() => null} />
       ))}
     </group>
@@ -296,6 +315,41 @@ function ForecastZone({ group, terrain }: { group: Group; terrain: Terrain }) {
   );
 }
 
+/**
+ * One person's recorded case history.
+ *
+ * Every case they are named in, in date order, joined by a line so the sequence
+ * reads as a path rather than a scatter. Deliberately violet: these are recorded
+ * offences, so they must not borrow the amber that means "predicted", and must not
+ * disappear into the red of the ordinary case pins either.
+ */
+function PersonTrail({ cases, terrain }: { cases: UCase[]; terrain: Terrain }) {
+  const pts = useMemo(() => cases
+    .filter((c) => c.lat != null && c.lon != null)
+    .slice()
+    .sort((a, b) => (a.incident_from || "").localeCompare(b.incident_from || ""))
+    .map((c) => {
+      const [x, z] = worldXZ(c.lon as number, c.lat as number);
+      return new THREE.Vector3(x, terrain.sampleY(c.lon as number, c.lat as number) + 3.2, z);
+    }), [cases, terrain]);
+
+  if (!pts.length) return null;
+  return (
+    <group>
+      {pts.length > 1 && (
+        <Line points={pts} color={TRAIL} lineWidth={2.2} dashed dashSize={1.1} gapSize={0.6}
+          transparent opacity={0.9} raycast={() => null} />
+      )}
+      {pts.map((p, i) => (
+        <mesh key={i} position={p}>
+          <sphereGeometry args={[0.62, 18, 18]} />
+          <meshStandardMaterial color={TRAIL} emissive={TRAIL} emissiveIntensity={1.5} />
+        </mesh>
+      ))}
+    </group>
+  );
+}
+
 function Rig({ autoRotate }: { autoRotate: boolean }) {
   const ref = useRef<any>(null);
   useFrame(() => { if (ref.current) ref.current.update(); });
@@ -304,13 +358,14 @@ function Rig({ autoRotate }: { autoRotate: boolean }) {
 
 export default function KarnatakaMap3D({
   districts, cases, selectedGroup, selectedDistrictId, showForecast, showPins, t,
-  hotspots, showHotspots, selectedHotspot, risk, showRisk,
+  hotspots, showHotspots, selectedHotspot, risk, showRisk, trailCases,
   onClickDistrict, onPickCase,
 }: {
   districts: District[]; cases: UCase[]; selectedGroup: Group | null; selectedDistrictId: number | null;
   showForecast: boolean; showPins: boolean; t: TFn;
   hotspots: Hotspot[]; showHotspots: boolean; selectedHotspot: string | null;
   risk: RiskDistrict[]; showRisk: boolean;
+  trailCases: UCase[];
   onClickDistrict: (censuscode: number, name: string) => void; onPickCase: (id: string) => void;
 }) {
   const terrain = useMemo(() => (districts.length ? buildTerrain(districts) : null), [districts]);
@@ -357,6 +412,7 @@ export default function KarnatakaMap3D({
               onOut={() => setPinTip(null)} onPick={onPickCase} />
           )}
           {terrain && selectedGroup && <GroupOverlay group={selectedGroup} terrain={terrain} />}
+          {terrain && trailCases.length > 0 && <PersonTrail cases={trailCases} terrain={terrain} />}
           {terrain && showForecast && selectedGroup?.forecast?.available && (
             <ForecastZone group={selectedGroup} terrain={terrain} />
           )}

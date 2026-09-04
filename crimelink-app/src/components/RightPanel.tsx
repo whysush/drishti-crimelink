@@ -9,6 +9,7 @@ import { Nav } from "./Rail";
 import HotspotsPanel from "./HotspotsPanel";
 import AlertsPanel from "./AlertsPanel";
 import NetworkPanel from "./NetworkPanel";
+import ForecastPanel from "./ForecastPanel";
 import InsightsPanel from "./InsightsPanel";
 import GroupView from "./GroupView";
 import PersonsPanel from "./PersonsPanel";
@@ -24,7 +25,7 @@ export default function RightPanel({
   persons, validation, districts, statuses, t, ts, sig, ph, loading,
   hotspots, hotspotMethod, hotspotScanned, selectedHotspot, onSelectHotspot,
   alerts, risk, anomalies, graph, socio, stations,
-  onOpenGroup, onPickCase, onBack, onCloseDistrict, onSetStatus, onBrief, onDistrict,
+  onOpenGroup, onShowPerson, onPickCase, onBack, onCloseDistrict, onSetStatus, onBrief, onDistrict,
 }: {
   nav: Nav;
   groups: Group[]; selectedGroup: Group | null;
@@ -33,7 +34,8 @@ export default function RightPanel({
   persons: Person[]; validation: Validation | null; districts: District[];
   statuses: Record<string, Status>; t: TFn; ts: TSFn; sig: SigFn; ph: PhFn;
   loading: boolean;
-  onOpenGroup: (id: string) => void; onPickCase: (id: string) => void;
+  onOpenGroup: (id: string) => void;
+  onShowPerson: (keys: string[], label: string) => void; onPickCase: (id: string) => void;
   onBack: () => void; onCloseDistrict: () => void;
   onSetStatus: (id: string, s: Status) => void; onBrief: () => void;
   hotspots: Hotspot[]; hotspotMethod: string; hotspotScanned: number;
@@ -77,7 +79,11 @@ export default function RightPanel({
           <AlertsPanel alerts={alerts} risk={risk} anomalies={anomalies}
             onDistrict={onDistrict} onPickCase={onPickCase} />
         )}
-        {nav === "network" && <NetworkPanel g={graph} onOpenGroup={onOpenGroup} />}
+        {nav === "forecast" && (
+          <ForecastPanel groups={groups} validation={validation} t={t} onOpenGroup={onOpenGroup} />
+        )}
+        {nav === "network" && <NetworkPanel g={graph} onOpenGroup={onOpenGroup}
+          onShowPerson={onShowPerson} />}
         {nav === "insights" && <InsightsPanel s={socio} />}
 
         {nav === "leads" && (

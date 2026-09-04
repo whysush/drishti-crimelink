@@ -27,9 +27,10 @@ import Identity from "./components/Identity";
  */
 function readUrl(): { nav: Nav; group: string | null; tour: boolean; brief: boolean;
                      role: string | null; district: string | null;
-                     focus: number | null } {
+                     focus: number | null; person: string | null;
+                     layers: string[] } {
   const q = new URLSearchParams(window.location.search);
-  const valid: Nav[] = ["leads", "hotspots", "alerts", "network",
+  const valid: Nav[] = ["leads", "forecast", "hotspots", "alerts", "network",
                         "people", "triage", "insights", "model"];
   const tab = q.get("tab");
   return {
@@ -41,6 +42,12 @@ function readUrl(): { nav: Nav; group: string | null; tour: boolean; brief: bool
     // ?focus=<districtId> opens the map on one district, pins dropped — the link an
     // officer sends when they mean "look at Mysuru", not "look at the state"
     focus: q.get("focus") ? Number(q.get("focus")) : null,
+    // ?person=<key> drops that person's recorded case history onto the map — the
+    // link you send when the point is "look at where this one has been active"
+    person: q.get("person"),
+    // ?layers=risk,hotspots turns map layers on from a link, so a particular view
+    // can be sent to someone rather than described to them
+    layers: (q.get("layers") || "").split(",").map((x) => x.trim()).filter(Boolean),
     brief: q.get("brief") === "1",
   };
 }
@@ -66,6 +73,7 @@ export default function App() {
   const [hotspots, setHotspots] = useState<Hotspot[]>([]);
   const [hotspotMeta, setHotspotMeta] = useState({ method: "", scanned: 0 });
   const [selectedHotspot, setSelectedHotspot] = useState<string | null>(null);
+  const [trail, setTrail] = useState<{ label: string; keys: string[] } | null>(null);
   const [alerts, setAlerts] = useState<AlertsResult | null>(null);
   const [risk, setRisk] = useState<RiskDistrict[]>([]);
   const [anomalies, setAnomalies] = useState<AnomalyResult | null>(null);
@@ -78,8 +86,11 @@ export default function App() {
   const [nav, setNav] = useState<Nav>(initial.nav);
   const [filters, setFilters] = useState<Filters>(EMPTY_FILTERS);
   const [statuses, setStatuses] = useState<Record<string, Status>>(loadStatuses);
-  const [layers, setLayers] = useState({
-    forecast: true, pins: true, hotspots: false, risk: false });
+  const [layers, setLayers] = useState(() => {
+    const base = { forecast: true, pins: true, hotspots: false, risk: false };
+    for (const l of initial.layers) if (l in base) (base as any)[l] = true;
+    return base;
+  });
 
   const [palette, setPalette] = useState(false);
   const [brief, setBrief] = useState(false);
@@ -99,6 +110,7 @@ export default function App() {
             .then((g) => { setGroup(g); if (initial.brief) setBrief(true); })
             .catch(() => {});
         }
+        if (initial.person) setNav("network");
         if (initial.focus != null) {
           const d = dl.districts.find((x) => Number(x.district_id) === initial.focus);
           if (d) setDist({ id: Number(d.district_id), name: d.district });
@@ -126,7 +138,7 @@ export default function App() {
         setLoading(false);
       }
     })();
-  }, [initial.group, initial.brief, initial.focus]);
+  }, [initial.person, initial.group, initial.brief, initial.focus]);
 
   useEffect(() => { saveStatuses(statuses); }, [statuses]);
 
@@ -179,7 +191,8 @@ export default function App() {
   const openGroup = useCallback(async (id: string) => {
     try {
       const g = await api.groupById(id);
-      setGroup(g); setDist(null); setNav("leads");
+      setGroup(g); setDist(null);
+      setNav((n) => (n === "forecast" ? "forecast" : "leads"));
     } catch { /* a stale id is not worth an error state */ }
   }, []);
 
@@ -215,6 +228,33 @@ export default function App() {
   const visibleGroups = useMemo(
     () => filterGroups(groups, filters, horizon), [groups, filters, horizon]);
 
+  /**
+   * The cases behind whoever is selected in the network graph.
+   *
+   * /persons gives each person their case ids but not coordinates, and the map
+   * needs coordinates — so the ids are joined against the case list the map is
+   * already holding rather than asking the API for the same rows again.
+   */
+  const trailCases = useMemo(() => {
+    if (!trail || !trail.keys.length) return [];
+    const wanted = new Set<string>();
+    for (const k of trail.keys) {
+      const person = persons.find((x) => x.person_key === k);
+      person?.cases.forEach((c) => wanted.add(String(c.case_master_id)));
+    }
+    return cases.filter((c) => wanted.has(String(c.case_master_id)));
+  }, [trail, persons, cases]);
+
+  useEffect(() => {
+    if (!initial.person || !persons.length || trail) return;
+    const p = persons.find((x) => x.person_key === initial.person);
+    if (p) setTrail({ label: p.name, keys: [p.person_key] });
+  }, [initial.person, persons, trail]);
+
+  const showPersonTrail = useCallback((keys: string[], label: string) => {
+    setTrail(keys.length ? { label, keys } : null);
+  }, []);
+
   const districtCases = useMemo(
     () => (dist ? visibleCases.filter((c) => c.district_id === dist.id) : []), [dist, visibleCases]);
   const districtGroups = useMemo(
@@ -232,6 +272,7 @@ export default function App() {
   const actions: Action[] = useMemo(() => [
     { id: "a-tour", label: "Start the guided tour", hint: "?", run: () => setTourStep(0) },
     { id: "a-leads", label: "Priority leads", run: () => { setNav("leads"); setGroup(null); } },
+    { id: "a-fc", label: "Forecast — where each group may strike next", run: () => setNav("forecast") },
     { id: "a-hot", label: "Crime hotspots (place x time)", run: () => setNav("hotspots") },
     { id: "a-alerts", label: "Alerts — spikes, risk, anomalies", run: () => setNav("alerts") },
     { id: "a-net", label: "Link analysis graph", run: () => setNav("network") },
@@ -328,12 +369,21 @@ export default function App() {
             showForecast={layers.forecast} showPins={layers.pins} t={t}
             hotspots={hotspots} showHotspots={layers.hotspots}
             selectedHotspot={selectedHotspot}
-            risk={risk} showRisk={layers.risk}
+            risk={risk} showRisk={layers.risk} trailCases={trailCases}
             onClickDistrict={clickDistrict} onPickCase={pickCase} />
 
           {err && <div className="err">{err}</div>}
 
           <Hud s={shown} t={t} filtered={isActive(filters)} />
+
+          {trail && (
+            <div className="trailbar">
+              <i />
+              <span>Crime history — <b>{trail.label}</b></span>
+              <em>{trailCases.length} recorded case{trailCases.length === 1 ? "" : "s"} on the map</em>
+              <button onClick={() => setTrail(null)}>clear</button>
+            </div>
+          )}
 
           <div className="mapctl">
             <label className={layers.pins ? "on" : ""}>
@@ -363,9 +413,11 @@ export default function App() {
             <span><i className="sw-n" />no data</span>
             <span><i className="sw-s" />selected</span>
             <span><i className="sw-w" />linked</span>
-            <span><i className="sw-f" />projected</span>
+            <span><i className="sw-f" />predicted</span>
             <span><i className="sw-h" />hotspot</span>
-            <span><i className="sw-r" />red zone</span>
+            <span><i className="sw-r" />red zone · high</span>
+            <span><i className="sw-y" />yellow zone · elevated</span>
+            <span><i className="sw-t" />person history</span>
           </div>
 
           {(group || dist) && (
@@ -386,7 +438,7 @@ export default function App() {
         selectedHotspot={selectedHotspot} onSelectHotspot={setSelectedHotspot}
         alerts={alerts} risk={risk} anomalies={anomalies} graph={graph}
         socio={socio} stations={stations} onDistrict={clickDistrict}
-        onOpenGroup={openGroup} onPickCase={pickCase}
+        onOpenGroup={openGroup} onShowPerson={showPersonTrail} onPickCase={pickCase}
         onBack={() => setGroup(null)} onCloseDistrict={() => setDist(null)}
         onSetStatus={(id, s) => setStatuses((m) => ({ ...m, [id]: s }))}
         onBrief={() => setBrief(true)} />

@@ -44,6 +44,13 @@ DEFAULT_WEIGHTS = {
 }
 SPATIAL_D0_KM = 6.0     # proximity half-scale
 AGE_SCALE = 15.0        # victim-age similarity scale (years)
+# How much a pair is discounted when only some signals are available. 1.0 is no
+# discount (the old behaviour). Swept against text-stripped data: full-text results
+# are identical at every setting, so this only shapes how the engine behaves as data
+# thins. 0.78 was chosen because it roughly matches the number of groups reported to
+# the number that exist, instead of returning 53 where 13 are real.
+COVERAGE_FLOOR = 0.78
+
 DELAY_SCALE_H = 18.0    # reporting-delay similarity scale (hours)
 
 # Sub-signal weights inside `temporal` and `profile`. Both are built, wired through
@@ -291,18 +298,34 @@ class Fingerprints:
 
     # -- composite with per-pair renormalisation ----------------------------
     def _composite(self):
+        """Weighted composite, discounted by how much evidence was actually there.
+
+        Renormalising alone treats a pair that agrees on four signals as equal to a
+        pair that agrees on all seven — which is wrong, and it shows the moment the
+        data thins out. With BriefFacts stripped the scores drifted up, more pairs
+        cleared the clustering threshold, and the engine reported 53 groups where 13
+        existed: precision 0.375. Not a graceful degradation, a flood of false leads.
+
+        So the renormalised score is scaled by coverage — the share of the total
+        weight that was available for that pair. Full evidence is untouched; thin
+        evidence has to be correspondingly stronger to link. Missing data now costs
+        confidence instead of quietly inflating it.
+        """
         n = self.n
-        keys = list(self.w)
+        keys = [k for k in self.w if self.w[k] > 0]
+        total = sum(self.w[k] for k in keys) or 1.0
         W = np.stack([np.full((n, n), self.w[k]) * self.avail[k] for k in keys])
         Wsum = W.sum(0)
-        Wsum[Wsum == 0] = 1.0
-        Weff = W / Wsum  # effective weights per pair, sum to 1 over available comps
+        coverage = Wsum / total
+        Wsum_safe = np.where(Wsum == 0, 1.0, Wsum)
+        Weff = W / Wsum_safe
         S = np.zeros((n, n))
-        self._weff = {}
+        self._weff = {k: np.zeros((n, n)) for k in self.w}
         for idx, k in enumerate(keys):
-            contrib = Weff[idx] * self.comps[k]
             self._weff[k] = Weff[idx]
-            S += contrib
+            S += Weff[idx] * self.comps[k]
+        # a pair with no shared evidence at all scores nothing, not a neutral 0.5
+        S = np.where(Wsum > 0, S * (COVERAGE_FLOOR + (1 - COVERAGE_FLOOR) * coverage), 0.0)
         np.fill_diagonal(S, 1.0)
         self.S = S
 

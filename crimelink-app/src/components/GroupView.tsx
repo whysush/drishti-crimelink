@@ -68,7 +68,7 @@ export default function GroupView({
         </div>
       )}
 
-      <ForecastCard f={group.forecast} t={t} ts={ts} ph={ph} />
+      <ForecastCard f={group.forecast} g={group} t={t} ts={ts} ph={ph} />
 
       <div className="gv-sub">{t("why_linked")}</div>
       {group.drivers.map((d) => (

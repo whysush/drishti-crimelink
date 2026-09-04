@@ -35,15 +35,23 @@
   --bone:   #f4f1ea;
 
   /* SEMANTIC ONLY */
+  --pred: #00e5d0;   /* PREDICTED — forecast, in the panel and on the map */
+  --risk-med: #ffd60a; /* predicted risk, Elevated tier */
   --sev:    #ff4d4d;   /* severity: high priority, heinous */
   --proj:   #ff9f1c;   /* projection: forecast, caution, unconfirmed */
   --ok:     #3ddc84;   /* confirmed: assigned, validated, measured-good */
   --link:   #5b9dff;   /* inferred: linkage, network edges */
 
   /* type */
-  --f-sans: "IBM Plex Sans", "Noto Sans Kannada", system-ui, sans-serif;
-  --f-cond: "IBM Plex Sans Condensed", "IBM Plex Sans", system-ui, sans-serif;
-  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  /* One typeface throughout: IBM Plex Mono. An instrument should read like an
+     instrument, and a fixed pitch makes every FIR number, coordinate and metric
+     line up down the column without special-casing.
+     Kannada has no monospace of its own, so Noto Sans Kannada carries that script —
+     it must sit ahead of the generic fallbacks or the OS substitutes something
+     arbitrary and the ಕನ್ನಡ interface stops matching the English one. */
+  --f-sans: "IBM Plex Mono", "Noto Sans Kannada", ui-monospace, Menlo, monospace;
+  --f-cond: "IBM Plex Mono", "Noto Sans Kannada", ui-monospace, Menlo, monospace;
+  --f-mono: "IBM Plex Mono", "Noto Sans Kannada", ui-monospace, Menlo, monospace;
 
   /* metrics */
   --rail: 88px;
@@ -339,7 +347,7 @@ textarea:focus-visible, a:focus-visible, [role="tab"]:focus-visible {
 .legend i { display: inline-block; width: 8px; height: 8px; margin-right: 5px;
   vertical-align: 0; }
 .sw-a { background: #6e6e8e; } .sw-n { background: #383839; }
-.sw-s { background: var(--bone); } .sw-f { background: var(--proj); }
+.sw-s { background: var(--bone); } .sw-f { background: var(--pred); }
 .sw-w { background: var(--link); }
 
 .map3d { position: absolute; inset: 0; }
@@ -424,7 +432,7 @@ textarea:focus-visible, a:focus-visible, [role="tab"]:focus-visible {
 .lead-why { font-size: 13px; color: var(--ink-3); margin-top: 5px; line-height: 1.5; }
 .lead-why b { color: var(--ink-2); font-weight: 500; }
 .lead-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; margin-top: 8px; }
-.lead-fc { font-family: var(--f-mono); font-size: 12px; color: var(--proj); }
+.lead-fc { font-family: var(--f-mono); font-size: 12px; color: var(--pred); }
 .lead-name { font-size: 12.5px; color: var(--ink-3); font-style: italic; }
 
 /* severity as a left stripe — readable without reading */
@@ -570,18 +578,18 @@ textarea:focus-visible, a:focus-visible, [role="tab"]:focus-visible {
 
 /* ── forecast ───────────────────────────────────────────────────────────── */
 
-.fc { border: 1px solid var(--line-2); border-top: 2px solid var(--proj);
+.fc { border: 1px solid var(--line-2); border-top: 2px solid var(--pred);
   background: var(--raise); padding: 13px 14px; margin: 16px 0; }
 .fc.fc-none { border-top-color: var(--line-3); }
 .fc-head { display: flex; align-items: baseline; gap: 9px; flex-wrap: wrap;
   font-family: var(--f-cond); font-size: 12px; font-weight: 700;
-  text-transform: uppercase; letter-spacing: .13em; color: var(--proj); }
+  text-transform: uppercase; letter-spacing: .13em; color: var(--pred); }
 .fc-conf { margin-left: auto; font-family: var(--f-mono); font-size: 11.5px;
   letter-spacing: .04em; color: var(--ink-3); text-transform: none;
   white-space: nowrap; }
-.fc-conf.high { color: var(--ok); } .fc-conf.medium { color: var(--proj); }
+.fc-conf.high { color: var(--ok); } .fc-conf.medium { color: var(--pred); }
 .fc-lede { font-size: 15.5px; line-height: 1.66; color: var(--ink-2); margin: 11px 0 12px; }
-.fc-lede b { color: var(--ink); font-family: var(--f-mono); font-weight: 500; }
+.fc-lede b { color: var(--pred); font-family: var(--f-mono); font-weight: 500; }
 .fc-grid { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line); }
 .fc-cell { padding: 9px 11px; border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line); }
@@ -855,7 +863,8 @@ textarea:focus-visible, a:focus-visible, [role="tab"]:focus-visible {
 
 @media print {
   .no-print, .brief-bar, .rail, .status, .tour, .tour-scrim, .pal, .pal-scrim { display: none !important; }
-  body, .app { background: #fff !important; height: auto; overflow: visible; display: block; }
+  body, .app {
+  letter-spacing: -.012em; background: #fff !important; height: auto; overflow: visible; display: block; }
   .brief-wrap { position: static; background: #fff; padding: 0; overflow: visible; }
   .brief { margin: 0; padding: 0; max-width: none; box-shadow: none; }
   .brief section { page-break-inside: avoid; }
@@ -1110,6 +1119,8 @@ textarea:focus-visible, a:focus-visible, [role="tab"]:focus-visible {
 
 /* map legend additions */
 .sw-h { background: var(--bone); } .sw-r { background: var(--sev); }
+.sw-y { background: var(--risk-med); }
+.sw-t { background: #c084fc; }
 
 /* ---------- identity + access ---------- */
 .idchip { position: relative; margin-left: auto; }
@@ -1150,3 +1161,114 @@ textarea:focus-visible, a:focus-visible, [role="tab"]:focus-visible {
 .rail-i.locked { opacity: .38; cursor: not-allowed; }
 .rail-i.locked:hover { background: none; }
 .lockb { font-size: 11px; opacity: .8; }
+
+/* ── association graph — the readable default for the Network tab ─────────── */
+.pg-legend{display:flex; flex-wrap:wrap; align-items:center; gap:5px 12px;
+  margin:9px 0 6px; font-size:11px; color:var(--ink-3);}
+.pg-legend span{display:flex; align-items:center; gap:5px;}
+.pg-legend i{width:14px; height:3px; border-radius:2px; display:inline-block;}
+.pg-legend i.dotmark{width:9px; height:9px; border-radius:50%; background:var(--ink-3);}
+
+.pgraph{width:100%; height:auto; display:block; background:var(--sunk);
+  border:1px solid var(--line); margin-top:2px;}
+.pgn{cursor:pointer;}
+.pgn circle{transition:r .12s ease;}
+.pgn:hover circle{stroke:var(--bone); stroke-width:2;}
+.pgl{font-family:var(--f-sans); font-size:9.5px; fill:var(--ink-2);
+  paint-order:stroke; stroke:var(--sunk); stroke-width:3px; stroke-linejoin:round;}
+.pgn.sel .pgl{fill:var(--ink); font-weight:600;}
+
+.pg-hint{margin-top:9px; font-size:11.5px; line-height:1.5; color:var(--ink-3);
+  border-left:2px solid var(--line-2); padding-left:10px;}
+.pg-hint b{color:var(--ink-2);}
+
+.pgsel{margin-top:10px; border:1px solid var(--line-2); background:var(--panel-2);}
+.pgsel-h{display:flex; align-items:baseline; gap:9px; flex-wrap:wrap;
+  padding:9px 12px; border-bottom:1px solid var(--line);}
+.pgsel-h b{font-size:14px;}
+.pgsel-h span{font-size:11px; color:var(--ink-3);}
+.pgsel-h .btn-ghost{margin-left:auto;}
+.pgsel-r{display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;
+  padding:8px 12px; border-bottom:1px solid var(--line); font-size:12px;}
+.pgsel-r b{color:var(--ink);}
+.pgsel-mo{color:var(--accent); font-size:11.5px;}
+.pgsel-geo{color:var(--ink-3); font-size:11px; margin-left:auto;}
+.pgsel-c{padding:8px 12px; font-size:10.5px; line-height:1.5; color:var(--ink-3);}
+
+/* ── person crime-history trail ───────────────────────────────────────────── */
+.trailbar{position:absolute; left:50%; top:14px; transform:translateX(-50%);
+  display:flex; align-items:center; gap:10px; z-index:8;
+  background:rgba(14,16,20,.93); border:1px solid #c084fc;
+  padding:7px 13px; font-size:12px; color:var(--ink-2);
+  box-shadow:0 8px 26px -12px rgba(0,0,0,.8);}
+.trailbar i{width:9px; height:9px; border-radius:50%; background:#c084fc;
+  box-shadow:0 0 9px #c084fc; flex:none;}
+.trailbar b{color:var(--ink);}
+.trailbar em{font-style:normal; color:var(--ink-3); font-size:11px;
+  border-left:1px solid var(--line-2); padding-left:10px;}
+.trailbar button{background:none; border:none; color:#c084fc; cursor:pointer;
+  font:inherit; font-size:11.5px; border-bottom:1px solid currentColor; padding:0;}
+.trailbar button:hover{color:var(--ink);}
+
+.assoc-map{margin-top:7px; background:var(--panel-2); border:1px solid var(--line-2);
+  color:#c084fc; font:inherit; font-size:11.5px; padding:4px 10px; cursor:pointer;}
+.assoc-map:hover{border-color:#c084fc; background:var(--raise);}
+
+/* ── Forecast: its own tab, marked out in the rail ────────────────────────── */
+/* The prediction colour, not yellow — yellow now means an Elevated risk zone on
+   the map, and a yellow tab would read as a severity grade rather than a section. */
+.rail-i.rail-flag{position:relative; border:1px solid var(--pred);
+  background:color-mix(in srgb, var(--pred) 9%, transparent);}
+.rail-i.rail-flag span{color:var(--pred);}
+.rail-i.rail-flag svg{stroke:var(--pred);}
+.rail-i.rail-flag.on{background:color-mix(in srgb, var(--pred) 20%, transparent);}
+.rail-i.rail-flag.on span, .rail-i.rail-flag.on svg{color:var(--bone); stroke:var(--bone);}
+
+.fc-trust{border:1px solid var(--line-2); border-top:2px solid var(--pred);
+  background:var(--raise); padding:12px 13px; margin-bottom:12px;}
+.fc-trust-h{font-family:var(--f-cond); font-size:11.5px; font-weight:700;
+  letter-spacing:.13em; text-transform:uppercase; color:var(--pred); margin-bottom:9px;}
+.fc-trust-row{display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+  background:var(--line); border:1px solid var(--line);}
+.fc-trust-row div{background:var(--panel-2); padding:8px 9px; text-align:center;}
+.fc-trust-row b{display:block; font-family:var(--f-mono); font-size:17px;
+  font-variant-numeric:tabular-nums; color:var(--pred);}
+.fc-trust-row span{font-size:9.5px; letter-spacing:.05em; text-transform:uppercase;
+  color:var(--ink-3);}
+.fc-trust p{margin:9px 0 0; font-size:11.5px; line-height:1.55; color:var(--ink-3);}
+.fc-trust p b{color:var(--ink-2);}
+
+.fc-count{font-family:var(--f-mono); font-size:11.5px; color:var(--ink-3); margin-bottom:9px;}
+.fc-count b{color:var(--pred);}
+
+.fcrow{display:block; width:100%; text-align:left; cursor:pointer;
+  background:var(--panel-2); border:1px solid var(--line);
+  border-left:3px solid var(--line-3); padding:10px 12px; margin-bottom:8px; font:inherit;}
+.fcrow:hover{border-color:var(--line-3); background:var(--raise);}
+.fcrow.high{border-left-color:var(--pred);}
+.fcrow.medium{border-left-color:var(--proj);}
+.fcrow.low{border-left-color:var(--line-3);}
+.fcrow.open{background:color-mix(in srgb, var(--pred) 7%, var(--panel-2));}
+.fcrow-top{display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+.fcrow-top b{flex:1; font-size:14px; color:var(--ink);}
+.fcchip{font-family:var(--f-mono); font-size:10px; letter-spacing:.05em;
+  border:1px solid currentColor; padding:1px 7px;}
+.fcchip.high{color:var(--pred);} .fcchip.medium{color:var(--proj);}
+.fcchip.low{color:var(--ink-3);}
+.fcrow-win{display:flex; align-items:baseline; gap:8px; margin-top:7px; flex-wrap:wrap;}
+.fcrow-win .k{font-size:9.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--ink-3);}
+.fcrow-win .v{font-family:var(--f-mono); font-size:12.5px; color:var(--ink);}
+.fcrow-win em{font-style:normal; font-size:10.5px; color:var(--ink-3); margin-left:auto;}
+.fcrow-win em.is-open{color:var(--pred);}
+.fcrow-meta{font-size:12px; color:var(--ink-2); margin-top:5px;}
+.fcrow-meta b{color:var(--pred); font-family:var(--f-mono);}
+.fcrow-basis{font-family:var(--f-mono); font-size:10.5px; color:var(--ink-3); margin-top:3px;}
+.fc-caveat-foot{margin-top:12px; padding-left:10px; border-left:2px solid var(--pred);
+  font-size:11px; line-height:1.5; color:var(--ink-3);}
+
+/* ── forecast, written out ────────────────────────────────────────────────── */
+.fc-report{margin-top:11px; border-top:1px solid var(--line); padding-top:10px;}
+.fc-report-h{font-family:var(--f-cond); font-size:10.5px; font-weight:700;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--pred); margin-bottom:7px;}
+.fc-report p{margin:0 0 8px; font-size:13.2px; line-height:1.62; color:var(--ink-2);}
+.fc-report p:last-child{margin-bottom:0; font-size:12.3px; color:var(--ink-3);}
